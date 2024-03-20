@@ -31,7 +31,7 @@ describe('My Web Application Tests', () => {
     }
   });
 
-/*     it('create Project', () => {
+    it('create Project', () => {
       //login
       cy.visit('/');
       cy.wait(2000);
@@ -49,7 +49,7 @@ describe('My Web Application Tests', () => {
         } else {
         console.log('Login failed');
       }
-    }); */
+    });
     
 });
 function Login(username, password, login) {
@@ -60,23 +60,8 @@ function Login(username, password, login) {
   }
 }
 function addEtablisement(Etablissement) {
-  Object.keys(Etablissement).forEach((field) => {
-    if(Etablissement[field] == "checkbox"){
-      cy.get(Etablissement.checkbox.selectorAttr).click({ force: true });
-    }
-    if(Etablissement[field].type == "input-text"){
-      cy.get(Etablissement[field].selectorAttr).should('exist').clear({ force: true });
-      cy.get(Etablissement[field].selectorAttr).should('exist').type(Etablissement[field].value, { force: true });
-    }
-    if(Etablissement[field].type == "dropDown"){
-      cy.get(Etablissement[field].selectorAttr).should('exist').click();
-      cy.get(".p-dropdown-filter").should('exist').type(Etablissement[field].labelFilter)
-      cy.get('p-dropdownitem').contains(Etablissement[field].labelFilter).should('exist').click();
-    
-    }
-  })
-  cy.get('.add-entreprise button').should('exist').click();
-/*   cy.get(Etablissement.checkbox.selectorAttr).click({ force: true });
+
+  cy.get(Etablissement.checkbox.selectorAttr).click({ force: true });
 
   cy.get(Etablissement.socialReason.selectorAttr).should('exist').clear({ force: true });
   cy.get(Etablissement.socialReason.selectorAttr).should('exist').type(Etablissement.socialReason.value, { force: true });
@@ -103,7 +88,7 @@ function addEtablisement(Etablissement) {
 
   cy.get(Etablissement.siret.selectorAttr).should('exist').clear({ force: true });
   cy.get(Etablissement.siret.selectorAttr).should('exist').type(Etablissement.siret.value, { force: true });
-  cy.get('.add-entreprise button').should('exist').click(); */
+  cy.get('.add-entreprise button').should('exist').click();
   
 }
 
