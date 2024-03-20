@@ -1,0 +1,115 @@
+[
+    {
+        "checkbox":{
+            "selectorAttr":"#NOAPISIRENCHECBOX[type=checkbox]",
+            "label":" Saisie établissement avec SIRET (API sirene indisponible)",
+            "type" : "checkbox",
+            "value":"NOAPISIRENCHECBOX"
+        },
+        "socialReason":{
+            "selectorAttr":"app-society-with-siret .social-reason input",
+            "value": "mrabet ya m3alem",
+            "label":"Raison sociale",
+            "type" : "input-text"
+        },
+        "manager":{
+            "selectorAttr":"app-society-with-siret .manager input",
+            "value": "mrabet ya m3alem",
+            "label":"Dirigeant",
+            "type" : "input-text"
+        },
+        "codeNaf":{
+            "selectorAttr":"app-society-with-siret .code-naf input",
+            "value": "0",
+            "label":"Code NAF",
+            "type" : "input-text"
+        },
+        "legalForm":{
+            "selectorAttr":"app-society-with-siret .legal-form",
+            "label":"Forme juridique",
+            "labelFilter":"Sté étrangère non immatriculée au RCS",
+            "type" : "dropDown"
+        }
+        ,
+        "country":{
+            "selectorAttr":"app-society-with-siret .address-country",
+            "label":"Pays",
+            "labelFilter":"France",
+            "type" : "dropDown"
+        } ,
+        "postalCode":{
+            "selectorAttr":"app-society-with-siret .adress-postal-code input",
+            "value": "75001",
+            "label":"Code postal",
+            "type" : "input-text"
+        },
+        "streetName":{
+            "selectorAttr":"app-society-with-siret .address-street-name input",
+            "value": "Paris",
+            "label":"Adresse",
+            "type" : "input-text"
+        },
+        "siret":{
+            "selectorAttr":"app-society-with-siret .address-siret-label input",
+            "value": "38684318865452",
+            "label":"SIRET",
+            "type" : "input-text"
+        }
+    },
+    {
+        "checkbox":{
+            "selectorAttr":"#NOAPISIRENCHECBOX[type=checkbox]",
+            "label":" Saisie établissement avec SIRET (API sirene indisponible)",
+            "type" : "checkbox"
+        },
+        "socialReason":{
+            "selectorAttr":"app-society-with-siret .social-reason input",
+            "value": "etablissement1",
+            "label":"Raison sociale",
+            "type" : "input-text"
+        },
+        "manager":{
+            "selectorAttr":"app-society-with-siret .manager input",
+            "value": "etablissement1",
+            "label":"Dirigeant",
+            "type" : "input-text"
+        },
+        "codeNaf":{
+            "selectorAttr":"app-society-with-siret .code-naf input",
+            "value": "0",
+            "label":"Code NAF",
+            "type" : "input-text"
+        },
+        "legalForm":{
+            "selectorAttr":"app-society-with-siret .legal-form",
+            "label":"Forme juridique",
+            "labelFilter":"Sté étrangère non immatriculée au RCS",
+            "type" : "dropDown"
+        }
+        ,
+        "country":{
+            "selectorAttr":"app-society-with-siret .address-country",
+            "label":"Pays",
+            "labelFilter":"France",
+            "type" : "dropDown"
+        } ,
+        "postalCode":{
+            "selectorAttr":"app-society-with-siret .adress-postal-code input",
+            "value": "75002",
+            "label":"Code postal",
+            "type" : "input-text"
+        },
+        "streetName":{
+            "selectorAttr":"app-society-with-siret .address-street-name input",
+            "value": "Paris",
+            "label":"Adresse",
+            "type" : "input-text"
+        },
+        "siret":{
+            "selectorAttr":"app-society-with-siret .address-siret-label input",
+            "value": "36598546268764",
+            "label":"SIRET",
+            "type" : "input-text"
+        }
+    }
+]
