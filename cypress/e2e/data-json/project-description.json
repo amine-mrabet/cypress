@@ -1,9 +1,5 @@
 {
-    "riskPrev":{
-        "selectorAttr":".risk-prev p-checkbox input",
-        "label":"Prévoyance",
-        "type" : "checkbox"
-    },
+
     "riskSante":{
         "selectorAttr":".risk-sante p-checkbox input",
         "label":"Santé",

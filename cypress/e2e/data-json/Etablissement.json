@@ -9,14 +9,14 @@
         },
         "socialReason":{
             "selectorAttr":"app-society-with-siret .social-reason input",
-            "value": "mrabet ya m3alem",
+            "value": "IBD Group Holding 03",
             "label":"Raison sociale",
             "type" : "input-text",
             "random":false
         },
         "manager":{
             "selectorAttr":"app-society-with-siret .manager input",
-            "value": "mrabet ya m3alem",
+            "value": "IBD Group Holding 03",
             "label":"Dirigeant",
             "type" : "input-text",
             "random":false
@@ -31,7 +31,7 @@
         "legalForm":{
             "selectorAttr":"app-society-with-siret .legal-form",
             "label":"Forme juridique",
-            "labelFilter":"Sté étrangère non immatriculée au RCS",
+            "labelFilter":"Société d'assurance à forme mutuelle",
             "type" : "dropDown",
             "random":false
         }
@@ -206,7 +206,7 @@
         "legalForm":{
             "selectorAttr":"app-foreign-compagny .legal-form",
             "label":"Statut juridique",
-            "labelFilter":"Sté étrangère non immatriculée au RCS",
+            "labelFilter":"Société d'assurance à forme mutuelle",
             "type" : "dropDown",
             "random":false
         },
