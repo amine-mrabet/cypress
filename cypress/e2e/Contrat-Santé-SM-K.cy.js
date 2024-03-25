@@ -3,49 +3,49 @@ const b300nqa = require('./profile/b300nqa.json');
 const ETABLISSEMENT = require('./data-json/Etablissement.json');
 const Apporteur = require('./data-json/Apporteur-interlocuteur-inspecteur.json')
 const DESCPROJECT = require('./data-json/project-description.json')
-const DEMOGRAPHY  = require('./data-json/demography.json')
+const DEMOGRAPHY = require('./data-json/demography.json')
 const FILE = require('./data-json/file.json')
 // Generate a random 14-digit number
 const randomNumber14 = Math.floor(10000000000000 + Math.random() * 90000000000000);
 describe('My Web Application Tests', () => {
-    it('create Saisie', () => {
-      cy.visit('/');
-      Login(b012cag.username, b012cag.password)
-      Cypress.on('uncaught:exception', (err, runnable) => {
-        return false;
-      });
-      //
-      const isLoginSuccessful = checkLogin(b012cag.username, b012cag.password, b012cag);
-      if (isLoginSuccessful) {
-        cy.visit('/');
-        cy.wait(3000);
-        cy.get('.create-request button').should('exist').click();
-        addEtablisement();
-        cy.get('#scrollTopBtn').should('exist').click();
-        cy.get('.checkmark-container input[type=checkbox]').first().should('exist').click({ force: true });
-        cy.get('.broker-inspector-info a').should('exist').click();
-        cy.wait(1000);
-        addApporteur()
-        cy.get('.project-description a').should('exist').click();
-        cy.wait(1000);
-        projectDescription()
-        cy.get('.Synthese-saisie a').should('exist').click();
-        cy.wait(1000);
-        cy.get('app-validation-sasie .style-save button').should('exist').click();
-        cy.wait(15000).then(() => {
-          cy.get('.validation-saisie a').should('exist').click();
-        })
-        cy.get(".request-reason").should('exist').click();
-        cy.get(".p-dropdown-filter").should('exist').type("Conquête")
-        cy.get('p-dropdownitem').contains("Conquête").should('exist').click();
-        cy.wait(3000).then(() => {
-          cy.get('app-synthese-saisie .create-project button').should('exist').click();
-        })
-        cy.wait(7000);
-      } else {
-        console.log('Login failed');
-      }
+  it('create Saisie', () => {
+    cy.visit('/');
+    Login(b012cag.username, b012cag.password)
+    Cypress.on('uncaught:exception', (err, runnable) => {
+      return false;
     });
+    //
+    const isLoginSuccessful = checkLogin(b012cag.username, b012cag.password, b012cag);
+    if (isLoginSuccessful) {
+      cy.visit('/');
+      cy.wait(3000);
+      cy.get('.create-request button').should('exist').click();
+      addEtablisement();
+      cy.get('#scrollTopBtn').should('exist').click();
+      cy.get('.checkmark-container input[type=checkbox]').first().should('exist').click({ force: true });
+      cy.get('.broker-inspector-info a').should('exist').click();
+      cy.wait(1000);
+      addApporteur()
+      cy.get('.project-description a').should('exist').click();
+      cy.wait(1000);
+      projectDescription()
+      cy.get('.Synthese-saisie a').should('exist').click();
+      cy.wait(1000);
+      cy.get('app-validation-sasie .style-save button').should('exist').click();
+      cy.wait(15000).then(() => {
+        cy.get('.validation-saisie a').should('exist').click();
+      })
+      cy.get(".request-reason").should('exist').click();
+      cy.get(".p-dropdown-filter").should('exist').type("Conquête")
+      cy.get('p-dropdownitem').contains("Conquête").should('exist').click();
+      cy.wait(3000).then(() => {
+        cy.get('app-synthese-saisie .create-project button').should('exist').click();
+      })
+      cy.wait(7000);
+    } else {
+      console.log('Login failed');
+    }
+  });
 
   it('create Project', () => {
     //login
@@ -67,18 +67,22 @@ describe('My Web Application Tests', () => {
         cy.get('.row-expanded .vp-col-actions .plm-grouped-button button').should('exist').click();
         cy.get(' .ouvrir-action button').should('exist').click();
         cy.wait(3000).then(() => {
-           cy.wait(3000);
+          cy.wait(3000);
           cy.contains('li span', 'Contexte du projet').click();
           cy.get('.risk-sante button').should('exist').click();
           cy.contains('.p-datepicker-buttonbar button span', "Aujourd'hui").click();
           cy.get('#scrollTopBtn').should('exist').click();
           cy.wait(1000);
-          cy.get('.suivant-action button').should('exist').click({waitForAnimations: false});
+          cy.get('.suivant-action button').should('exist').click({ waitForAnimations: false });
           cy.wait(13000);
           addDynamiqueData(DEMOGRAPHY)
-          cy.get('.valider-demographie button').should('exist').click({waitForAnimations: false});
-  
+          cy.get('#scrollTopBtn').should('exist').click();
+          cy.get('.valider-demographie').should('exist').click({ waitForAnimations: false });
+
         })
+        cy.wait(3000);
+        cy.get('.create-etude').should('exist').click({ waitForAnimations: false });
+
       })
 
 

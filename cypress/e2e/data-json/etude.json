@@ -1,8 +1,15 @@
 {
-    "legalForm":{
-        "selectorAttr":".population-chose",
-        "label":"Choix du collège",
-        "labelFilter":"Ensemble du personnel",
+    "typeDeTarification":{
+        "selectorAttr":".typeDeTarification",
+        "label":"Choix du type de tarification",
+        "labelFilter":"Tarification sur garanties",
+        "type" : "dropDown",
+        "random":false
+    },
+    "commercialProduct":{
+        "selectorAttr":".commercialProduct",
+        "label":"Sélection du produit commercial",
+        "labelFilter":"PRODUIT SUR MESURE SANTE KLESIA P",
         "type" : "dropDown",
         "random":false
     },
