@@ -10,6 +10,8 @@ module.exports = defineConfig({
   videosFolder: "cypress/videos", // The folder where recorded videos will be stored
   chromeWebSecurity: false,
   experimentalSourceRewriting: true,
+  defaultCommandTimeout:600000,
+  setupNodeEvents: true,
   e2e: {
     supportFile:false,
     setupNodeEvents(on, config) {},

@@ -4,12 +4,6 @@
         "selectorAttr":".risk-sante p-checkbox input",
         "label":"Santé",
         "type" : "checkbox"
-    },
-    "offerRetenu":{
-        "selectorAttr":".offer-retenu",
-        "label":"offer Retenu",
-        "labelFilter":"SM K",
-        "type" : "dropDown"
     }
     ,
     "recommendedOffer":{
@@ -18,6 +12,12 @@
         "labelFilter":"SM K",
         "type" : "dropDown"
     } ,
+    "offerRetenu":{
+        "selectorAttr":".offer-retenu",
+        "label":"offer Retenu",
+        "labelFilter":"SM K",
+        "type" : "dropDown"
+    },
     
     "regime":{
         "selectorAttr":".request-regime",

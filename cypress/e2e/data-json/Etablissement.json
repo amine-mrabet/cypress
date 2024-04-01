@@ -9,14 +9,14 @@
         },
         "socialReason":{
             "selectorAttr":"app-society-with-siret .social-reason input",
-            "value": "IBD Group Holding 03",
+            "value": "Amine Test Auto 01-04-2024",
             "label":"Raison sociale",
             "type" : "input-text",
             "random":false
         },
         "manager":{
             "selectorAttr":"app-society-with-siret .manager input",
-            "value": "IBD Group Holding 03",
+            "value": "Amine Test Auto  01-04-2024",
             "label":"Dirigeant",
             "type" : "input-text",
             "random":false

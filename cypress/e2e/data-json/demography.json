@@ -1,11 +1,5 @@
 {
-    "legalForm":{
-        "selectorAttr":".population-chose",
-        "label":"Choix du collège",
-        "labelFilter":"Ensemble du personnel",
-        "type" : "dropDown",
-        "random":false
-    },
+
     "celibatiaire-noChilds":{
         "selectorAttr":".celibatiaire-noChilds",
         "value": "10",
@@ -25,6 +19,13 @@
         "value": "30",
         "label":"Célibataires, Veufs, Divorcés, Séparés % global des femmes",
         "type" : "input-text",
+        "random":false
+    },
+    "legalForm":{
+        "selectorAttr":".population-chose",
+        "label":"Choix du collège",
+        "labelFilter":"Ensemble du personnel",
+        "type" : "dropDown",
         "random":false
     },
     "concubins-noChilds":{

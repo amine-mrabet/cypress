@@ -1,0 +1,16 @@
+{
+    "typeDeTarification":{
+        "selectorAttr":".type-de-tarification",
+        "label":"Choix du type de tarification",
+        "labelFilter":"Tarification sur garanties",
+        "type" : "dropDown",
+        "random":false
+    },
+    "commercialProduct":{
+        "selectorAttr":".commercial-product",
+        "label":"Sélection du produit commercial",
+        "labelFilter":"PRODUIT SUR MESURE SANTE KLESIA P",
+        "type" : "dropDown",
+        "random":false
+    }   
+}
