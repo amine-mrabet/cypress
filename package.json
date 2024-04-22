@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "open":"npx cypress open",
-    "cypress:open:debug": "cypress open -d",
+    "cypress:open:debug": "cypress open -d --max-old-space-size=6144",
     "cloud":"npx cypress run --record --key bf99167d-6580-49c1-9267-d4c4dfac9371",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

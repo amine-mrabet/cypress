@@ -6,18 +6,18 @@
         "type" : "checkbox"
     }
     ,
-    "recommendedOffer":{
-        "selectorAttr":".recommended-offer",
-        "label":"Offre préconisée",
-        "labelFilter":"SM K",
-        "type" : "dropDown"
-    } ,
     "offerRetenu":{
         "selectorAttr":".offer-retenu",
         "label":"offer Retenu",
         "labelFilter":"SM K",
         "type" : "dropDown"
     },
+    "recommendedOffer":{
+        "selectorAttr":".recommended-offer",
+        "label":"Offre préconisée",
+        "labelFilter":"SM K",
+        "type" : "dropDown"
+    } ,
     
     "regime":{
         "selectorAttr":".request-regime",

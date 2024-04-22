@@ -9,7 +9,7 @@
     "regimeLabel": {
         "selectorAttr": ".request-regime",
         "label": "Régime",
-        "labelFilter": "Base",
+        "labelFilter": "Base + 3 Options",
         "type": "dropDown",
         "random": false
     },
