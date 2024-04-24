@@ -14,14 +14,17 @@ const PERIMETREETUDE = require('./data-json/perimetre-de-etude.json');
 const nommer_redacteur_technico_commercial = require('./data-json/nommer-redacteur-technico-commercial.json');
 // Generate a random 14-digit number
 const randomNumber14 = Math.floor(10000000000000 + Math.random() * 90000000000000);
+var NUM_PROJET
 describe('My Web Application Tests', () => {
   it('create Saisie', () => {
     cy.visit('/');
     Login(b012cag.username, b012cag.password)
+    Cypress.on('uncaught:exception', (err, runnable) => {
+      Cypress.runner.stop() // Stop the test run
+    });
     Cypress.on('fail', (error, runnable) => {
       Cypress.runner.stop() // Stop the test run
     });
-    //
     const isLoginSuccessful = checkLogin(b012cag.username, b012cag.password, b012cag);
     if (isLoginSuccessful) {
       cy.visit('/');
@@ -42,7 +45,15 @@ describe('My Web Application Tests', () => {
       cy.get(".p-dropdown-filter").should('exist').type("Conquête")
       cy.get('p-dropdownitem').contains("Conquête").should('exist').click();
       cy.get('app-synthese-saisie .create-project button').should('exist').click({ waitForAnimations: false });
-      cy.wait(15000)
+      cy.get(".open-project").should('exist').click({ waitForAnimations: false });
+      cy.wait(7000)
+      cy.url().then(url => {
+        const uri = url.split('/').slice(3).join('/');
+        NUM_PROJET = uri.split('#/project?numProject=').join('')
+         console.log('hani houni', NUM_PROJET);
+       });
+      
+  
     } else {
       console.log('Login failed');
     }
@@ -54,9 +65,10 @@ describe('My Web Application Tests', () => {
     cy.reload(true);
     Login(b300nqa.username, b300nqa.password)
     Cypress.on('uncaught:exception', (err, runnable) => {
-      cy.log('err->>>>>>>>>>>>>>>', err)
-      cy.log('runnable->>>>>>>>>>>>>>>', runnable)
-      return true;
+      Cypress.runner.stop() // Stop the test run
+    });
+    Cypress.on('fail', (error, runnable) => {
+      Cypress.runner.stop() // Stop the test run
     });
 
     const isLoginSuccessful = checkLogin(b300nqa.username, b300nqa.password, b300nqa);
@@ -64,6 +76,8 @@ describe('My Web Application Tests', () => {
       cy.visit('/');
       cy.reload(true);
       cy.get('.search-tabs ul li').eq(1).click();
+      cy.get("#numproject").should('exist').type(NUM_PROJET)
+      cy.get('app-project-project-search-input .search  button').should('exist').click();  
       cy.get('.project-0 .button-expandable-project button').should('exist').click();
       cy.get('.row-expanded .vp-col-actions .plm-grouped-button button').should('exist').click();
       cy.get('.assigner-action button').should('exist').click();
@@ -89,8 +103,8 @@ describe('My Web Application Tests', () => {
       cy.get('.valider-info-contrat').should('exist').click({ waitForAnimations: false });
       cy.wait(5000);
       cy.document().then((doc) => {
-        // Scroll the document to the bottom by 10 pixels
-        doc.documentElement.scrollTop += 70;
+        cy.get('.create-etude').scrollIntoView();
+        //doc.documentElement.scrollTop += 70;
       });
       cy.get('.create-etude').should('exist').click({ waitForAnimations: false });
       cy.wait(1000);
@@ -117,6 +131,8 @@ describe('My Web Application Tests', () => {
       cy.wait(4000);
       cy.visit('/');
       cy.get('.search-tabs ul li').eq(1).click();
+      cy.get("#numproject").should('exist').type(NUM_PROJET)
+      cy.get('app-project-project-search-input .search  button').should('exist').click();
       cy.get('.project-0 .button-expandable-project button').should('exist').click();
       cy.get('.row-expanded .Process_Projet .vp-col-actions .plm-grouped-button button').should('exist').click();
       cy.get('.ouvrir-action button').should('exist').click({ waitForAnimations: false });
@@ -139,16 +155,18 @@ describe('My Web Application Tests', () => {
     cy.reload(true);
     Login(b011jpz.username, b011jpz.password)
     Cypress.on('uncaught:exception', (err, runnable) => {
-      cy.log('err->>>>>>>>>>>>>>>', err)
-      cy.log('runnable->>>>>>>>>>>>>>>', runnable)
-      return true;
+      Cypress.runner.stop() // Stop the test run
     });
-
+    Cypress.on('fail', (error, runnable) => {
+      Cypress.runner.stop() // Stop the test run
+    });
     const isLoginSuccessful = checkLogin(b011jpz.username, b011jpz.password, b011jpz);
     if (isLoginSuccessful) {
       cy.visit('/');
       cy.reload(true);
       cy.get('.search-tabs ul li').eq(1).click();
+      cy.get("#numproject").should('exist').type(NUM_PROJET)
+      cy.get('app-project-project-search-input .search  button').should('exist').click();
       cy.get('.project-0 .button-expandable-project button').should('exist').click();
       cy.get('.row-expanded .vp-col-actions .plm-grouped-button button').should('exist').click();
       cy.get('.assigner-action button').should('exist').click();
@@ -174,9 +192,10 @@ describe('My Web Application Tests', () => {
     cy.reload(true);
     Login(b300nqa.username, b300nqa.password)
     Cypress.on('uncaught:exception', (err, runnable) => {
-      cy.log('err->>>>>>>>>>>>>>>', err)
-      cy.log('runnable->>>>>>>>>>>>>>>', runnable)
-      return true;
+      Cypress.runner.stop() // Stop the test run
+    });
+    Cypress.on('fail', (error, runnable) => {
+      Cypress.runner.stop() // Stop the test run
     });
 
     const isLoginSuccessful = checkLogin(b300nqa.username, b300nqa.password, b300nqa);
@@ -184,6 +203,8 @@ describe('My Web Application Tests', () => {
       cy.visit('/');
       cy.reload(true);
       cy.get('.search-tabs ul li').eq(1).click();
+      cy.get("#numproject").should('exist').type(NUM_PROJET)
+      cy.get('app-project-project-search-input .search  button').should('exist').click();
       cy.get('.project-0 .button-expandable-project button').should('exist').click();
       cy.get('.row-expanded .Process_Cotation .vp-col-actions .plm-grouped-button button').should('exist').click();
       cy.get('.assigner-action button').should('exist').click();
@@ -211,9 +232,10 @@ describe('My Web Application Tests', () => {
     cy.reload(true);
     Login(b011jpz.username, b011jpz.password)
     Cypress.on('uncaught:exception', (err, runnable) => {
-      cy.log('err->>>>>>>>>>>>>>>', err)
-      cy.log('runnable->>>>>>>>>>>>>>>', runnable)
-      return true;
+      Cypress.runner.stop() // Stop the test run
+    });
+    Cypress.on('fail', (error, runnable) => {
+      Cypress.runner.stop() // Stop the test run
     });
 
     const isLoginSuccessful = checkLogin(b011jpz.username, b011jpz.password, b011jpz);
@@ -221,6 +243,8 @@ describe('My Web Application Tests', () => {
       cy.visit('/');
       cy.reload(true);
       cy.get('.search-tabs ul li').eq(1).click();
+      cy.get("#numproject").should('exist').type(NUM_PROJET)
+      cy.get('app-project-project-search-input .search  button').should('exist').click();
       cy.get('.project-0 .button-expandable-project button').should('exist').click();
       cy.get('.row-expanded .vp-col-actions .plm-grouped-button button').should('exist').click();
       cy.get('.assigner-action button').should('exist').click();
@@ -252,23 +276,24 @@ describe('My Web Application Tests', () => {
       console.log('Login failed');
     }
   });
-  it('En Rédaction vers Projet de PC à envoyer', () => {
+   it('En Rédaction vers Projet de PC à envoyer', () => {
     cy.wait(1000);
     cy.visit('/');
-    cy.wait(500);
+    cy.wait(1000);
     cy.reload(true);
     Login(b011juc.username, b011juc.password)
-    Cypress.on('uncaught:exception', (err, runnable) => {
-      cy.log('err->>>>>>>>>>>>>>>', err)
-      cy.log('runnable->>>>>>>>>>>>>>>', runnable)
-      return true;
+    Cypress.on('fail', (error, runnable) => {
+      Cypress.runner.stop() // Stop the test run
     });
 
     const isLoginSuccessful = checkLogin(b011juc.username, b011juc.password, b011juc);
     if (isLoginSuccessful) {
       cy.visit('/');
+      cy.wait(1000);
       cy.reload(true);
       cy.get('.search-tabs ul li').eq(1).click();
+      cy.get("#numproject").should('exist').type(NUM_PROJET)
+      cy.get('app-project-project-search-input .search  button').should('exist').click();
       cy.get('.project-0 .button-expandable-project button').should('exist').click();
       cy.get('.row-expanded .Process_Cotation .vp-col-actions .plm-grouped-button button').should('exist').click();
       cy.get('.assigner-action button').should('exist').click();
@@ -318,23 +343,25 @@ describe('My Web Application Tests', () => {
     cy.reload(true);
     Login(b011jpz.username, b011jpz.password)
     Cypress.on('uncaught:exception', (err, runnable) => {
-      cy.log('err->>>>>>>>>>>>>>>', err)
-      cy.log('runnable->>>>>>>>>>>>>>>', runnable)
-      return true;
+      Cypress.runner.stop() // Stop the test run
     });
-
+    Cypress.on('fail', (error, runnable) => {
+      Cypress.runner.stop() // Stop the test run
+    });
     const isLoginSuccessful = checkLogin(b011jpz.username, b011jpz.password, b011jpz);
     if (isLoginSuccessful) {
       cy.visit('/');
       cy.reload(true);
       cy.get('.search-tabs ul li').eq(1).click();
+      cy.get("#numproject").should('exist').type(NUM_PROJET)
+      cy.get('app-project-project-search-input .search  button').should('exist').click();
       cy.get('.project-0 .button-expandable-project button').should('exist').click();
       cy.get('.row-expanded .vp-col-actions .plm-grouped-button button').should('exist').click();
       cy.get(' .ouvrir-action button').should('exist').click({ waitForAnimations: false });
       cy.get('.actions-cell a').should('exist').click();
       cy.get('app-etude-table .p-panel-icons-end button').should('exist').click();
       cy.get('.tarif-0 .contrats-link').should('exist').click();
-      cy.wait(500);
+      cy.wait(1000);
       cy.get('.check-all p-inputswitch').should('exist').click();
       cy.wait(1000);
       cy.get('.demande-de-retouche-btn button').should('exist').click();
@@ -342,7 +369,7 @@ describe('My Web Application Tests', () => {
     } else {
       console.log('Login failed');
     }
-  }); 
+  });
   it('Demande de retouche vers Projet de PC à envoyer', () => {
     cy.wait(1000);
     cy.visit('/');
@@ -350,9 +377,10 @@ describe('My Web Application Tests', () => {
     cy.reload(true);
     Login(b011juc.username, b011juc.password)
     Cypress.on('uncaught:exception', (err, runnable) => {
-      cy.log('err->>>>>>>>>>>>>>>', err)
-      cy.log('runnable->>>>>>>>>>>>>>>', runnable)
-      return true;
+      Cypress.runner.stop() // Stop the test run
+    });
+    Cypress.on('fail', (error, runnable) => {
+      Cypress.runner.stop() // Stop the test run
     });
 
     const isLoginSuccessful = checkLogin(b011juc.username, b011juc.password, b011juc);
@@ -360,6 +388,8 @@ describe('My Web Application Tests', () => {
       cy.visit('/');
       cy.reload(true);
       cy.get('.search-tabs ul li').eq(1).click();
+      cy.get("#numproject").should('exist').type(NUM_PROJET)
+      cy.get('app-project-project-search-input .search  button').should('exist').click();
       cy.get('.project-0 .button-expandable-project button').should('exist').click();
       cy.get('.row-expanded .Process_Cotation .vp-col-actions .plm-grouped-button button').should('exist').click();
       cy.get(' .ouvrir-action button').should('exist').click({ waitForAnimations: false });
@@ -373,7 +403,7 @@ describe('My Web Application Tests', () => {
       cy.get(".contractStatusDropDown .p-dropdown-trigger").should('exist').click();
       cy.get('p-dropdownitem').contains("Projet PC").should('exist').click();
       cy.wait(1000);
-      cy.get('.changer-status-btn button').should('exist').click({ force: true});
+      cy.get('.changer-status-btn button').should('exist').click({ force: true });
       cy.get('.check-all p-inputswitch').should('exist').click({ waitForAnimations: false });
       cy.wait(500);
       cy.get('.transmettre-pc-btn button').should('exist').click({ waitForAnimations: false });
@@ -390,22 +420,25 @@ describe('My Web Application Tests', () => {
     cy.reload(true);
     Login(b011jpz.username, b011jpz.password)
     Cypress.on('uncaught:exception', (err, runnable) => {
-      cy.log('err->>>>>>>>>>>>>>>', err)
-      cy.log('runnable->>>>>>>>>>>>>>>', runnable)
-      return true;
+      Cypress.runner.stop() // Stop the test run
+    });
+    Cypress.on('fail', (error, runnable) => {
+      Cypress.runner.stop() // Stop the test run
     });
     const isLoginSuccessful = checkLogin(b011jpz.username, b011jpz.password, b011jpz);
     if (isLoginSuccessful) {
       cy.visit('/');
       cy.reload(true);
       cy.get('.search-tabs ul li').eq(1).click();
+      cy.get("#numproject").should('exist').type(NUM_PROJET)
+      cy.get('app-project-project-search-input .search  button').should('exist').click();
       cy.get('.project-0 .button-expandable-project button').should('exist').click();
       cy.get('.row-expanded .vp-col-actions .plm-grouped-button button').should('exist').click();
       cy.get(' .ouvrir-action button').should('exist').click({ waitForAnimations: false });
       cy.get('.actions-cell a').should('exist').click();
       cy.get('app-etude-table .p-panel-icons-end button').should('exist').click();
       cy.get('.tarif-0 .contrats-link').should('exist').click();
-      cy.wait(500);
+      cy.wait(1000);
       cy.get('.check-all p-inputswitch').should('exist').click();
       cy.wait(1000);
       cy.get('.envoyer-btn button').should('exist').click();
@@ -417,7 +450,7 @@ describe('My Web Application Tests', () => {
     } else {
       console.log('Login failed');
     }
-  });
+  }); 
   it('Projet de PC Validé vers PC à envoyer', () => {
     cy.wait(1000);
     cy.visit('/');
@@ -425,9 +458,10 @@ describe('My Web Application Tests', () => {
     cy.reload(true);
     Login(b011juc.username, b011juc.password)
     Cypress.on('uncaught:exception', (err, runnable) => {
-      cy.log('err->>>>>>>>>>>>>>>', err)
-      cy.log('runnable->>>>>>>>>>>>>>>', runnable)
-      return true;
+      Cypress.runner.stop() // Stop the test run
+    });
+    Cypress.on('fail', (error, runnable) => {
+      Cypress.runner.stop() // Stop the test run
     });
 
     const isLoginSuccessful = checkLogin(b011juc.username, b011juc.password, b011juc);
@@ -435,20 +469,22 @@ describe('My Web Application Tests', () => {
       cy.visit('/');
       cy.reload(true);
       cy.get('.search-tabs ul li').eq(1).click();
+      cy.get("#numproject").should('exist').type(NUM_PROJET)
+      cy.get('app-project-project-search-input .search  button').should('exist').click();
       cy.get('.project-0 .button-expandable-project button').should('exist').click();
       cy.get('.row-expanded .Process_Cotation .vp-col-actions .plm-grouped-button button').should('exist').click();
       cy.get(' .ouvrir-action button').should('exist').click({ waitForAnimations: false });
-      cy.wait(500);
+      cy.wait(1000);
       cy.get('.actions-cell a').should('exist').click({ waitForAnimations: false });
       cy.get('app-etude-table .p-panel-icons-end button').should('exist').click({ waitForAnimations: false });
       cy.get('.tarif-0 .contrats-link').should('exist').click({ waitForAnimations: false });
-      cy.wait(500);
+      cy.wait(1000);
       cy.get('.check-all p-inputswitch').should('exist').click({ waitForAnimations: false });
       cy.wait(1000);
       cy.get(".contractStatusDropDown .p-dropdown-trigger").should('exist').click();
       cy.get('p-dropdownitem').contains("PC définitives").should('exist').click();
       cy.wait(1000);
-      cy.get('.changer-status-btn button').should('exist').click({ force: true});
+      cy.get('.changer-status-btn button').should('exist').click({ force: true });
       cy.get('.check-all p-inputswitch').should('exist').click({ waitForAnimations: false });
       cy.wait(1000);
       cy.get('.meg-btn button').should('exist').click({ waitForAnimations: false });
@@ -457,7 +493,7 @@ describe('My Web Application Tests', () => {
       cy.get(".contractStatusDropDown .p-dropdown-trigger").should('exist').click();
       cy.get('p-dropdownitem').contains("PC à envoyer").should('exist').click();
       cy.wait(1000);
-      cy.get('.changer-status-btn button').should('exist').click({ force: true});
+      cy.get('.changer-status-btn button').should('exist').click({ force: true });
     } else {
       console.log('Login failed');
     }
@@ -469,36 +505,42 @@ describe('My Web Application Tests', () => {
     cy.reload(true);
     Login(b011jpz.username, b011jpz.password)
     Cypress.on('uncaught:exception', (err, runnable) => {
-      cy.log('err->>>>>>>>>>>>>>>', err)
-      cy.log('runnable->>>>>>>>>>>>>>>', runnable)
-      return true;
+      Cypress.runner.stop() // Stop the test run
+    });
+    Cypress.on('fail', (error, runnable) => {
+      Cypress.runner.stop() // Stop the test run
     });
     const isLoginSuccessful = checkLogin(b011jpz.username, b011jpz.password, b011jpz);
     if (isLoginSuccessful) {
       cy.visit('/');
       cy.reload(true);
       cy.get('.search-tabs ul li').eq(1).click();
-      cy.get('.project-0 .button-expandable-project button').should('exist').click();
-
-      cy.get('.row-expanded .vp-col-actions .plm-grouped-button button').should('exist').click();
-      cy.get(' .ouvrir-action button').should('exist').click({ waitForAnimations: false });
+      cy.get("#numproject").should('exist').type(NUM_PROJET)
+      cy.get('app-project-project-search-input .search  button').should('exist').click();
+      cy.get('.project-0 .vp-col-actions app-view-row-navigator button').should('exist').click();
+      cy.contains('li span', "Tableau d'émission").click({ waitForAnimations: false });
+      cy.wait(1000);
       cy.get('.actions-cell a').should('exist').click();
       cy.get('app-etude-table .p-panel-icons-end button').should('exist').click();
       cy.get('.tarif-0 .contrats-link').should('exist').click();
-      cy.wait(500);
+      cy.wait(1000);
       cy.get('.check-all p-inputswitch').should('exist').click();
       cy.wait(1000);
       cy.get('.envoyer-btn button').should('exist').click();
-      cy.wait(10000);
+      cy.get('.confirmer-btn button').should('exist').click({ force: true });
+
+      cy.wait(5000);
+      cy.get('.check-all p-inputswitch').should('exist').click();
       cy.get(".contractStatusDropDown .p-dropdown-trigger").should('exist').click();
       cy.get('p-dropdownitem').contains("PC signées").should('exist').click();
       cy.wait(1000);
-      cy.get('.changer-status-btn button').should('exist').click({ force: true});
-      cy.wait(10000);
+      cy.get('.changer-status-btn button').should('exist').click({ force: true });
+
+      cy.get('.check-all p-inputswitch').should('exist').click();
       cy.get(".contractStatusDropDown .p-dropdown-trigger").should('exist').click();
       cy.get('p-dropdownitem').contains("Mis en gestion").should('exist').click();
       cy.wait(1000);
-      cy.get('.changer-status-btn button').should('exist').click({ force: true});
+      cy.get('.changer-status-btn button').should('exist').click({ force: true });
     } else {
       console.log('Login failed');
     }
@@ -532,17 +574,14 @@ function generateDoc() {
   // Check if the button does not have the 'disabled' attribute
   cy.get('.check-all p-inputswitch').should('exist').click({ waitForAnimations: false });
   cy.get('.check-all p-inputswitch').should('exist').click({ waitForAnimations: false });
- 
+
   cy.get('.telecharger-btn button').invoke('attr', 'disabled').then((disabledAttr) => {
-    if (!disabledAttr) {
-      cy.visit('/');
-    } else {
+    if (disabledAttr) {
       cy.get('.generer-documents-btn').should('exist').click({ waitForAnimations: false });
       cy.wait(30000);
       cy.get('.contracts-title button').should('exist').click();
       cy.wait(2000);
       generateDoc()
-
     }
   });
 }

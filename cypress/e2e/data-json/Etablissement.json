@@ -9,14 +9,14 @@
         },
         "socialReason":{
             "selectorAttr":"app-society-with-siret .social-reason input",
-            "value": "FBI",
+            "value": "lindt",
             "label":"Raison sociale",
             "type" : "input-text",
             "random":false
         },
         "manager":{
             "selectorAttr":"app-society-with-siret .manager input",
-            "value": "FBI",
+            "value": "lindt",
             "label":"Dirigeant",
             "type" : "input-text",
             "random":false
