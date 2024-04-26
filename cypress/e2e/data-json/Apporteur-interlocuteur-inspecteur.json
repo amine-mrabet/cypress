@@ -1,7 +1,7 @@
 {
     "brokerCode":{
         "selectorAttr":"app-apporteur-inspecteur .broker-code input",
-        "value": "G100",
+        "value": "G100-BARRAT",
         "label":"Code apporteur",
         "type" : "input-text"
     },

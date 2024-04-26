@@ -8,13 +8,13 @@ const DESCPROJECT = require('./data-json/project-description.json')
 const DEMOGRAPHY = require('./data-json/demography.json')
 const FILE = require('./data-json/file.json')
 const CONTEXTPROJET = require('./data-json/context-projet.json')
-const CONTRACTACUELstatistiques = require('./data-json/contrat-actuel-et-statistiques-sante.json')
+const CONTRACTACUELSTATISTIQUES = require('./data-json/contrat-actuel-et-statistiques-sante.json')
 const ETUDEDIALOG = require('./data-json/etude-dialog.json');
 const PERIMETREETUDE = require('./data-json/perimetre-de-etude.json');
 const nommer_redacteur_technico_commercial = require('./data-json/nommer-redacteur-technico-commercial.json');
 // Generate a random 14-digit number
 const randomNumber14 = Math.floor(10000000000000 + Math.random() * 90000000000000);
-var NUM_PROJET
+var NUM_PROJET = "2024AJ74"
 describe('My Web Application Tests', () => {
   it('create Saisie', () => {
     cy.visit('/');
@@ -40,7 +40,6 @@ describe('My Web Application Tests', () => {
       cy.get('.Synthese-saisie a').should('exist').click();
       cy.get('app-validation-sasie .style-save button').should('exist').click({ waitForAnimations: false });
       cy.get('.validation-saisie a').should('exist').click({ waitForAnimations: false });
-      cy.log();
       cy.get(".request-reason").should('exist').click({ waitForAnimations: false });
       cy.get(".p-dropdown-filter").should('exist').type("Conquête")
       cy.get('p-dropdownitem').contains("Conquête").should('exist').click();
@@ -50,10 +49,7 @@ describe('My Web Application Tests', () => {
       cy.url().then(url => {
         const uri = url.split('/').slice(3).join('/');
         NUM_PROJET = uri.split('#/project?numProject=').join('')
-         console.log('hani houni', NUM_PROJET);
-       });
-      
-  
+  });
     } else {
       console.log('Login failed');
     }
@@ -99,7 +95,7 @@ describe('My Web Application Tests', () => {
       cy.wait(2000);
       cy.contains('li span', 'Contrat actuel et statistiques santé').click();
       cy.wait(2000);
-      addDynamiqueData(CONTRACTACUELstatistiques)
+      addDynamiqueData(CONTRACTACUELSTATISTIQUES)
       cy.get('.valider-info-contrat').should('exist').click({ waitForAnimations: false });
       cy.wait(5000);
       cy.document().then((doc) => {
@@ -289,8 +285,6 @@ describe('My Web Application Tests', () => {
     const isLoginSuccessful = checkLogin(b011juc.username, b011juc.password, b011juc);
     if (isLoginSuccessful) {
       cy.visit('/');
-      cy.wait(1000);
-      cy.reload(true);
       cy.get('.search-tabs ul li').eq(1).click();
       cy.get("#numproject").should('exist').type(NUM_PROJET)
       cy.get('app-project-project-search-input .search  button').should('exist').click();
@@ -321,7 +315,19 @@ describe('My Web Application Tests', () => {
       cy.wait(500);
       cy.get('.check-all p-inputswitch').should('exist').click({ waitForAnimations: false });
       cy.wait(2000);
-      generateDoc()
+      retryFunctionGenerateDoc(() => {
+        cy.wait(3000);
+        cy.get('.telecharger-btn button').invoke('attr', 'disabled').then((disabledAttr) => {
+          if (disabledAttr) {
+            cy.get('.generer-documents-btn').should('exist').click({ waitForAnimations: false });
+            cy.wait(40000);
+            cy.get('.contracts-title button').should('exist').click();
+            cy.get('.check-all p-inputswitch').should('exist').click({ waitForAnimations: false });
+            cy.get('.check-all p-inputswitch').should('exist').click({ waitForAnimations: false });
+          }
+        });
+      }, 3);
+      //generateDoc()
       cy.get(".contractStatusDropDown .p-dropdown-trigger").should('exist').click();
       cy.get('p-dropdownitem ').contains("Projet PC").should('exist').click();
       cy.wait(2000);
@@ -356,7 +362,7 @@ describe('My Web Application Tests', () => {
       cy.get("#numproject").should('exist').type(NUM_PROJET)
       cy.get('app-project-project-search-input .search  button').should('exist').click();
       cy.get('.project-0 .button-expandable-project button').should('exist').click();
-      cy.get('.row-expanded .vp-col-actions .plm-grouped-button button').should('exist').click();
+      cy.get('.row-expanded tr:first-child .vp-col-actions .plm-grouped-button button').should('exist').click();
       cy.get(' .ouvrir-action button').should('exist').click({ waitForAnimations: false });
       cy.get('.actions-cell a').should('exist').click();
       cy.get('app-etude-table .p-panel-icons-end button').should('exist').click();
@@ -433,7 +439,7 @@ describe('My Web Application Tests', () => {
       cy.get("#numproject").should('exist').type(NUM_PROJET)
       cy.get('app-project-project-search-input .search  button').should('exist').click();
       cy.get('.project-0 .button-expandable-project button').should('exist').click();
-      cy.get('.row-expanded .vp-col-actions .plm-grouped-button button').should('exist').click();
+      cy.get('.row-expanded tr:first-child .vp-col-actions .plm-grouped-button button').should('exist').click();
       cy.get(' .ouvrir-action button').should('exist').click({ waitForAnimations: false });
       cy.get('.actions-cell a').should('exist').click();
       cy.get('app-etude-table .p-panel-icons-end button').should('exist').click();
@@ -570,7 +576,7 @@ function Login(username, password) {
   cy.get('input[type=password]').should('exist').type(password);
   cy.get('#kc-form-login input[type=submit]').should('exist').click();
 }
-function generateDoc() {
+/* function generateDoc() {
   // Check if the button does not have the 'disabled' attribute
   cy.get('.check-all p-inputswitch').should('exist').click({ waitForAnimations: false });
   cy.get('.check-all p-inputswitch').should('exist').click({ waitForAnimations: false });
@@ -584,7 +590,24 @@ function generateDoc() {
       generateDoc()
     }
   });
+} */
+function retryFunctionGenerateDoc(func, attemptsLeft) {
+  if (attemptsLeft === 0) {
+      //throw new Error('Toutes les tentatives ont échoué');
+      Cypress.runner.stop()
+  }
+
+  try {
+      func();
+  } catch (error) {
+      // En cas d'échec, réessayer en décrémentant le nombre de tentatives restantes
+      console.log(`La tentative a échoué. Tentatives restantes : ${attemptsLeft}`);
+      retryFunction(func, attemptsLeft - 1);
+  }
 }
+
+
+
 /**
  * 
  */
