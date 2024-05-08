@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "open":"npx cypress open",
+    "generate:report": "npx cypress run --reporter mochawesome",
     "cypress:open:debug": "cypress open -d --max-old-space-size=6144",
     "cloud":"npx cypress run --record --key bf99167d-6580-49c1-9267-d4c4dfac9371",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +13,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
   "devDependencies": {
-    "cypress": "13.3.1"
+    "cypress": "^13.3.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0"
   }
 }
