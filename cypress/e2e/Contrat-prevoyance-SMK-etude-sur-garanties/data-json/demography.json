@@ -1,0 +1,129 @@
+{
+
+    "celibatiaire-noChilds":{
+        "selectorAttr":".celibatiaire-noChilds",
+        "value": "10",
+        "label":"Célibataires, Veufs, Divorcés, Séparés Sans enfant",
+        "type" : "input-text",
+        "random":false
+    },
+    "celibatiaire-withOneChild":{
+        "selectorAttr":".celibatiaire-withOneChild",
+        "value": "20",
+        "label":"Célibataires, Veufs, Divorcés, Séparés Avec au moins 1 enfant",
+        "type" : "input-text",
+        "random":false
+    },
+    "celibatiaire-globalWoman":{
+        "selectorAttr":".celibatiaire-globalWoman",
+        "value": "30",
+        "label":"Célibataires, Veufs, Divorcés, Séparés % global des femmes",
+        "type" : "input-text",
+        "random":false
+    },
+    "legalForm":{
+        "selectorAttr":".population-chose",
+        "label":"Choix du collège",
+        "labelFilter":"Ensemble du personnel",
+        "type" : "dropDown",
+        "random":false
+    },
+    "concubins-noChilds":{
+        "selectorAttr":".concubins-noChilds",
+        "value": "40",
+        "label":"Concubins Sans enfant",
+        "type" : "input-text",
+        "random":false
+    },
+    "concubins-withOneChild":{
+        "selectorAttr":".concubins-withOneChild",
+        "value": "50",
+        "label":"Concubins Avec au moins 1 enfant",
+        "type" : "input-text",
+        "random":false
+    },
+    "mariee-noChilds":{
+        "selectorAttr":".mariee-noChilds",
+        "value": "60",
+        "label":"Mariés, Pacsés Sans enfant",
+        "type" : "input-text",
+        "random":false
+    },
+    "mariee-withOneChild":{
+        "selectorAttr":".mariee-withOneChild",
+        "value": "70",
+        "label":"Mariés, Pacsés Avec au moins 1 enfant",
+        "type" : "input-text",
+        "random":false
+    },
+    "totalChilds":{
+        "selectorAttr":".totalChilds",
+        "value": "150",
+        "label":"Nombre total d'enfants",
+        "type" : "input-text",
+        "random":false
+    },
+    "managerNumber":{
+        "selectorAttr":".managerNumber",
+        "value": "45",
+        "label":"Nombre de cadre",
+        "type" : "input-text",
+        "random":false
+    },
+    "averageEmployeesAge":{
+        "selectorAttr":".averageEmployeesAge",
+        "value": "40",
+        "label":"Age moyen des salariés ",
+        "type" : "input-text",
+        "random":false
+    },
+    "medianEmployeesAge":{
+        "selectorAttr":".medianEmployeesAge",
+        "value": "50",
+        "label":"Age médian des salariés ",
+        "type" : "input-text",
+        "random":false
+    },
+    "base-salaires-tranche":{
+        "selectorAttr":".base-salaires-tranche[type=checkbox]",
+        "label":"Sur base des salaires par tranche ",
+        "type" : "checkbox",
+        "random":false
+    },
+    "ventilationChoise":{
+        "selectorAttr":".ventilationChoise .p-dropdown-trigger",
+        "label":"Choix type de ventilation :",
+        "labelFilter":"TA/TB/TC/TD",
+        "type" : "dropDownNoFilter",
+        "random":false
+    },
+    "totalSalaryTA":{
+        "selectorAttr":".totalSalaryTA",
+        "value": "1200",
+        "label":"TA",
+        "type" : "input-text",
+        "random":false
+    },
+    "totalSalaryTB":{
+        "selectorAttr":".totalSalaryTB",
+        "value": "1300",
+        "label":"TB",
+        "type" : "input-text",
+        "random":false
+    },
+    "totalSalaryTC":{
+        "selectorAttr":".totalSalaryTC",
+        "value": "1400",
+        "label":"TC",
+        "type" : "input-text",
+        "random":false
+    },
+    "totalSalaryTD":{
+        "selectorAttr":".totalSalaryTD",
+        "value": "1500",
+        "label":"T5",
+        "type" : "input-text",
+        "random":false
+    }
+    
+}

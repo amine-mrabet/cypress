@@ -1,0 +1,14 @@
+{
+    "brokerCode":{
+        "selectorAttr":"app-apporteur-inspecteur .broker-code input",
+        "value": "G100-BARRAT",
+        "label":"Code apporteur",
+        "type" : "input-text"
+    },
+    "brokerContactCode":{
+        "selectorAttr":"app-apporteur-inspecteur .broker-contact-code",
+        "label":"Nom interlocuteur",
+        "labelFilter":"STEPHANE LAFITTE- Stephane@yahoo.fr -0145698875",
+        "type" : "dropDown"
+    } 
+}

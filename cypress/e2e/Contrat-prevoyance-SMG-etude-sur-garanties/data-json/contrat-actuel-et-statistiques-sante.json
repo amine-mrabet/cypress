@@ -1,0 +1,138 @@
+{
+    "collegeId": {
+        "selectorAttr": ".college-id",
+        "label": "Collège",
+        "labelFilter": "Ensemble du personnel",
+        "type": "dropDown",
+        "random": false
+    },
+    "regimeLabel": {
+        "selectorAttr": ".request-regime",
+        "label": "Régime",
+        "labelFilter": "Base + 3 Options",
+        "type": "dropDown",
+        "random": false
+    },
+    "structureLabel": {
+        "selectorAttr": ".base-structure",
+        "label": "Structure base",
+        "labelFilter": "Salarié - Conjoint - Enfant",
+        "type": "dropDown",
+        "random": false
+    },
+    "option-structure": {
+        "selectorAttr": ".option-structure",
+        "label": "Structure option",
+        "labelFilter": "Salarié - Conjoint - Enfant",
+        "type": "dropDown",
+        "random": false
+    },
+    
+    "statistic-year-n-2": {
+        "selectorAttr": ".statistic-year-n-2 input[type=radio]",
+        "label": "Année(s) des statistique(s)",
+        "type": "checkbox",
+        "value": "N2",
+        "random": false
+    },
+    "maintain-rate-year-sante": {
+        "selectorAttr": ".cotisation-type-0 .p-dropdown-trigger",
+        "label": "Expression des Cotisations",
+        "labelFilter": "EURO",
+        "type": "dropDownNoFilter",
+        "random": false
+    },
+    "contract-data-old-rate-n-1":{
+        "selectorAttr":" .contract-data-old-rate-n-1 input",
+        "value": "90",
+        "label":"Ancien taux de chargement N-2 ",
+        "type" : "input-text",
+        "random":false
+    },
+    "cot-Salarié-Base-0":{
+        "selectorAttr":"#cot-Salarié-Base-0",
+        "value": "10",
+        "label":"Base Salarié",
+        "type" : "input-text",
+        "random":false
+    },
+    "cot-Conjoint-Base-1":{
+        "selectorAttr":"#cot-Conjoint-Base-1",
+        "value": "10",
+        "label":"Base Conjoint",
+        "type" : "input-text",
+        "random":false
+    },
+    "cot-Enfant-Base-2":{
+        "selectorAttr":"#cot-Enfant-Base-2",
+        "value": "10",
+        "label":"Base Enfant",
+        "type" : "input-text",
+        "random":false
+    },
+    "cot-Salarié-Option1-0":{
+        "selectorAttr":"#cot-Salarié-Option1-0",
+        "value": "10",
+        "label":"Option 1 Salarié",
+        "type" : "input-text",
+        "random":false
+    },
+    "cot-Conjoint-Option1-1":{
+        "selectorAttr":"#cot-Conjoint-Option1-1",
+        "value": "10",
+        "label":"Option 1 Conjoint",
+        "type" : "input-text",
+        "random":false
+    },
+    "cot-Enfant-Option1-2":{
+        "selectorAttr":"#cot-Enfant-Option1-2",
+        "value": "10",
+        "label":"Option 1 Enfant",
+        "type" : "input-text",
+        "random":false
+    }
+    ,
+    "cot-Salarié-Option2-0":{
+        "selectorAttr":"#cot-Salarié-Option2-0",
+        "value": "10",
+        "label":"Option 2 Salarié",
+        "type" : "input-text",
+        "random":false
+    },
+    "cot-Conjoint-Option2-1":{
+        "selectorAttr":"#cot-Conjoint-Option2-1",
+        "value": "10",
+        "label":"Option 2 Conjoint",
+        "type" : "input-text",
+        "random":false
+    },
+    "cot-Enfant-Option2-2":{
+        "selectorAttr":"#cot-Enfant-Option2-2",
+        "value": "10",
+        "label":"Option 2 Enfant",
+        "type" : "input-text",
+        "random":false
+    }
+    ,
+    "cot-Salarié-Option3-0":{
+        "selectorAttr":"#cot-Salarié-Option3-0",
+        "value": "10",
+        "label":"Option 3 Salarié",
+        "type" : "input-text",
+        "random":false
+    },
+    "cot-Conjoint-Option3-1":{
+        "selectorAttr":"#cot-Conjoint-Option3-1",
+        "value": "10",
+        "label":"Option 3 Conjoint",
+        "type" : "input-text",
+        "random":false
+    },
+    "cot-Enfant-Option3-2":{
+        "selectorAttr":"#cot-Enfant-Option3-2",
+        "value": "10",
+        "label":"Option 3 Enfant",
+        "type" : "input-text",
+        "random":false
+    }
+}

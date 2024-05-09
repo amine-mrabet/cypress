@@ -1,0 +1,8 @@
+{"maintain-rate-year-sante":{
+    "selectorAttr":".maintain-rate-year-sante .p-dropdown-trigger",
+    "label":"Nombre d'années de maintien de taux possibles",
+    "labelFilter":"Sans maintien de taux",
+    "type" : "dropDownNoFilter",
+    "random":false
+}
+}

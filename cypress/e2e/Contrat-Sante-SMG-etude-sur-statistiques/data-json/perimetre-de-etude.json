@@ -1,0 +1,16 @@
+{
+    "legalForm": {
+        "selectorAttr": ".collegeIdEtude",
+        "label": "Choix du collège",
+        "labelFilter": "Ensemble du personnel",
+        "type": "dropDown",
+        "random": false
+    },
+    "ventilationChoise": {
+        "selectorAttr": ".selection_valorisation .p-dropdown-trigger",
+        "label": "Sélection d'une valorisation ",
+        "labelFilter": "STANDARD",
+        "type": "dropDownNoFilter",
+        "random": false
+    }
+}

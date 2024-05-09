@@ -15,10 +15,10 @@ const nommer_redacteur_technico_commercial = require('./data-json/nommer-redacte
 const COMPLETERETUDE = require('./data-json/completer-etude-accord-client.json');
 // Generate a random 14-digit number
 const randomNumber14 = Math.floor(10000000000000 + Math.random() * 90000000000000);
-var NUM_PROJET =
+var NUM_PROJET
   describe('My Web Application Tests', () => {
 
-    it('create Saisie', () => {
+     it('create Saisie', () => {
       cy.visit('/');
       Login(b012cag.username, b012cag.password)
       Cypress.on('uncaught:exception', (err, runnable) => {
@@ -184,7 +184,7 @@ var NUM_PROJET =
       } else {
         console.log('Login failed');
       }
-    });
+    }); 
     it('validation Accord Client BY souscripteur', () => {
       cy.wait(1000);
       cy.visit('/');
@@ -343,9 +343,9 @@ var NUM_PROJET =
         cy.get("#numproject").should('exist').type(NUM_PROJET)
         cy.get('app-project-project-search-input .search  button').should('exist').click();
         cy.get('.project-0 .button-expandable-project button').should('exist').click();
-        cy.get('.row-expanded .Process_Cotation .vp-col-actions .plm-grouped-button button').should('exist').click();
+/*         cy.get('.row-expanded .Process_Cotation .vp-col-actions .plm-grouped-button button').should('exist').click();
         cy.get('.assigner-action button').should('exist').click();
-        cy.wait(3000);
+        cy.wait(3000); */
         cy.get('.row-expanded .Process_Cotation .vp-col-actions .plm-grouped-button button').should('exist').click();
         cy.get(' .ouvrir-action button').should('exist').click({ waitForAnimations: false });
         cy.wait(500);
@@ -758,6 +758,9 @@ function addDynamiqueData(data) {
     if (data[key].type == 'dropDownNoFilter') {
       cy.get(data[key].selectorAttr).should('exist').click();
       cy.get('p-dropdownitem').contains(data[key].labelFilter).should('exist').click();
+    }
+    if (data[key].type == 'p-selectButton') {
+      cy.get(`.${data[key].labelFilter}`).contains(data[key].labelFilter).click();
     }
   })
 }

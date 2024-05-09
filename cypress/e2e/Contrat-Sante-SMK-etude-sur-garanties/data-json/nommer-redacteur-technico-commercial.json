@@ -1,0 +1,30 @@
+{
+    "redacteurTeamId":{
+        "selectorAttr":".redacteurTeamId",
+        "label":"Liste des équipes rédacteurs",
+        "labelFilter":"Equipe Emission",
+        "type" : "dropDown",
+        "random":false
+    },
+    "redacteurUserId":{
+        "selectorAttr":".redacteurUserId",
+        "label":"Liste des collaborateurs",
+        "labelFilter":"b011juc",
+        "type" : "dropDown",
+        "random":false
+    },
+    "technicoTeamId":{
+        "selectorAttr":".technicoTeamId",
+        "label":"Liste des équipes technico-commercial",
+        "labelFilter":"Equipe TC1",
+        "type" : "dropDown",
+        "random":false
+    },
+    "technicoUserId":{
+        "selectorAttr":".technicoUserId",
+        "label":"Liste des collaborateurs",
+        "labelFilter":"b011jpz",
+        "type" : "dropDown",
+        "random":false
+    }
+}

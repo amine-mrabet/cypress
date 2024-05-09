@@ -37,24 +37,24 @@
         "random":false
     },
     "paymentFrequency":{
-        "selectorAttr":".paymentFrequency .p-dropdown-trigger",
+        "selectorAttr":".paymentFrequency .selectButton",
         "label":"Périodicité de paiement de cotation:",
         "labelFilter":"Mensuel",
-        "type" : "dropDownNoFilter",
+        "type" : "p-selectButton",
         "random":false
     },
-    "paymentTerm":{
-        "selectorAttr":".paymentTerm .p-dropdown-trigger",
+    "paymentTerm": {
+        "selectorAttr": ".paymentTermAvance input[type=radio]",
         "label":"Terme de paiement de cotation:",
-        "labelFilter":"Avance",
-        "type" : "dropDownNoFilter",
-        "random":false
+        "type": "checkbox",
+        "value": "Avance",
+        "random": false
     },
-    "paymentMethod":{
-        "selectorAttr":".paymentMethod .p-dropdown-trigger",
-        "label":"Mode de paiement de cotation:",
-        "labelFilter":"Mode de paiement différent pour les actifs et personnel en maintien collectifAvance",
-        "type" : "dropDownNoFilter",
-        "random":false
+    "paymentMethod": {
+        "selectorAttr": ".paymentTermAvance input[type=radio]",
+        "label":"Mode de paiement différent pour les actifs et personnel en maintien collectifAvance",
+        "type": "checkbox",
+        "value": "Mode de paiement différent pour les actifs et personnel en maintien collectifAvance",
+        "random": false
     }
 }

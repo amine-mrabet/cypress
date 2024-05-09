@@ -1,0 +1,9 @@
+{
+    "typeDeTarification":{
+        "selectorAttr":".type-de-tarification",
+        "label":"Choix du type de tarification",
+        "labelFilter":"Tarification sur garanties",
+        "type" : "dropDown",
+        "random":false
+    } 
+}
