@@ -31,7 +31,7 @@
         "legalForm":{
             "selectorAttr":"app-society-with-siret .legal-form",
             "label":"Forme juridique",
-            "labelFilter":"Sté étrangère non immatriculée au RCS",
+            "value":"Sté étrangère non immatriculée au RCS",
             "type" : "dropDown",
             "random":false
         }
@@ -39,7 +39,7 @@
         "country":{
             "selectorAttr":"app-society-with-siret .address-country",
             "label":"Pays",
-            "labelFilter":"France",
+            "value":"France",
             "type" : "dropDown",
             "random":false
         } ,
@@ -103,7 +103,7 @@
         "adress-pays":{
             "selectorAttr":"app-association-loi .adress-pays",
             "label":"Pays",
-            "labelFilter":"France",
+            "value":"France",
             "type" : "dropDown",
             "random":false
         },
@@ -152,7 +152,7 @@
         "adress-country":{
             "selectorAttr":"app-siret-attribution .adress-country",
             "label":"Pays",
-            "labelFilter":"France",
+            "value":"France",
             "type" : "dropDown",
             "random":false
         },
@@ -206,14 +206,14 @@
         "legalForm":{
             "selectorAttr":"app-foreign-compagny .legal-form",
             "label":"Statut juridique",
-            "labelFilter":"Sté étrangère non immatriculée au RCS",
+            "value":"Sté étrangère non immatriculée au RCS",
             "type" : "dropDown",
             "random":false
         },
         "adress-country":{
             "selectorAttr":"app-foreign-compagny .adress-country",
             "label":"Pays",
-            "labelFilter":"France",
+            "value":"France",
             "type" : "dropDown",
             "random":false
         },

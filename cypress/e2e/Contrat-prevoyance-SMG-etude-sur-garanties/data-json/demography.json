@@ -24,7 +24,7 @@
     "legalForm":{
         "selectorAttr":".population-chose",
         "label":"Choix du collège",
-        "labelFilter":"Ensemble du personnel",
+        "value":"Ensemble du personnel",
         "type" : "dropDown",
         "random":false
     },
@@ -93,7 +93,7 @@
     "ventilationChoise":{
         "selectorAttr":".ventilationChoise .p-dropdown-trigger",
         "label":"Choix type de ventilation :",
-        "labelFilter":"TA/TB/TC/TD",
+        "value":"TA/TB/TC/TD",
         "type" : "dropDownNoFilter",
         "random":false
     },

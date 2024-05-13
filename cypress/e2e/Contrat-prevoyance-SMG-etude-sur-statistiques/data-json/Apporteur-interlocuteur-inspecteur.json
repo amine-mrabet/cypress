@@ -8,7 +8,7 @@
     "brokerContactCode":{
         "selectorAttr":"app-apporteur-inspecteur .broker-contact-code",
         "label":"Nom interlocuteur",
-        "labelFilter":"STEPHANE LAFITTE- Stephane@yahoo.fr -0145698875",
+        "value":"STEPHANE LAFITTE- Stephane@yahoo.fr -0145698875",
         "type" : "dropDown"
     } 
 }

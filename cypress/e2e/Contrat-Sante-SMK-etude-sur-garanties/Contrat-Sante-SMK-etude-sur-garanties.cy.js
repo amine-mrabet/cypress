@@ -1,7 +1,7 @@
-const b012cag = require('./profile/b012cag.json');
-const b300nqa = require('./profile/b300nqa.json');
-const b011jpz = require('./profile/b011jpz.json');
-const b011juc = require('./profile/b011juc.json');
+const b012cag = require('./../profile/b012cag.json');
+const b300nqa = require('./../profile/b300nqa.json');
+const b011jpz = require('./../profile/b011jpz.json');
+const b011juc = require('./../profile/b011juc.json');
 const ETABLISSEMENT = require('./data-json/Etablissement.json');
 const Apporteur = require('./data-json/Apporteur-interlocuteur-inspecteur.json')
 const DESCPROJECT = require('./data-json/project-description.json')
@@ -176,11 +176,10 @@ var NUM_PROJET
         cy.wait(3000);
         cy.get('.actions-cell .actions .p-splitbutton-menubutton').should('exist').click();
         cy.get('#validationAccordClient').should('exist').click();
-        cy.wait(3000);
-
+        cy.wait(6000);
         cy.get('.actions-cell .actions .p-splitbutton-menubutton').should('exist').click();
         cy.get('#confirmAccordClient').should('exist').click();
-        cy.wait(3000);
+        cy.wait(5000);
       } else {
         console.log('Login failed');
       }
@@ -343,9 +342,9 @@ var NUM_PROJET
         cy.get("#numproject").should('exist').type(NUM_PROJET)
         cy.get('app-project-project-search-input .search  button').should('exist').click();
         cy.get('.project-0 .button-expandable-project button').should('exist').click();
-/*         cy.get('.row-expanded .Process_Cotation .vp-col-actions .plm-grouped-button button').should('exist').click();
+        cy.get('.row-expanded .Process_Cotation .vp-col-actions .plm-grouped-button button').should('exist').click();
         cy.get('.assigner-action button').should('exist').click();
-        cy.wait(3000); */
+        cy.wait(3000);
         cy.get('.row-expanded .Process_Cotation .vp-col-actions .plm-grouped-button button').should('exist').click();
         cy.get(' .ouvrir-action button').should('exist').click({ waitForAnimations: false });
         cy.wait(500);
@@ -356,8 +355,8 @@ var NUM_PROJET
           if (nommer_redacteur_technico_commercial[key].type == 'dropDown') {
             cy.wait(500).then(() => {
               cy.get(nommer_redacteur_technico_commercial[key].selectorAttr).should('exist').click();
-              cy.get(".p-dropdown-filter").should('exist').type(nommer_redacteur_technico_commercial[key].labelFilter)
-              cy.get('p-dropdownitem').contains(nommer_redacteur_technico_commercial[key].labelFilter).should('exist').click();
+              cy.get(".p-dropdown-filter").should('exist').type(nommer_redacteur_technico_commercial[key].value)
+              cy.get('p-dropdownitem').contains(nommer_redacteur_technico_commercial[key].value).should('exist').click();
             })
           }
         })
@@ -494,8 +493,8 @@ var NUM_PROJET
         cy.wait(1000);
         cy.get('.envoyer-btn button').should('exist').click();
         cy.get('.confirmer-btn button').should('exist').click();
-        cy.get('.check-all p-inputswitch').should('exist').click();
         cy.wait(5000);
+        cy.get('.check-all p-inputswitch').should('exist').click();
         cy.get('.valider-btn button').should('exist').click();
         cy.get('.check-all p-inputswitch').should('exist').click({ waitForAnimations: false });
       } else {
@@ -675,8 +674,8 @@ function addEtablisement() {
       if (item[key].type == 'dropDown') {
         cy.wait(500).then(() => {
           cy.get(item[key].selectorAttr).should('exist').click();
-          cy.get(".p-dropdown-filter").should('exist').type(item[key].labelFilter)
-          cy.get('p-dropdownitem').contains(item[key].labelFilter).should('exist').click();
+          cy.get(".p-dropdown-filter").should('exist').type(item[key].value)
+          cy.get('p-dropdownitem').contains(item[key].value).should('exist').click();
         })
       }
     })
@@ -694,8 +693,8 @@ function addApporteur() {
   cy.wait(3000)
   cy.get('app-apporteur-inspecteur .broker-code .search-broker-code').should('exist').click();
   cy.get(Apporteur.brokerContactCode.selectorAttr).should('exist').click();
-  cy.get(".p-dropdown-filter").should('exist').type(Apporteur.brokerContactCode.labelFilter)
-  cy.get('p-dropdownitem').contains(Apporteur.brokerContactCode.labelFilter).should('exist').click();
+  cy.get(".p-dropdown-filter").should('exist').type(Apporteur.brokerContactCode.value)
+  cy.get('p-dropdownitem').contains(Apporteur.brokerContactCode.value).should('exist').click();
   cy.get('app-apporteur-inspecteur .siret-preconised input').invoke('val').then(value => {
     cy.get('app-apporteur-inspecteur .siren-dropdown input').should('exist').clear({ force: true });
     cy.get('app-apporteur-inspecteur .siren-dropdown input').should('exist').type(value, { force: true });
@@ -720,8 +719,8 @@ function projectDescription() {
     if (DESCPROJECT[key].type == 'dropDown') {
       cy.wait(500).then(() => {
         cy.get(DESCPROJECT[key].selectorAttr).should('exist').click();
-        cy.get(".p-dropdown-filter").should('exist').type(DESCPROJECT[key].labelFilter)
-        cy.get('p-dropdownitem').contains(DESCPROJECT[key].labelFilter).should('exist').click();
+        cy.get(".p-dropdown-filter").should('exist').type(DESCPROJECT[key].value)
+        cy.get('p-dropdownitem').contains(DESCPROJECT[key].value).should('exist').click();
       })
 
     }
@@ -750,17 +749,17 @@ function addDynamiqueData(data) {
     if (data[key].type == 'dropDown') {
       cy.wait(500).then(() => {
         cy.get(data[key].selectorAttr).should('exist').click();
-        cy.get(".p-dropdown-filter").should('exist').type(data[key].labelFilter)
-        cy.get('p-dropdownitem').contains(data[key].labelFilter).should('exist').click();
+        cy.get(".p-dropdown-filter").should('exist').type(data[key].value)
+        cy.get('p-dropdownitem').contains(data[key].value).should('exist').click();
       })
 
     }
     if (data[key].type == 'dropDownNoFilter') {
       cy.get(data[key].selectorAttr).should('exist').click();
-      cy.get('p-dropdownitem').contains(data[key].labelFilter).should('exist').click();
+      cy.get('p-dropdownitem').contains(data[key].value).should('exist').click();
     }
     if (data[key].type == 'p-selectButton') {
-      cy.get(`.${data[key].labelFilter}`).contains(data[key].labelFilter).click();
+      cy.get(`.${data[key].value}`).contains(data[key].value).click();
     }
   })
 }

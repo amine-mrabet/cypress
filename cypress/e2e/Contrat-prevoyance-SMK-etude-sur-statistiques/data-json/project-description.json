@@ -9,20 +9,20 @@
     "offerRetenu":{
         "selectorAttr":".offer-retenu",
         "label":"offer Retenu",
-        "labelFilter":"SM G",
+        "value":"SM G",
         "type" : "dropDown"
     },
     "recommendedOffer":{
         "selectorAttr":".recommended-offer",
         "label":"Offre préconisée",
-        "labelFilter":"SM G",
+        "value":"SM G",
         "type" : "dropDown"
     } ,
     
     "regime":{
         "selectorAttr":".request-regime",
         "label":"Régime",
-        "labelFilter":"Obligatoire",
+        "value":"Obligatoire",
         "type" : "dropDown"
     },
     

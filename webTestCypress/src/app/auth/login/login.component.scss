@@ -1,0 +1,24 @@
+p {
+    font-family: Lato;
+  }
+  
+  
+  .form-control-feedback{
+        animation: 1.0s alertAnim forwards;
+  }
+  .card{
+    width: 550px !important;
+    padding: 20px;
+  }
+  
+  @keyframes alertAnim {
+      from {
+          opacity:0;
+          transform: translateY(-20px);
+      }
+      to {
+          opacity:1;
+          transform: translateY(0);
+      }
+  }
+  

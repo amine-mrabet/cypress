@@ -31,14 +31,14 @@
         "legalForm": {
             "selectorAttr": "app-society-with-siret .legal-form",
             "label": "Forme juridique",
-            "labelFilter": "Société européenne",
+            "value": "Société européenne",
             "type": "dropDown",
             "random": false
         },
         "country": {
             "selectorAttr": "app-society-with-siret .address-country",
             "label": "Pays",
-            "labelFilter": "France",
+            "value": "France",
             "type": "dropDown",
             "random": false
         },

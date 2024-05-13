@@ -1,29 +1,31 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { JsonEditorComponent } from './json-editor/json-editor.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms'
-import { JsonEditorService } from './services/json-editor.service';
-import { HttpClientModule } from '@angular/common/http';
-import { MenuModule } from 'primeng/menu';
+import { AuthModule } from './auth/auth.module';
+import { requestInterceptorProvider } from './shared/services/request-interceptor.service';
+import { CookieService } from 'ngx-cookie-service';
+import { SharedModule } from './shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    JsonEditorComponent
+    AppComponent
   ],
   imports: [
+    SharedModule,
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    MenuModule
+    CommonModule,
+    AuthModule,
+    AppRoutingModule
   ],
-  providers: [JsonEditorService],
-  bootstrap: [AppComponent]
+  providers: [requestInterceptorProvider, CookieService],
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

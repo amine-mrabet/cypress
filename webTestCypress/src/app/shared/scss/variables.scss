@@ -1,0 +1,106 @@
+/** Global colors **/
+$base-color: #000000 !default;
+$secondary-color: #ff0000 !default;
+$secondary-color-light: #ff8160 !default;
+$secondary-color-hover: #aa1e0e !default;
+$disabled-color: #999999 !default;
+$workspace-color: #1f2636 !default;
+
+$success-color: #15d1b6;
+$info-color: #28c2f6;
+$warn-color: #ffa012;
+$error-color: #fe375f;
+$login-error-msg  : #ab1a0f;
+$label-color: #666666;
+$fa-color:#9fa4b8;
+$input-text-border-color:#82899b;
+$input-text-background-color:#0a111f;
+
+$icon-hover: #B2B9CC !default;
+$text-neutral: #333333 !default;
+$border-neutral: #999999 !default;
+$border-neutral-dark: #666 !default;
+$purple-color:#8e60fe!default;
+$green-color:#07e079!default;
+$blue-color:#628ff9!default;
+/** Data inputs **/
+$input-dropdown-height: 36px !default;
+$input-dropdown-item-focus-bg: #e7e7e7 !default;
+$input-radio-size: 24px !default;
+$input-checkbox-size: 24px !default;
+$input-toggleswitch-size: 24px !default;
+$input-toggleswitch-width: 42px !default;
+$input-radio-cercle-size: 12px !default;
+$input-disabled-state-background: #f5f5f5 !default;
+$input-disabled-state-border: #d1d1d1 !default;
+$input-border-color: #ccc !default;
+$input-border-size: 1px !default;
+$input-border-radius: 4px !default;
+$input-focus-border-color: #333d56 !default;
+$input-hover-border-color: #efeeef !default;
+$input-placeholder-color: #999 !default;
+
+/* Sidebar */
+$sidebar-color: #000000 !default;
+$secondary-sidebar-color: #ff0000 !default;
+
+/* a links */
+$dropdown-hover-text: #445292 !default;
+$dropdown-hover-bg : #b2b9cc !default;
+
+$gradient-color: #333d56 !default;
+$night-brik-color: #ff0000 !default;
+$base-text-color: #3e3d43;
+$default-color: #333333 !default;
+$main-bg-color: #f9fafb !default;
+$second-screen-bg: rgb(255, 255, 255) !default;
+$error-color: #c62828 !default;
+$dark-color: #383e44 !default;
+$white-color: #ffffff !default;
+$light-base-color: #f8e7ed !default;
+$text-color-button-reset: #bebdcb !default;
+$border-light: #f3f3f3 !default;
+$gray-color: #686670 !default;
+$grid-hover-color: rgba(235, 236, 241, 0.9) !default;
+$gray-white: #f4f4f6 !default;
+$text-color-footer-login :#fff;
+$border-group: #ccc !default;
+$border-header: #a4a3a3 !default;
+$gradient-back-ground: linear-gradient(to right, $base-color, $gradient-color);
+$background-color-login-page:linear-gradient(to right, $base-color, $gradient-color);
+
+/** Card **/
+$card-max-height: 500px;
+$card-margin: 20px;
+$card-width: auto;
+/** Fonts **/
+$font-family: Lato, 'Helvetica Neue', sans-serif !default;
+$font-size-small: 12px !default;
+$font-size-medium: 14px !default;
+$font-size-large: 16px !default;
+$font-size-xlarge: 18px !default;
+/** Sizes **/
+$header-height: 70px !default;
+$footer-height: 60px !default;
+$button-heigth: 36px !default;
+$side-bar-width: 256px !default;
+$screen-margin: 4%;
+
+/** Breakpoints **/
+$xs: 576px !default;
+$sm: 768px !default;
+$md: 992px !default;
+$lg: 1200px !default;
+
+/* Input */
+$readonly-bg: #f6f6f6 !default;
+
+/** Common css properties **/
+/**  Global widths**/
+$full-width: 100% !default;
+$text-center: center !default;
+$absolute-position: absolute !default;
+$radius-dropdown: 5px !default;
+
+/* messages */
+$messages-size: 15px !default;

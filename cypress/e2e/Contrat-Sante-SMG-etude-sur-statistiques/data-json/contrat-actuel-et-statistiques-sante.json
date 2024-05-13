@@ -2,28 +2,28 @@
     "collegeId": {
         "selectorAttr": ".college-id",
         "label": "Collège",
-        "labelFilter": "Ensemble du personnel",
+        "value": "Ensemble du personnel",
         "type": "dropDown",
         "random": false
     },
     "regimeLabel": {
         "selectorAttr": ".request-regime",
         "label": "Régime",
-        "labelFilter": "Base + 3 Options",
+        "value": "Base + 3 Options",
         "type": "dropDown",
         "random": false
     },
     "structureLabel": {
         "selectorAttr": ".base-structure",
         "label": "Structure base",
-        "labelFilter": "Salarié - Conjoint - Enfant",
+        "value": "Salarié - Conjoint - Enfant",
         "type": "dropDown",
         "random": false
     },
     "option-structure": {
         "selectorAttr": ".option-structure",
         "label": "Structure option",
-        "labelFilter": "Salarié - Conjoint - Enfant",
+        "value": "Salarié - Conjoint - Enfant",
         "type": "dropDown",
         "random": false
     },
@@ -38,7 +38,7 @@
     "maintain-rate-year-sante": {
         "selectorAttr": ".cotisation-type-0 .p-dropdown-trigger",
         "label": "Expression des Cotisations",
-        "labelFilter": "EURO",
+        "value": "EURO",
         "type": "dropDownNoFilter",
         "random": false
     },

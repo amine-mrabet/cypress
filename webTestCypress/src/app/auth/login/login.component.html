@@ -1,0 +1,42 @@
+<div >
+    <div class="card">
+        <div class="card-block">
+            <div>
+                <form [formGroup]="form" novalidate>
+                    <div class="form-group"
+                        [class.has-danger]="((form.get('username')?.hasError('required')) )&& form.get('username')?.touched">
+                        <label for="exampleInputEmail1">User Name</label>
+                        <input formControlName="username" type="text" class="form-control" id="exampleInputEmail1"
+                            [class.form-control-danger]="form.get('username')?.hasError('required') && form.get('username')?.touched"
+                            placeholder="Enter User Name">
+                        <div *ngIf="form.get('username')?.hasError('required') && form.get('username')?.touched"
+                            class="form-control-feedback">Username required</div>
+
+                    </div>
+                    <div class="form-group"
+                        [class.has-danger]="(form.get('password')?.hasError('required') || form.get('password')?.hasError('minlength')) && form.get('password')?.touched">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input formControlName="password" type="password" class="form-control"
+                            id="exampleInputPassword1"
+                            [class.form-control-danger]="form.get('password')?.hasError('required') && form.get('password')?.touched"
+                            placeholder="Password">
+
+                        <div *ngIf="form.get('password')?.hasError('required') && form.get('password')?.touched"
+                            class="form-control-feedback">Password required</div>
+
+                        <div *ngIf="form.get('password')?.hasError('minlength') && form.get('password')?.touched"
+                            class="form-control-feedback">Minimum length is 6 characters. Add more!</div>
+
+
+                    </div>
+
+
+                    <button type="submit" (click)="login()" class="btn btn-primary">Submit</button>
+
+                    <button type="submit" (click)="onReset()" class="btn">Clear </button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

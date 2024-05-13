@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <!-- <textarea class="form-control" [(ngModel)]="fileContent" rows="20" cols="50"></textarea> -->
+            <!-- <json-editor [debug]="true" [options]="editorOptions" [data]="fileContent" [(ngModel)]="fileContent"></json-editor> -->
+            <form *ngIf="fileContent" [formGroup]="form">
+                <json-editor [options]="editorOptions" formControlName="myinput">
+                </json-editor>
+            </form>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-9"></div>
+        <div class="col-lg-3">
+            <p-button (onClick)="saveFile()" icon="pi pi-check" label="save"></p-button>
+        </div>
+        
+    </div>
+</div>

@@ -3,21 +3,21 @@
     "collegecontractuel":{
         "selectorAttr":"app-insured-item-all-etude app-dynamic-element .insuredItemParameter .p-dropdown-trigger",
         "label":"Collège contractuel(catégorie objective) :",
-        "labelFilter":"possible value1",
+        "value":"possible value1",
         "type" : "dropDownNoFilter",
         "random":false
     },
     "SANTE_SM_G_1_pdtcom_type_affiliation":{
         "selectorAttr":".SANTE_SM_G_1_pdtcom_type_affiliation .p-dropdown-trigger",
         "label":"Type d'affiliation :",
-        "labelFilter":"AFCE : Affiliations facultatives du Conjoint et de l’enfant",
+        "value":"AFCE : Affiliations facultatives du Conjoint et de l’enfant",
         "type" : "dropDownNoFilter",
         "random":false
     },
     "SANTE_SM_G_1_pdtcom_maintien_garantie_peripherique":{
         "selectorAttr":".SANTE_SM_G_1_pdtcom_maintien_garantie_peripherique .p-dropdown-trigger",
         "label":"Maintien des garanties périphériques :",
-        "labelFilter":"Non",
+        "value":"Non",
         "type" : "dropDownNoFilter",
         "random":false
     }
@@ -39,7 +39,7 @@
     "paymentFrequency":{
         "selectorAttr":".paymentFrequency .selectButton",
         "label":"Périodicité de paiement de cotation:",
-        "labelFilter":"Mensuel",
+        "value":"Mensuel",
         "type" : "p-selectButton",
         "random":false
     },

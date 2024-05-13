@@ -38,7 +38,18 @@ export class JsonEditorService {
 
     return this.http.post<any[]>(`${BASE_PATH}/updateFile`, body, { params: params, headers: headers });
   }
-  runCypress(): Observable<any> {
-    return this.http.get<any>(`${BASE_PATH}/runcypress`)
+  runCypress(folder?:any): Observable<any> {
+    let params = new HttpParams();
+    if (folder !== undefined && folder !== null) {
+      params = params.append('folder', folder.toString());
+    }
+    return this.http.get<any>(`${BASE_PATH}/runcypress`, { params: params })
+  }
+  getVideos(folder?:any) {
+    let params = new HttpParams();
+    if (folder !== undefined && folder !== null) {
+      params = params.append('folder', folder.toString());
+    }
+    return this.http.get(`${BASE_PATH}/getVideo`, { responseType: 'blob' ,params: params})
   }
 }

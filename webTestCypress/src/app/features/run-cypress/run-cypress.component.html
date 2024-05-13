@@ -1,0 +1,16 @@
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <p-dropdown  [filter]="true" filterBy="name" [options]="folders" class="list-folder" [(ngModel)]="folder" optionLabel="name" [showClear]="true"
+                placeholder="Select folder for run Cypress"></p-dropdown>
+            </div>
+            <div class="col-lg-3"><p-button (onClick)="runCypress()" icon="pi pi-check" label="Run Cypress"></p-button></div>
+        </div>
+        <div *ngIf="showVideo" class="row" style="margin-top: 25px;">
+            <div class="col-lg-10">
+                <video controls [src]="videoUrl" width="900" height="500"></video>
+            </div>
+        </div>
+    </div>    
+    

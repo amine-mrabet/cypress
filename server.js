@@ -2,19 +2,19 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
-
 const app = express();
 const port = 3000;
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
-
+app.use(express.json({ limit: '300mb' }));
 app.get('/cypress/runcypress', (req, res) => {
     
-    exec(`npx cypress run --reporter mochawesome --reporter-options "reportDir=${req.query.folder},reportFilename=${req.query.folder}.cy.js"`, (error, stdout, stderr) => {
+    exec(`npx cypress run --reporter mochawesome --spec cypress/e2e/${req.query.folder}/${req.query.folder}.cy.js`, (error, stdout, stderr) => {
         if (error) {
             console.error(`Cypress execution error: ${error}`);
             return res.status(500).send('Cypress execution failed');
         }
+        
         res.send('Cypress script executed successfully');
     });
 });
@@ -65,6 +65,18 @@ app.get('/cypress/getFolders', (req, res) => {
     });
 
 });
+app.get('/cypress/getVideo', (req, res) => {
+    const filePath = `cypress/videos/${req.query.folder}.cy.js.mp4`;
+    const readStream = fs.createReadStream(filePath);
+    
+    // Handle errors
+    readStream.on('error', (err) => {
+      res.status(500).send('Error reading file');
+    });
+  
+    // Pipe the file stream to the response
+    readStream.pipe(res);
+  });
 
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);

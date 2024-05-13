@@ -2,14 +2,14 @@
     "legalForm": {
         "selectorAttr": ".collegeIdEtude",
         "label": "Choix du collège",
-        "labelFilter": "Ensemble du personnel",
+        "value": "Ensemble du personnel",
         "type": "dropDown",
         "random": false
     },
     "ventilationChoise": {
         "selectorAttr": ".selection_valorisation .p-dropdown-trigger",
         "label": "Sélection d'une valorisation ",
-        "labelFilter": "STANDARD",
+        "value": "STANDARD",
         "type": "dropDownNoFilter",
         "random": false
     }
