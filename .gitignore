@@ -2,3 +2,7 @@
 .vscode
 .angular
 package-lock.json
+cypress/reports/*
+cypress/videos/*
+cypress/downloads/*
+node_modules
