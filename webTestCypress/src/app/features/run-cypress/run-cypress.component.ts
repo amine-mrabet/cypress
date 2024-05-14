@@ -30,6 +30,7 @@ export class RunCypressComponent implements OnInit{
 
     })
   }
+
   videoUrl: string = '';
   fetchVideo() {
     this.service.getVideos(this.folder.code)
