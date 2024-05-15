@@ -26,7 +26,13 @@ export class RunCypressComponent implements OnInit{
   }
   runCypress() {
     this.service.runCypress(this.folder.code).subscribe(data => {
-    this.fetchVideo()
+
+    },(error=>{
+
+    }),()=>{
+    /*   setTimeout(() => {
+        this.fetchVideo()
+      }, 5000); */
 
     })
   }

@@ -1905,17 +1905,17 @@
 
   .p-button {
     color: #ffffff;
-    background: #007bff;
-    border: 1px solid #007bff;
+    background: rgb(5, 145, 80);
+    border: 1px solid rgb(5, 145, 80);
     padding: 0.5rem 0.75rem;
     font-size: 1rem;
     transition: background-color 0.15s, border-color 0.15s, box-shadow 0.15s;
     border-radius: 4px;
   }
   .p-button:enabled:hover {
-    background: #0069d9;
+    background: rgb(0 159 85);
     color: #ffffff;
-    border-color: #0069d9;
+    border-color: rgb(0 159 85);
   }
   .p-button:enabled:active {
     background: #0062cc;

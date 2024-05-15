@@ -17,8 +17,13 @@
   </ng-template>
 
   <ng-template plmTemplate="centerHeader">
-    <h3>Cypress Crysalide</h3>
-    <p-menubar class="menu-horizontal" *ngIf="displayBarMenu && showMenu" [model]="menu" (click)="activeMenu($event)"></p-menubar>
+    <div class="logo-center">
+      <img src="assets/cypress.svg" height="40" width="80" title="Cypress Cryisalide">
+      <h3>Crysalide</h3>
+    </div>
+
+    <p-menubar class="menu-horizontal" *ngIf="displayBarMenu && showMenu" [model]="menu"
+      (click)="activeMenu($event)"></p-menubar>
   </ng-template>
 
   <ng-template plmTemplate="rightHeader">

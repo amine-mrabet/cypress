@@ -41,11 +41,11 @@ export class HomeComponent implements OnInit {
         this.service.getListFilesName(element).subscribe((data: any) => {
           count++;
           this.menu[0].items?.push({
-            label: element,
+            label: element.replace(/-/g, " "),
             icon: 'fa-solid fa-folder-open',
             items: data.map((item: any) => {
               return {
-                label: item,
+                label: item.replace(/-/g, " "),
                 icon: 'fa-solid fa-file',
                 url: `editor/${element}/${item}`,
                 disabled:false,

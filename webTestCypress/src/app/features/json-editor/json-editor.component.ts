@@ -18,7 +18,7 @@ export class CustomJsonEditorComponent implements OnInit {
 
   constructor(private service: JsonEditorService,private route: ActivatedRoute,private fb:FormBuilder) {
     this.editorOptions = new JsonEditorOptions()
-    this.editorOptions.mode = 'tree';
+    this.editorOptions.mode = 'code';
     this.editorOptions.modes = ['code', 'text', 'tree', 'view']
     this.route.params.subscribe(params => {
       this.folder  = params['param1'];

@@ -72,7 +72,7 @@ var NUM_PROJET
       const isLoginSuccessful = checkLogin(b300nqa.username, b300nqa.password, b300nqa);
       if (isLoginSuccessful) {
         cy.visit('/');
-        cy.reload(true);
+        //cy.reload(true);
         cy.get('.search-tabs ul li').eq(1).click();
         cy.get("#numproject").should('exist').type(NUM_PROJET)
         cy.get('app-project-project-search-input .search  button').should('exist').click();
@@ -163,7 +163,7 @@ var NUM_PROJET
       const isLoginSuccessful = checkLogin(b011jpz.username, b011jpz.password, b011jpz);
       if (isLoginSuccessful) {
         cy.visit('/');
-        cy.reload(true);
+        //cy.reload(true);
         cy.get('.search-tabs ul li').eq(1).click();
         cy.get("#numproject").should('exist').type(NUM_PROJET)
         cy.get('app-project-project-search-input .search  button').should('exist').click();
@@ -200,7 +200,7 @@ var NUM_PROJET
       const isLoginSuccessful = checkLogin(b300nqa.username, b300nqa.password, b300nqa);
       if (isLoginSuccessful) {
         cy.visit('/');
-        cy.reload(true);
+        //cy.reload(true);
         cy.get('.search-tabs ul li').eq(1).click();
         cy.get("#numproject").should('exist').type(NUM_PROJET)
         cy.get('app-project-project-search-input .search  button').should('exist').click();
@@ -254,7 +254,7 @@ var NUM_PROJET
       const isLoginSuccessful = checkLogin(b011jpz.username, b011jpz.password, b011jpz);
       if (isLoginSuccessful) {
         cy.visit('/');
-        cy.reload(true);
+        //cy.reload(true);
         cy.get('.search-tabs ul li').eq(1).click();
         cy.get("#numproject").should('exist').type(NUM_PROJET)
         cy.get('app-project-project-search-input .search  button').should('exist').click();
@@ -290,7 +290,7 @@ var NUM_PROJET
       const isLoginSuccessful = checkLogin(b011jpz.username, b011jpz.password, b011jpz);
       if (isLoginSuccessful) {
         cy.visit('/');
-        cy.reload(true);
+        //cy.reload(true);
         cy.get('.search-tabs ul li').eq(1).click();
         cy.get("#numproject").should('exist').type(NUM_PROJET)
         cy.get('app-project-project-search-input .search  button').should('exist').click();
@@ -401,7 +401,7 @@ var NUM_PROJET
       const isLoginSuccessful = checkLogin(b011jpz.username, b011jpz.password, b011jpz);
       if (isLoginSuccessful) {
         cy.visit('/');
-        cy.reload(true);
+        //cy.reload(true);
         cy.get('.search-tabs ul li').eq(1).click();
         cy.get("#numproject").should('exist').type(NUM_PROJET)
         cy.get('app-project-project-search-input .search  button').should('exist').click();
@@ -436,7 +436,7 @@ var NUM_PROJET
       const isLoginSuccessful = checkLogin(b011juc.username, b011juc.password, b011juc);
       if (isLoginSuccessful) {
         cy.visit('/');
-        cy.reload(true);
+        //cy.reload(true);
         cy.get('.search-tabs ul li').eq(1).click();
         cy.get("#numproject").should('exist').type(NUM_PROJET)
         cy.get('app-project-project-search-input .search  button').should('exist').click();
@@ -478,7 +478,7 @@ var NUM_PROJET
       const isLoginSuccessful = checkLogin(b011jpz.username, b011jpz.password, b011jpz);
       if (isLoginSuccessful) {
         cy.visit('/');
-        cy.reload(true);
+        //cy.reload(true);
         cy.get('.search-tabs ul li').eq(1).click();
         cy.get("#numproject").should('exist').type(NUM_PROJET)
         cy.get('app-project-project-search-input .search  button').should('exist').click();
@@ -517,7 +517,7 @@ var NUM_PROJET
       const isLoginSuccessful = checkLogin(b011juc.username, b011juc.password, b011juc);
       if (isLoginSuccessful) {
         cy.visit('/');
-        cy.reload(true);
+        //cy.reload(true);
         cy.get('.search-tabs ul li').eq(1).click();
         cy.get("#numproject").should('exist').type(NUM_PROJET)
         cy.get('app-project-project-search-input .search  button').should('exist').click();
@@ -563,7 +563,7 @@ var NUM_PROJET
       const isLoginSuccessful = checkLogin(b011jpz.username, b011jpz.password, b011jpz);
       if (isLoginSuccessful) {
         cy.visit('/');
-        cy.reload(true);
+        //cy.reload(true);
         cy.get('.search-tabs ul li').eq(1).click();
         cy.get("#numproject").should('exist').type(NUM_PROJET)
         cy.get('app-project-project-search-input .search  button').should('exist').click();
