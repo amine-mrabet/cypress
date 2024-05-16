@@ -31,7 +31,9 @@ export class RequestInterceptorService implements HttpInterceptor {
       catchError((error: any) => {
         // Handle the error
         let errors = this.handleError(error);
-        this.messageService.add({severity:'error', summary:errors.summary, detail:errors.detail});
+        if(error.status !="404"){
+          this.messageService.add({severity:'error', summary:errors.summary, detail:errors.detail});
+        }
         return throwError(error);
       }),
       finalize(() => {

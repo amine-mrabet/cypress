@@ -1,0 +1,51 @@
+{
+    "step1": {
+        "name": "create Saisie",
+        "run": false
+    },
+    "step2": {
+        "name": "create Project",
+        "run": true
+    },
+    "step3": {
+        "name": "Réponse tarifaire en instance",
+        "run": true
+    },
+    "step4": {
+        "name": "validation Accord Client BY souscripteur",
+        "run": true
+    },
+    "step5": {
+        "name": "Demander l’émission",
+        "run": true
+    },
+    "step6": {
+        "name": "structuration",
+        "run": true
+    },
+    "step7": {
+        "name": "En Rédaction vers Projet de PC à envoyer",
+        "run": true
+    },
+    "step8": {
+        "name": "Projet de PC à envoyer vers Demande de retouche",
+        "run": true
+    },
+    "step9": {
+        "name": "Demande de retouche vers Projet de PC à envoyer",
+        "run": true
+    },
+    "step10": {
+        "name": "Projet de PC à envoyer vers Projet de PC Validé",
+        "run": true
+    },
+    "step11": {
+        "name": "Projet de PC Validé vers PC à envoyer",
+        "run": true
+    },
+    "step12": {
+        "name": "PC à envoyer vers Finalisé",
+        "run": true
+    },
+    "projectNumber": ""
+}

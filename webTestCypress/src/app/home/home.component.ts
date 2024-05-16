@@ -45,7 +45,7 @@ export class HomeComponent implements OnInit {
             icon: 'fa-solid fa-folder-open',
             items: data.map((item: any) => {
               return {
-                label: item.replace(/-/g, " "),
+                label: item.replace(/-/g, " ").replace(".json", " "),
                 icon: 'fa-solid fa-file',
                 url: `editor/${element}/${item}`,
                 disabled:false,

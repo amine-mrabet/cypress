@@ -1,0 +1,51 @@
+{
+    "step1": {
+        "name": "create Saisie",
+        "run": false
+    },
+    "step2": {
+        "name": "create Project",
+        "run": false
+    },
+    "step3": {
+        "name": "Réponse tarifaire en instance",
+        "run": false
+    },
+    "step4": {
+        "name": "validation Accord Client BY souscripteur",
+        "run": false
+    },
+    "step5": {
+        "name": "Demander l’émission",
+        "run": false
+    },
+    "step6": {
+        "name": "structuration",
+        "run": false
+    },
+    "step7": {
+        "name": "En Rédaction vers Projet de PC à envoyer",
+        "run": true
+    },
+    "step8": {
+        "name": "Projet de PC à envoyer vers Demande de retouche",
+        "run": false
+    },
+    "step9": {
+        "name": "Demande de retouche vers Projet de PC à envoyer",
+        "run": false
+    },
+    "step10": {
+        "name": "Projet de PC à envoyer vers Projet de PC Validé",
+        "run": false
+    },
+    "step11": {
+        "name": "Projet de PC Validé vers PC à envoyer",
+        "run": false
+    },
+    "step12": {
+        "name": "PC à envoyer vers Finalisé",
+        "run": false
+    },
+    "projectNumber": "2024AK16"
+}

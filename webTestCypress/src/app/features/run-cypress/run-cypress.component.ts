@@ -30,9 +30,6 @@ export class RunCypressComponent implements OnInit{
     },(error=>{
 
     }),()=>{
-    /*   setTimeout(() => {
-        this.fetchVideo()
-      }, 5000); */
 
     })
   }
