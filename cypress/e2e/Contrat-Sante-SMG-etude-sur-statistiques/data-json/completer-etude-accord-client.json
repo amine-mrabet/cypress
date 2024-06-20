@@ -3,7 +3,7 @@
     "collegecontractuel":{
         "selectorAttr":"app-insured-item-all-etude app-dynamic-element .insuredItemParameter .p-dropdown-trigger",
         "label":"Collège contractuel(catégorie objective) :",
-        "value":"possible value1",
+        "value":"Ensemble du personnel",
         "type" : "dropDownNoFilter",
         "random":false
     },

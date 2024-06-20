@@ -5,11 +5,11 @@
     },
     "step2": {
         "name": "create Project",
-        "run": true
+        "run": false
     },
     "step3": {
         "name": "Réponse tarifaire en instance",
-        "run": true
+        "run": false
     },
     "step4": {
         "name": "validation Accord Client BY souscripteur",
@@ -25,27 +25,27 @@
     },
     "step7": {
         "name": "En Rédaction vers Projet de PC à envoyer",
-        "run": true
+        "run": false
     },
     "step8": {
         "name": "Projet de PC à envoyer vers Demande de retouche",
-        "run": true
+        "run": false
     },
     "step9": {
         "name": "Demande de retouche vers Projet de PC à envoyer",
-        "run": true
+        "run": false
     },
     "step10": {
         "name": "Projet de PC à envoyer vers Projet de PC Validé",
-        "run": true
+        "run": false
     },
     "step11": {
         "name": "Projet de PC Validé vers PC à envoyer",
-        "run": true
+        "run": false
     },
     "step12": {
         "name": "PC à envoyer vers Finalisé",
-        "run": true
+        "run": false
     },
-    "projectNumber": ""
+    "projectNumber": "2024AN26"
 }

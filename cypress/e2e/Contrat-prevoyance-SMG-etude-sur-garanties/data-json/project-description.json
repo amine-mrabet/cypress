@@ -1,8 +1,8 @@
 {
 
     "riskSante":{
-        "selectorAttr":".risk-prev p-checkbox input",
-        "label":"prev",
+        "selectorAttr":".risk-sante p-checkbox input",
+        "label":"Santé",
         "type" : "checkbox"
     }
     ,

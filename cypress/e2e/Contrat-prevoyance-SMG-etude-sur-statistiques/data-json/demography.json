@@ -24,7 +24,7 @@
     "legalForm":{
         "selectorAttr":".population-chose",
         "label":"Choix du collège",
-        "value":"Ensemble du personnel",
+        "value":"ENSEMBLE DU PERSONNEL",
         "type" : "dropDown",
         "random":false
     },
