@@ -2,38 +2,16 @@
 
     "collegecontractuel":{
         "selectorAttr":"app-insured-item-all-etude app-dynamic-element .insuredItemParameter .p-dropdown-trigger",
-        "label":"Collège contractuel(catégorie objective) :",
+        "label":"Collèges contractuels :",
         "value":"Ensemble du personnel",
         "type" : "dropDownNoFilter",
         "random":false
     },
     "SANTE_SM_G_1_pdtcom_type_affiliation":{
-        "selectorAttr":".SANTE_SM_G_1_pdtcom_type_affiliation .p-dropdown-trigger",
+        "selectorAttr":".SANTE_SM_G_1_affiliation_CNTR .p-dropdown-trigger",
         "label":"Type d'affiliation :",
-        "value":"AFCE : Affiliations facultatives du Conjoint et de l’enfant",
+        "value":"Affiliations facultatives du Conjoint et de l’enfant",
         "type" : "dropDownNoFilter",
-        "random":false
-    },
-    "SANTE_SM_G_1_pdtcom_maintien_garantie_peripherique":{
-        "selectorAttr":".SANTE_SM_G_1_pdtcom_maintien_garantie_peripherique .p-dropdown-trigger",
-        "label":"Maintien des garanties périphériques :",
-        "value":"Non",
-        "type" : "dropDownNoFilter",
-        "random":false
-    }
-    , 
-    "SANTE_SM_G_1_pdtcom_nom_assistance":{
-        "selectorAttr":".SANTE_SM_G_1_pdtcom_nom_assistance",
-        "value": "Nom de l'assistance",
-        "label":"Nom de l'assistance :",
-        "type" : "input-text",
-        "random":false
-    },
-    "SANTE_SM_G_1_pdtcom_reference_assistance":{
-        "selectorAttr":".SANTE_SM_G_1_pdtcom_reference_assistance",
-        "value": "123545486515",
-        "label":"Référence de l’assistance :",
-        "type" : "input-text",
         "random":false
     },
     "paymentFrequency":{
@@ -51,7 +29,7 @@
         "random": false
     },
     "paymentMethod": {
-        "selectorAttr": ".paymentTermAvance input[type=radio]",
+        "selectorAttr": ".paymentMethoddiff input[type=radio]",
         "label":"Mode de paiement différent pour les actifs et personnel en maintien collectifAvance",
         "type": "checkbox",
         "value": "Mode de paiement différent pour les actifs et personnel en maintien collectifAvance",

@@ -180,6 +180,8 @@ var NUM_PROJET = STEPS.projectNumber != "" ? STEPS.projectNumber : null
           cy.get('.row-expanded .Process_Cotation .vp-col-actions .plm-grouped-button button').should('exist').click();
           cy.get(' .ouvrir-action button').should('exist').click({ waitForAnimations: false });
           cy.wait(3000);
+          cy.get('.p-dialog-header-icons button').should('exist').click({ waitForAnimations: false });
+          cy.wait(1000);
           cy.get('.actions-cell .actions .p-splitbutton-menubutton').should('exist').click();
           cy.get('#validationAccordClient').should('exist').click();
           cy.wait(6000);
@@ -215,7 +217,7 @@ var NUM_PROJET = STEPS.projectNumber != "" ? STEPS.projectNumber : null
           cy.get('.project-0 .button-expandable-project button').should('exist').click();
           cy.get('.row-expanded .Process_Cotation .vp-col-actions .plm-grouped-button button').should('exist').click();
           cy.get('.assigner-action button').should('exist').click();
-          cy.wait(3000);
+          cy.wait(5000);
           cy.get('.row-expanded .Process_Cotation .vp-col-actions .plm-grouped-button button').should('exist').click();
           cy.get(' .ouvrir-action button').should('exist').click({ waitForAnimations: false });
           cy.wait(3000);
@@ -275,6 +277,8 @@ var NUM_PROJET = STEPS.projectNumber != "" ? STEPS.projectNumber : null
           cy.get('.row-expanded .Process_Cotation .vp-col-actions .plm-grouped-button button').should('exist').click();
           cy.get(' .ouvrir-action button').should('exist').click({ waitForAnimations: false });
           cy.wait(3000);
+          cy.get('.p-dialog-header-icons button').should('exist').click({ waitForAnimations: false });
+          cy.wait(1000);
           cy.get('.actions-cell .actions .p-splitbutton-menubutton').should('exist').click();
           cy.get('#demanderEmission').should('exist').click();
           cy.wait(1000);
@@ -307,13 +311,11 @@ var NUM_PROJET = STEPS.projectNumber != "" ? STEPS.projectNumber : null
           cy.get("#numproject").should('exist').type(NUM_PROJET)
           cy.get('app-project-project-search-input .search  button').should('exist').click();
           cy.get('.project-0 .button-expandable-project button').should('exist').click();
-          // TO REMOVE
-          cy.get('.row-expanded .vp-col-actions .plm-grouped-button button').should('exist').click();
-          cy.get('.assigner-action button').should('exist').click();
-          cy.wait(3000);
-          //
-          cy.get('.row-expanded .vp-col-actions .plm-grouped-button button').should('exist').click();
+          cy.get('.row-expanded .Process_Cotation .vp-col-actions .plm-grouped-button button').should('exist').click();
           cy.get(' .ouvrir-action button').should('exist').click({ waitForAnimations: false });
+          cy.wait(3000);
+          cy.get('.p-dialog-header-icons button').should('exist').click({ waitForAnimations: false });
+          cy.wait(1000);
           cy.get('.actions-cell a').should('exist').click();
           cy.get('app-etude-table .p-panel-icons-end button').should('exist').click();
           cy.get('.tarif-0 .contrats-link').should('exist').click();
@@ -364,6 +366,8 @@ var NUM_PROJET = STEPS.projectNumber != "" ? STEPS.projectNumber : null
           cy.get('.row-expanded .Process_Cotation .vp-col-actions .plm-grouped-button button').should('exist').click();
           cy.get(' .ouvrir-action button').should('exist').click({ waitForAnimations: false });
           cy.wait(500);
+          cy.get('.p-dialog-header-icons button').should('exist').click({ waitForAnimations: false });
+          cy.wait(1000);
           cy.get('.actions-cell .actions .p-splitbutton-menubutton').should('exist').click();
           cy.get('#validerDemandeRedaction').should('exist').click();
           cy.wait(3000);

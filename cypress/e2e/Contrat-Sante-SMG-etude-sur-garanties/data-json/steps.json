@@ -13,19 +13,19 @@
     },
     "step4": {
         "name": "validation Accord Client BY souscripteur",
-        "run": true
+        "run": false
     },
     "step5": {
         "name": "Demander l’émission",
-        "run": true
+        "run": false
     },
     "step6": {
         "name": "structuration",
-        "run": true
+        "run": false
     },
     "step7": {
         "name": "En Rédaction vers Projet de PC à envoyer",
-        "run": false
+        "run": true
     },
     "step8": {
         "name": "Projet de PC à envoyer vers Demande de retouche",
@@ -47,5 +47,5 @@
         "name": "PC à envoyer vers Finalisé",
         "run": false
     },
-    "projectNumber": "2024AN26"
+    "projectNumber": "2024AN53"
 }

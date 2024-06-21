@@ -23,7 +23,7 @@
     "technicoUserId":{
         "selectorAttr":".technicoUserId",
         "label":"Liste des collaborateurs",
-        "value":"b011jpz",
+        "value":"Mez Mez",
         "type" : "dropDown",
         "random":false
     }
