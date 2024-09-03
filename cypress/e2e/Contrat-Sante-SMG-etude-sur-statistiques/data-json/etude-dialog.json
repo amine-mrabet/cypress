@@ -2,7 +2,7 @@
     "typeDeTarification":{
         "selectorAttr":".type-de-tarification",
         "label":"Choix du type de tarification",
-        "value":"Tarification sur garanties",
+        "value":"Tarification sur statistiques",
         "type" : "dropDown",
         "random":false
     } 

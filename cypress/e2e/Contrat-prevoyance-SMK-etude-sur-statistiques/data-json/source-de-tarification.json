@@ -1,0 +1,29 @@
+{
+    
+    "statistics": {
+        "selectorAttr": "#statistics-0 input[type=radio]",
+        "label": "statistics",
+        "type": "checkbox"
+    },
+    "yearIncomeStatementAllStaff-2021": {
+        "selectorAttr": "#yearIncomeStatementAllStaff-2021 input[type=checkbox]",
+        "label": "statistics",
+        "type": "checkbox"
+    },
+    "yearIncomeStatementAllStaff-2022": {
+        "selectorAttr": "#yearIncomeStatementAllStaff-2022 input[type=checkbox]",
+        "label": "statistics",
+        "type": "checkbox"
+    },
+    "yearIncomeStatementAllStaff-2023": {
+        "selectorAttr": "#yearIncomeStatementAllStaff-2023 input[type=checkbox]",
+        "label": "statistics",
+        "type": "checkbox"
+    },
+
+    "enterpriseByDemograhpy": {
+        "selectorAttr": "#enterpriseByDemograhpy-0 input[type=checkbox]",
+        "label": "enterpriseByDemograhpy",
+        "type": "checkbox"
+    }
+}

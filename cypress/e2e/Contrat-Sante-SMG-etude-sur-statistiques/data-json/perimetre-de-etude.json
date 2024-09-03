@@ -1,9 +1,17 @@
 {
-    "legalForm": {
-        "selectorAttr": ".collegeIdEtude",
-        "label": "Choix du collège",
-        "value": "ENSEMBLE DU PERSONNEL",
-        "type": "dropDown",
+    
+    "contract-actuel": {
+        "selectorAttr": "#contract-actuel-0 input[type=checkbox]",
+        "label":"contract-actuel",
+        "type": "checkbox",
+        "value": "ISOGARANTIE",
+        "random": false
+    },
+    "Iso-garantie": {
+        "selectorAttr": "#g1 input[type=radio]",
+        "label":"Iso-garantie",
+        "type": "checkbox",
+        "value": "ISOGARANTIE",
         "random": false
     },
     "ventilationChoise": {
@@ -13,4 +21,5 @@
         "type": "dropDownNoFilter",
         "random": false
     }
+    
 }

@@ -1,0 +1,198 @@
+{
+    "inputStatisticalName":{
+        "selectorAttr":".inputStatisticalName",
+        "value": "mrabet",
+        "label":"Nom des statistiques",
+        "type" : "input-text",
+        "random":false
+    },
+    "statistic-contract-0": {
+        "selectorAttr": ".statistic-contract-0[type=checkbox]",
+        "label": "contrat",
+        "type": "checkbox",
+        "value": "",
+        "random": false
+    },    
+    "cotisationRatePart": {
+        "selectorAttr": ".cotisationRatePart-GUARANTEEFAMILY[type=radio]",
+        "label":"Type de compte de résultat",
+        "type": "checkbox",
+        "value": "GUARANTEEFAMILY",
+        "random": false
+    },
+    "yearCotisationRate": {
+        "selectorAttr": ".yearCotisationRate",
+        "value": ["2023", "2022", "2021"],
+        "label": "Année(s) des statistique(s)",
+        "type": "p-multiSelect",
+        "random": false
+    },
+    "deces-2023-0-1":{
+        "selectorAttr":".deces-2023-0-1",
+        "value": "10",
+        "label":"Cotisations brut HT",
+        "type" : "input-text",
+        "random":false
+    },
+    "deces-2023-0-2":{
+        "selectorAttr":".deces-2023-0-2",
+        "value": "10",
+        "label":"Cotisations nettes",
+        "type" : "input-text",
+        "random":false
+    },
+    "deces-2023-0-3":{
+        "selectorAttr":".deces-2023-0-3",
+        "value": "10",
+        "label":"Prestations",
+        "type" : "input-text",
+        "random":false
+    },
+    "deces-2023-0-4":{
+        "selectorAttr":".deces-2023-0-4",
+        "value": "10",
+        "label":"Provisions",
+        "type" : "input-text",
+        "random":false
+    },
+    "deces-2022-1-1":{
+        "selectorAttr":".deces-2022-1-1",
+        "value": "10",
+        "label":"Cotisations brut HT",
+        "type" : "input-text",
+        "random":false
+    },
+    "deces-2022-1-2":{
+        "selectorAttr":".deces-2022-1-2",
+        "value": "10",
+        "label":"Cotisations nettes",
+        "type" : "input-text",
+        "random":false
+    },
+    "deces-2022-1-3":{
+        "selectorAttr":".deces-2022-1-3",
+        "value": "10",
+        "label":"Prestations",
+        "type" : "input-text",
+        "random":false
+    },
+    "deces-2022-1-4":{
+        "selectorAttr":".deces-2022-1-4",
+        "value": "10",
+        "label":"Provisions",
+        "type" : "input-text",
+        "random":false
+    },
+    "deces-2021-2-1":{
+        "selectorAttr":".deces-2021-2-1",
+        "value": "10",
+        "label":"Cotisations brut HT",
+        "type" : "input-text",
+        "random":false
+    },
+    "deces-2021-2-2":{
+        "selectorAttr":".deces-2021-2-2",
+        "value": "10",
+        "label":"Cotisations nettes",
+        "type" : "input-text",
+        "random":false
+    },
+    "deces-2021-2-3":{
+        "selectorAttr":".deces-2021-2-3",
+        "value": "10",
+        "label":"Prestations",
+        "type" : "input-text",
+        "random":false
+    },
+    "deces-2021-2-4":{
+        "selectorAttr":".deces-2021-2-4",
+        "value": "10",
+        "label":"Provisions",
+        "type" : "input-text",
+        "random":false
+    },
+    "incap-inval-2023-0-1":{
+        "selectorAttr":".incap-inval-2023-0-1",
+        "value": "10",
+        "label":"Cotisations brut HT",
+        "type" : "input-text",
+        "random":false
+    },
+    "incap-inval-2023-0-2":{
+        "selectorAttr":".incap-inval-2023-0-2",
+        "value": "10",
+        "label":"Cotisations nettes",
+        "type" : "input-text",
+        "random":false
+    },
+    "incap-inval-2023-0-3":{
+        "selectorAttr":".incap-inval-2023-0-3",
+        "value": "10",
+        "label":"Prestations",
+        "type" : "input-text",
+        "random":false
+    },
+    "incap-inval-2023-0-4":{
+        "selectorAttr":".incap-inval-2023-0-4",
+        "value": "10",
+        "label":"Provisions",
+        "type" : "input-text",
+        "random":false
+    },
+    "incap-inval-2022-1-1":{
+        "selectorAttr":".incap-inval-2022-1-1",
+        "value": "10",
+        "label":"Cotisations brut HT",
+        "type" : "input-text",
+        "random":false
+    },
+    "incap-inval-2022-1-2":{
+        "selectorAttr":".incap-inval-2022-1-2",
+        "value": "10",
+        "label":"Cotisations nettes",
+        "type" : "input-text",
+        "random":false
+    },
+    "incap-inval-2022-1-3":{
+        "selectorAttr":".incap-inval-2022-1-3",
+        "value": "10",
+        "label":"Prestations",
+        "type" : "input-text",
+        "random":false
+    },
+    "incap-inval-2022-1-4":{
+        "selectorAttr":".incap-inval-2022-1-4",
+        "value": "10",
+        "label":"Provisions",
+        "type" : "input-text",
+        "random":false
+    },
+    "incap-inval-2021-2-1":{
+        "selectorAttr":".incap-inval-2021-2-1",
+        "value": "10",
+        "label":"Cotisations brut HT",
+        "type" : "input-text",
+        "random":false
+    },
+    "incap-inval-2021-2-2":{
+        "selectorAttr":".incap-inval-2021-2-2",
+        "value": "10",
+        "label":"Cotisations nettes",
+        "type" : "input-text",
+        "random":false
+    },
+    "incap-inval-2021-2-3":{
+        "selectorAttr":".incap-inval-2021-2-3",
+        "value": "10",
+        "label":"Prestations",
+        "type" : "input-text",
+        "random":false
+    },
+    "incap-inval-2021-2-4":{
+        "selectorAttr":".incap-inval-2021-2-4",
+        "value": "10",
+        "label":"Provisions",
+        "type" : "input-text",
+        "random":false
+    }
+}

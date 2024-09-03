@@ -1,0 +1,122 @@
+{
+    "collegeId": {
+        "selectorAttr": ".college-id",
+        "label": "Collège",
+        "value": "ENSEMBLE DU PERSONNEL",
+        "type": "dropDown",
+        "random": false
+    },
+    "cotisationRateYear": {
+        "selectorAttr": ".cotisationRateYear",
+        "label": "Année des taux des cotisations",
+        "value": "2023",
+        "type": "dropDown",
+        "random": false
+    },
+    "cotisationRateExpression": {
+        "selectorAttr": ".cotisationRateExpression",
+        "label": "Expression des taux",
+        "value": "TA, TB, TC, et TD",
+        "type": "dropDown",
+        "random": false
+    }  ,
+    
+    "typeTauxGLOBAL": {
+        "selectorAttr": ".GLOBAL input[type=radio]",
+        "label":"Choix de type des taux par tranche",
+        "type": "checkbox",
+        "value": "GLOBAL",
+        "random": false
+    },
+    "global-TA":{
+        "selectorAttr":".global-TA",
+        "value": "10",
+        "label":"TA",
+        "type" : "input-text",
+        "random":false
+    },
+    "global-TB":{
+        "selectorAttr":".global-TB",
+        "value": "10",
+        "label":"TB",
+        "type" : "input-text",
+        "random":false
+    },
+    "global-TC":{
+        "selectorAttr":".global-TC",
+        "value": "10",
+        "label":"TC",
+        "type" : "input-text",
+        "random":false
+    },
+    "global-TD":{
+        "selectorAttr":".global-TD",
+        "value": "10",
+        "label":"TD",
+        "type" : "input-text",
+        "random":false
+    },
+    "typeTaux": {
+        "selectorAttr": ".GUARANTEEFAMILY input[type=radio]",
+        "label":"Choix de type des taux par tranche",
+        "type": "checkbox",
+        "value": "GUARANTEEFAMILY",
+        "random": false
+    },
+     "deces-TA":{
+        "selectorAttr":".deces-TA",
+        "value": "1",
+        "label":"TA",
+        "type" : "input-text",
+        "random":false
+    },
+    "deces-TB":{
+        "selectorAttr":".deces-TB",
+        "value": "1",
+        "label":"TB",
+        "type" : "input-text",
+        "random":false
+    },
+    "deces-TC":{
+        "selectorAttr":".deces-TC",
+        "value": "2",
+        "label":"TC",
+        "type" : "input-text",
+        "random":false
+    },
+    "deces-TD":{
+        "selectorAttr":".deces-TD",
+        "value": "1",
+        "label":"TD",
+        "type" : "input-text",
+        "random":false
+    },
+     "incap-inval-TA":{
+        "selectorAttr":".incap-inval-TA",
+        "value": "1",
+        "label":"TA",
+        "type" : "input-text",
+        "random":false
+    },
+    "incap-inval-TB":{
+        "selectorAttr":".incap-inval-TB",
+        "value": "2",
+        "label":"TB",
+        "type" : "input-text",
+        "random":false
+    },
+    "incap-inval-TC":{
+        "selectorAttr":".incap-inval-TC",
+        "value": "1",
+        "label":"TC",
+        "type" : "input-text",
+        "random":false
+    },
+    "incap-inval-TD":{
+        "selectorAttr":".incap-inval-TD",
+        "value": "1",
+        "label":"TD",
+        "type" : "input-text",
+        "random":false
+    }
+}

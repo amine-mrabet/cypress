@@ -9,13 +9,13 @@
     "offerRetenu":{
         "selectorAttr":".offer-retenu",
         "label":"offer Retenu",
-        "value":"SM G",
+        "value":"SM K",
         "type" : "dropDown"
     },
     "recommendedOffer":{
         "selectorAttr":".recommended-offer",
         "label":"Offre préconisée",
-        "value":"SM G",
+        "value":"SM K",
         "type" : "dropDown"
     } ,
     

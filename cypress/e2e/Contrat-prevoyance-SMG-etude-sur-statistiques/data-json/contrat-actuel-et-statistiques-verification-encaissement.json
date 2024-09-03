@@ -1,0 +1,23 @@
+{
+    "contract-actuel": {
+        "selectorAttr": ".contract-actuel-0[type=checkbox]",
+        "label": "contrat",
+        "type": "checkbox",
+        "value": "",
+        "random": false
+    },
+    "demography-contract": {
+        "selectorAttr": ".demography-0[type=checkbox]",
+        "label": "contrat",
+        "type": "checkbox",
+        "value": "",
+        "random": false
+    },
+    "statistical-contract": {
+        "selectorAttr": ".statistical-0[type=checkbox]",
+        "label": "contrat",
+        "type": "checkbox",
+        "value": "",
+        "random": false
+    }
+}

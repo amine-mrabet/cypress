@@ -1,0 +1,18 @@
+{
+    
+    "statistics": {
+        "selectorAttr": "#statistics-0 input[type=checkbox]",
+        "label": "statistics",
+        "type": "checkbox"
+    },
+    "regimeCibleActuel": {
+        "selectorAttr": ".regimeCibleActuel",
+        "label": "Evolution du régime cible / régime actuel ",
+        "type": "checkbox"
+    },
+    "enterpriseByDemograhpy": {
+        "selectorAttr": "#enterpriseByDemograhpy-0 input[type=checkbox]",
+        "label": "enterpriseByDemograhpy",
+        "type": "checkbox"
+    }
+}

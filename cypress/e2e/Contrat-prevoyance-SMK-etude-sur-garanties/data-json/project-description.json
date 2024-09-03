@@ -1,21 +1,21 @@
 {
 
     "riskSante":{
-        "selectorAttr":".risk-sante p-checkbox input",
-        "label":"Santé",
+        "selectorAttr":".risk-prev p-checkbox input",
+        "label":"Prévoyance",
         "type" : "checkbox"
     }
     ,
     "offerRetenu":{
         "selectorAttr":".offer-retenu",
         "label":"offer Retenu",
-        "value":"SM G",
+        "value":"SM K",
         "type" : "dropDown"
     },
     "recommendedOffer":{
         "selectorAttr":".recommended-offer",
         "label":"Offre préconisée",
-        "value":"SM G",
+        "value":"SM K",
         "type" : "dropDown"
     } ,
     

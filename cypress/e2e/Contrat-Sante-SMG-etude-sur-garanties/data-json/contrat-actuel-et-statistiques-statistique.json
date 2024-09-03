@@ -1,0 +1,67 @@
+{
+    "inputStatisticalName":{
+        "selectorAttr":".inputStatisticalName",
+        "value": "mrabet",
+        "label":"Nom des statistiques",
+        "type" : "input-text",
+        "random":false
+    },
+    "statistic-contract-0": {
+        "selectorAttr": ".statistic-contract-0[type=checkbox]",
+        "label": "contrat",
+        "type": "checkbox",
+        "value": "",
+        "random": false
+    },
+
+    "input-0-1":{
+        "selectorAttr":".input-0-1",
+        "value": "60",
+        "type" : "input-text",
+        "random":false
+    },
+    "input-0-2":{
+        "selectorAttr":".input-0-2",
+        "value": "10",
+        "type" : "input-text",
+        "random":false
+    },
+    "input-0-3":{
+        "selectorAttr":".input-0-3",
+        "value": "20",
+        "type" : "input-text",
+        "random":false
+    },
+    "input-0-4":{
+        "selectorAttr":".input-0-4",
+        "value": "10",
+        "type" : "input-text",
+        "random":false
+    },
+    "input-1-0":{
+        "selectorAttr":".input-1-0",
+        "value": "10",
+        "type" : "input-text",
+        "random":false
+    }
+    ,
+    "input-2-0":{
+        "selectorAttr":".input-2-0",
+        "value": "10",
+        "type" : "input-text",
+        "random":false
+    },
+    "input-3-0":{
+        "selectorAttr":".input-3-0",
+        "value": "10",
+        "type" : "input-text",
+        "random":false
+    },
+    "observedIncome":{
+        "selectorAttr":".observedIncome",
+        "value": "1200",
+        "type" : "input-text",
+        "random":false
+    }
+    
+}

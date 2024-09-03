@@ -1,0 +1,7 @@
+{
+    "enterpriseByDemograhpy": {
+        "selectorAttr": "#enterpriseByDemograhpy-0 input[type=checkbox]",
+        "label": "enterpriseByDemograhpy",
+        "type": "checkbox"
+    }
+}

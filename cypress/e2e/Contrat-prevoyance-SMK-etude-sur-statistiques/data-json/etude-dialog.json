@@ -2,7 +2,14 @@
     "typeDeTarification":{
         "selectorAttr":".type-de-tarification",
         "label":"Choix du type de tarification",
-        "value":"Tarification sur garanties",
+        "value":"Tarification sur statistiques",
+        "type" : "dropDown",
+        "random":false
+    },
+    "commercial-product":{
+        "selectorAttr":".commercial-product",
+        "label":"Sélection du produit commercial",
+        "value":"PRODUIT SUR MESURE PREVOYANCE CARCEPT",
         "type" : "dropDown",
         "random":false
     } 

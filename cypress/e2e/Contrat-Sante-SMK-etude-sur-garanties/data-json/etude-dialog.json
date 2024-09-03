@@ -5,5 +5,12 @@
         "value":"Tarification sur garanties",
         "type" : "dropDown",
         "random":false
+    }  ,
+    "commercial-product":{
+        "selectorAttr":".commercial-product",
+        "label":"Sélection du produit commercial",
+        "value":"PRODUIT SUR MESURE SANTE KLESIA CARCEPT",
+        "type" : "dropDown",
+        "random":false
     } 
 }

@@ -134,5 +134,12 @@
         "label":"Option 3 Enfant",
         "type" : "input-text",
         "random":false
+    },
+    "additionnel-differentiel": {
+        "selectorAttr": ".additionnel-differentiel input[type=radio]",
+        "label": "additionnel différentiel",
+        "type": "checkbox",
+        "value": "DIFFERENTIAL",
+        "random": false
     }
 }
