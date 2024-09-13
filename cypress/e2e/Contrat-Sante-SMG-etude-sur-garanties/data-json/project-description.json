@@ -25,13 +25,6 @@
         "value":"Obligatoire",
         "type" : "dropDown"
     },
-    
-    "cadres":{
-        "selectorAttr":".cadres-checkbox input",
-        "label":"Cadres",
-        "type" : "checkbox"
-    }
-    ,
     "non-cadres":{
         "selectorAttr":".non-cadres-checkbox input",
         "label":"Non cadres",
@@ -40,6 +33,11 @@
     "ensemblePersonnel":{
         "selectorAttr":".ensemble-personnel-checkbox input",
         "label":"Ensemble du personnel",
+        "type" : "checkbox"
+    },
+    "cadres":{
+        "selectorAttr":".cadres-checkbox input",
+        "label":"Cadres",
         "type" : "checkbox"
     }
 }

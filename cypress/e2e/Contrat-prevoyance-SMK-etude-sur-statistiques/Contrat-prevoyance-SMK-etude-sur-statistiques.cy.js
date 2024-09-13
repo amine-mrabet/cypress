@@ -18,6 +18,10 @@ const nommer_redacteur_technico_commercial = require('./data-json/nommer-redacte
 const COMPLETERETUDE = require('./data-json/completer-etude-accord-client.json');
 const STEPS = require('./data-json/steps.json');
 const SOURCETARIFICATION = require('./data-json/source-de-tarification.json');
+const CONTEXTETUDE = require('./data-json/context-etude.json')
+const SELECTIONGARANTIES = require('./data-json/selection-des-garanties.json');
+const TARIFERETUDER = require('./data-json/tarifer-etude.json');
+
 // Generate a random 14-digit number
 const randomNumber14 = Math.floor(10000000000000 + Math.random() * 90000000000000);
 var NUM_PROJET = STEPS.projectNumber != "" ? STEPS.projectNumber : null
@@ -105,7 +109,7 @@ describe('My Web Application Tests', () => {
         cy.wait(2000);
         cy.contains('li span', 'Contrat actuel et statistiques prévoyance').click();
 
-        cy.wait(10000).then(() => {
+        cy.wait(12000).then(() => {
           addDynamiqueData(CONTRACTACUELSTATISTIQUESINFOCONTRACT)
           cy.get('.valider-info-contrat').should('exist').click({ waitForAnimations: false });
           cy.wait(5000);
@@ -171,15 +175,44 @@ describe('My Web Application Tests', () => {
         cy.contains('li span', 'Source de tarification').click();
         addDynamiqueData(SOURCETARIFICATION)
         cy.wait(1000);
-        //cy.get('.valider-source-tarification').should('exist').click({ waitForAnimations: false });
-        /* cy.wait(13000);
+        cy.get('.valider-source-tarification').should('exist').click({ waitForAnimations: false });
+        cy.wait(13000);
+        cy.contains('li span', 'Contexte de l’étude').click();
+        addDynamiqueData(CONTEXTETUDE);
+        cy.get('.save-etude').should('exist').click({ waitForAnimations: false });
+        cy.wait(4000);
+        cy.contains('li span', 'Sélection des garanties').click();
+        addDynamiqueData(SELECTIONGARANTIES)
         cy.contains('li span', 'Tarif').click();
+        addDynamiqueData(TARIFERETUDER)
         cy.get('.tarifer').should('exist').click({ waitForAnimations: false });
         cy.wait(4000);
         cy.get('.save-etude').should('exist').click({ waitForAnimations: false });
         cy.wait(4000);
         cy.get('.figer-etude').should('exist').click({ waitForAnimations: false });
         cy.wait(4000);
+        
+      } else {
+        console.log('Login failed');
+      }
+    });
+  }
+  if (STEPS.step4.run) {
+    it('add cotation', () => {
+      cy.wait(1000);
+      cy.visit('/');
+      cy.wait(500)
+      cy.reload(true);
+      Login(b300nqa.username, b300nqa.password)
+      Cypress.on('uncaught:exception', (err, runnable) => {
+        Cypress.runner.stop() // Stop the test run
+      });
+      Cypress.on('fail', (error, runnable) => {
+        Cypress.runner.stop() // Stop the test run
+      });
+
+      const isLoginSuccessful = checkLogin(b300nqa.username, b300nqa.password, b300nqa);
+      if (isLoginSuccessful) {
         cy.visit('/');
         cy.get('.search-tabs ul li').eq(1).click();
         cy.get("#numproject").should('exist').type(NUM_PROJET)
@@ -194,13 +227,12 @@ describe('My Web Application Tests', () => {
         cy.get('.add-cotation').should('exist').click({ waitForAnimations: false })
         cy.get('.reponse-tarifaire').should('exist').click({ waitForAnimations: false });
         cy.contains('li span', "Offre commerciale").click({ waitForAnimations: false });
- */
       } else {
         console.log('Login failed');
       }
     });
   }
-  if (STEPS.step4.run) {
+  if (STEPS.step5.run) {
     it('Réponse tarifaire en instance', () => {
       cy.wait(1000);
       cy.visit('/');
@@ -240,7 +272,7 @@ describe('My Web Application Tests', () => {
       }
     });
   }
-  if (STEPS.step5.run) {
+  if (STEPS.step6.run) {
     it('validation Accord Client BY souscripteur', () => {
       cy.wait(1000);
       cy.visit('/');
@@ -296,7 +328,7 @@ describe('My Web Application Tests', () => {
       }
     });
   }
-  if (STEPS.step6.run) {
+  if (STEPS.step7.run) {
     it('Demander l’émission', () => {
       cy.wait(1000);
       cy.visit('/');
@@ -336,7 +368,7 @@ describe('My Web Application Tests', () => {
       }
     });
   }
-  if (STEPS.step7.run) {
+  if (STEPS.step8.run) {
     it('structuration', () => {
       cy.wait(1000);
       cy.visit('/');
@@ -389,7 +421,7 @@ describe('My Web Application Tests', () => {
       }
     });
   }
-  if (STEPS.step8.run) {
+  if (STEPS.step9.run) {
     it('En Rédaction vers Projet de PC à envoyer', () => {
       cy.wait(1000);
       cy.visit('/');
@@ -454,7 +486,7 @@ describe('My Web Application Tests', () => {
       }
     });
   }
-  if (STEPS.step9.run) {
+  if (STEPS.step10.run) {
     it('Projet de PC à envoyer vers Demande de retouche', () => {
       cy.wait(1000);
       cy.visit('/');
@@ -490,7 +522,7 @@ describe('My Web Application Tests', () => {
       }
     });
   }
-  if (STEPS.step10.run) {
+  if (STEPS.step11.run) {
     it('Demande de retouche vers Projet de PC à envoyer', () => {
       cy.wait(1000);
       cy.visit('/');
@@ -535,7 +567,7 @@ describe('My Web Application Tests', () => {
       }
     });
   }
-  if (STEPS.step11.run) {
+  if (STEPS.step12.run) {
     it('Projet de PC à envoyer vers Projet de PC Validé', () => {
       cy.wait(1000);
       cy.visit('/');
@@ -575,7 +607,7 @@ describe('My Web Application Tests', () => {
       }
     });
   }
-  if (STEPS.step12.run) {
+  if (STEPS.step13.run) {
     it('Projet de PC Validé vers PC à envoyer', () => {
       cy.wait(1000);
       cy.visit('/');
@@ -624,7 +656,7 @@ describe('My Web Application Tests', () => {
       }
     });
   }
-  if (STEPS.step13.run) {
+  if (STEPS.step14.run) {
     it('PC à envoyer vers Finalisé', () => {
       cy.wait(1000);
       cy.wait(500);
@@ -798,46 +830,69 @@ function addApporteur() {
 function addDynamiqueData(data) {
   Object.entries(data).forEach(([key, value]) => {
     cy.get('body').then(($body) => {
-      cy.wait(500).then(() => {
-        // Check if the element exists in the DOM
-        if ($body.find(data[key].selectorAttr).length > 0) {
-          if (data[key].type == 'checkbox') {
-            cy.get(data[key].selectorAttr).click({ force: true });
-          }
-          if (data[key].type == 'input-text') {
-            cy.get(data[key].selectorAttr).should('exist').clear({ force: true });
-            if (data[key].random) {
-              cy.get(data[key].selectorAttr).should('exist').type(randomNumber14.toString(), { force: true });
-            } else {
-              cy.get(data[key].selectorAttr).should('exist').type(data[key].value, { force: true });
-            }
-          }
-          if (data[key].type == 'dropDown') {
-            cy.wait(500).then(() => {
-              cy.get(data[key].selectorAttr).should('exist').click();
-              cy.get(".p-dropdown-filter").should('exist').type(data[key].value)
-              cy.get('p-dropdownitem').contains(data[key].value).should('exist').click();
-            })
+      if(data[key].type == 'wait') {
+        cy.wait(data[key].value).then(() => {
 
+        })
+      }else{
+        cy.wait(500).then(() => {
+          // Check if the element exists in the DOM
+          if ($body.find(data[key].selectorAttr).length > 0) {
+            cy.document().then((doc) => {
+              cy.get(data[key].selectorAttr).scrollIntoView();
+            });
+            if (data[key].type == 'checkbox') {
+              cy.get(data[key].selectorAttr).click({ force: true });
+            }
+            if (data[key].type == 'input-text') {
+              cy.get(data[key].selectorAttr).should('exist').clear({ force: true });
+              if (data[key].random) {
+                cy.get(data[key].selectorAttr).should('exist').type(randomNumber14.toString(), { force: true });
+              } else {
+                cy.get(data[key].selectorAttr).should('exist').type(data[key].value, { force: true });
+              }
+            }
+            if (data[key].type == 'dropDown') {
+              cy.wait(500).then(() => {
+                cy.get(data[key].selectorAttr).should('exist').click();
+                cy.get(".p-dropdown-filter").should('exist').type(data[key].value)
+                cy.get('p-dropdownitem').contains(data[key].value).should('exist').click();
+              })
+  
+            }
+            if (data[key].type == 'dropDownNoFilter') {
+              cy.get(data[key].selectorAttr).should('exist').click();
+              cy.get('p-dropdownitem').contains(data[key].value).should('exist').click();
+            }
+            if (data[key].type == 'p-selectButton') {
+              cy.get(`.${data[key].value}`).contains(data[key].value).click();
+            }
+            if (data[key].type == 'button') {
+              cy.get(data[key].selectorAttr).should('exist').click();
+            }
+            if (data[key].type == 'link') {
+              cy.contains(data[key].selectorAttr, data[key].value).click();
+            }
+            if (data[key].type == 'p-multiSelect') {
+              cy.get(data[key].selectorAttr)
+                .click()
+                .then(() => {
+                  data[key].value.forEach(element => {
+                    cy.get('.p-multiselect-item')
+                      .contains(element)
+                      .click();
+                  });
+  
+                });
+            }
+  
+          } else {
+            // If it doesn't exist, you can log a message or do nothing
+            cy.log('Element does not exist, skipping the action');
           }
-          if (data[key].type == 'dropDownNoFilter') {
-            cy.get(data[key].selectorAttr).should('exist').click();
-            cy.get('p-dropdownitem').contains(data[key].value).should('exist').click();
-          }
-          if (data[key].type == 'p-selectButton') {
-            cy.get(`.${data[key].value}`).contains(data[key].value).click();
-          }
-          if (data[key].type == 'button') {
-            cy.get(data[key].selectorAttr).should('exist').click();
-          }
-          if (data[key].type == 'link') {
-            cy.contains('li span', data[key].value).click();
-          }
-        } else {
-          // If it doesn't exist, you can log a message or do nothing
-          cy.log('Element does not exist, skipping the action');
-        }
-      });
+        });
+      }
+
     })
 
 

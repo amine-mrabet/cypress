@@ -1,0 +1,374 @@
+{
+    "add-option-button1": {
+        "selectorAttr": ".onglet-0 .add-option-button",
+        "type": "button",
+        "random": false
+    },
+    "add-option-button2": {
+        "selectorAttr": ".onglet-0 .add-option-button",
+        "type": "button",
+        "random": false
+    },
+    "label-option-1": {
+        "selectorAttr": ".onglet-0 .option-1 .label-option-1",
+        "value": "OPTION 1",
+        "label": "Libellé de l’option :",
+        "type": "input-text",
+        "random": false
+    },
+    "selectedBenefit-sub-link-0-option-0-sub-option-0": {
+        "selectorAttr": ".onglet-0 .option-0 .sub-option-0 .selectedBenefit .p-dropdown-trigger",
+        "label": "Choix de la garantie :",
+        "value": "Décès par accident",
+        "type": "dropDownNoFilter",
+        "random": false
+    },
+    "add-benefit-button-sub-link-0-option-0-sub-option-0": {
+        "selectorAttr": ".onglet-0 .option-0 .sub-option-0 .add-benefit-button",
+        "type": "button",
+        "random": false
+    },
+    "wait": {
+        "type": "wait",
+        "value": 2000
+    },
+    "cell-0-0-option-0-sub-option-0": {
+        "selectorAttr": ".onglet-0 .option-0 .sub-option-0 .parameter-0 .cell-0-0",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-0-1-option-0-sub-option-0": {
+        "selectorAttr": ".onglet-0 .option-0 .sub-option-0 .parameter-0 .cell-0-1",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-0-2-option-0-sub-option-0": {
+        "selectorAttr": ".onglet-0 .option-0 .sub-option-0 .parameter-0 .cell-0-2",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-0-3-option-0-sub-option-0": {
+        "selectorAttr": ".onglet-0 .option-0 .sub-option-0 .parameter-0 .cell-0-3",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "sub-link-option-0": {
+        "selectorAttr": ".onglet-0 .option-0 .sub-link-1",
+        "type": "link",
+        "value": "Rentes",
+        "random": false
+    },
+    "selectedBenefit-sub-link-1-option-0-sub-option-1": {
+        "selectorAttr": ".onglet-0 .option-0 .sub-option-1 .selectedBenefit .p-dropdown-trigger",
+        "label": "Choix de la garantie :",
+        "value": "Rente de conjoint viagère",
+        "type": "dropDownNoFilter",
+        "random": false
+    },
+    "add-benefit-button-sub-link-1-option-0-sub-option-1": {
+        "selectorAttr": ".onglet-0 .option-0 .sub-option-1 .add-benefit-button",
+        "type": "button",
+        "random": false
+    },
+    "wait1": {
+        "type": "wait",
+        "value": 2000
+    },
+    "cell-0-0-option-0-sub-option-1": {
+        "selectorAttr": ".onglet-0 .option-0 .sub-option-1 .parameter-0 .cell-0-0",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-0-1-option-0-sub-option-1": {
+        "selectorAttr": ".onglet-0 .option-0 .sub-option-1 .parameter-0 .cell-0-1",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-0-2-option-0-sub-option-1": {
+        "selectorAttr": ".onglet-0 .option-0 .sub-option-1 .parameter-0 .cell-0-2",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-0-3-option-0-sub-option-1": {
+        "selectorAttr": ".onglet-0 .option-0 .sub-option-1 .parameter-0 .cell-0-3",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "selectedBenefit-sub-link-0-option-1-sub-option-0": {
+        "selectorAttr": ".onglet-0 .option-1 .sub-option-0 .selectedBenefit .p-dropdown-trigger",
+        "label": "Choix de la garantie :",
+        "value": "Décès par accident",
+        "type": "dropDownNoFilter",
+        "random": false
+    },
+    "add-benefit-button-sub-link-0-option-1-sub-option-0": {
+        "selectorAttr": ".onglet-0 .option-1 .sub-option-0 .add-benefit-button",
+        "type": "button",
+        "random": false
+    },
+    "wait2": {
+        "type": "wait",
+        "value": 2000
+    },
+    "cell-0-0-option-1-sub-option-0": {
+        "selectorAttr": ".onglet-0 .option-1 .sub-option-0 .parameter-0 .cell-0-0",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-0-1-option-1-sub-option-0": {
+        "selectorAttr": ".onglet-0 .option-1 .sub-option-0 .parameter-0 .cell-0-1",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-0-2-option-1-sub-option-0": {
+        "selectorAttr": ".onglet-0 .option-1 .sub-option-0 .parameter-0 .cell-0-2",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-0-3-option-1-sub-option-0": {
+        "selectorAttr": ".onglet-0 .option-1 .sub-option-0 .parameter-0 .cell-0-3",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "sub-link-option-1": {
+        "selectorAttr": ".onglet-0 .option-1 .sub-link-1",
+        "type": "link",
+        "value": "Rentes",
+        "random": false
+    },
+    "selectedBenefit-sub-link-0-option-1-sub-option-1": {
+        "selectorAttr": ".onglet-0 .option-1 .sub-option-1 .selectedBenefit .p-dropdown-trigger",
+        "label": "Choix de la garantie :",
+        "value": "Rente de conjoint viagère",
+        "type": "dropDownNoFilter",
+        "random": false
+    },
+    "add-benefit-button-sub-link-0-option-1-sub-option-1": {
+        "selectorAttr": ".onglet-0 .option-1 .sub-option-1 .add-benefit-button",
+        "type": "button",
+        "random": false
+    },
+    "wait4": {
+        "type": "wait",
+        "value": 2000
+    },
+    "cell-0-0-option-1-sub-option-1": {
+        "selectorAttr": ".onglet-0 .option-1 .sub-option-1 .parameter-0 .cell-0-0",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-0-1-option-1-sub-option-1": {
+        "selectorAttr": ".onglet-0 .option-1 .sub-option-1 .parameter-0 .cell-0-1",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-0-2-option-1-sub-option-1": {
+        "selectorAttr": ".onglet-0 .option-1 .sub-option-1 .parameter-0 .cell-0-2",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-0-3-option-1-sub-option-1": {
+        "selectorAttr": ".onglet-0 .option-1 .sub-option-1 .parameter-0 .cell-0-3",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "link-2": {
+        "selectorAttr": ".link-2",
+        "type": "link",
+        "value": "Incapacité/Invalidité",
+        "random": false
+    },
+    "selectedBenefit-coverage-0": {
+        "selectorAttr": ".onglet-1 .coverage-0 .selectedBenefit .p-dropdown-trigger",
+        "label": "Choix de la garantie :",
+        "value": "Indemnités journalières ITT",
+        "type": "dropDownNoFilter",
+        "random": false
+    },
+    "add-benefit-button-coverage-0": {
+        "selectorAttr": ".onglet-1 .coverage-0 .add-benefit-button",
+        "type": "button",
+        "random": false
+    },
+    "cell-0-0-coverage-0-parameter-0-option-0": {
+        "selectorAttr": ".onglet-1 .coverage-0 .option-0 .parameter-0 .cell-0-0",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-1-0-coverage-0-parameter-0-option-0": {
+        "selectorAttr": ".onglet-1 .coverage-0 .option-0 .parameter-0 .cell-1-0",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-2-0-coverage-0-parameter-0-option-0": {
+        "selectorAttr": ".onglet-1 .coverage-0 .option-0 .parameter-0 .cell-2-0",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-3-0-coverage-0-parameter-0-option-0": {
+        "selectorAttr": ".onglet-1 .coverage-0 .option-0 .parameter-0 .cell-3-0",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-0-0-coverage-0-parameter-1-option-0": {
+        "selectorAttr": ".onglet-1 .coverage-0 .option-0 .parameter-1 .cell-0-0",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-0-1-coverage-0-parameter-1-option-0": {
+        "selectorAttr": ".onglet-1 .coverage-0 .option-0 .parameter-1 .cell-0-1",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-0-2-coverage-0-parameter-1-option-0": {
+        "selectorAttr": ".onglet-1 .coverage-0 .option-0 .parameter-1 .cell-0-2",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-0-3-coverage-0-parameter-1-option-0": {
+        "selectorAttr": ".onglet-1 .coverage-0 .option-0 .parameter-1 .cell-0-3",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "link-5": {
+        "selectorAttr": ".link-5",
+        "type": "link",
+        "value": "IP",
+        "random": false
+    },
+    "selectedBenefit-coverage-1": {
+        "selectorAttr": ".onglet-1 .coverage-1 .selectedBenefit .p-dropdown-trigger",
+        "label": "Choix de la garantie :",
+        "value": "Rente Invalidité Toutes causes (y/c ATMP)",
+        "type": "dropDownNoFilter",
+        "random": false
+    },
+    "add-benefit-button-coverage-1": {
+        "selectorAttr": ".onglet-1 .coverage-1 .add-benefit-button",
+        "type": "button",
+        "random": false
+    },
+    "cell-0-0-coverage-1-parameter-0-option-0": {
+        "selectorAttr": ".onglet-1 .coverage-1 .option-0 .parameter-0 .cell-0-0",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-0-1-coverage-1-parameter-0-option-0": {
+        "selectorAttr": ".onglet-1 .coverage-1 .option-0 .parameter-0 .cell-0-1",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-0-2-coverage-1-parameter-0-option-0": {
+        "selectorAttr": ".onglet-1 .coverage-1 .option-0 .parameter-0 .cell-0-2",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-0-3-coverage-1-parameter-0-option-0": {
+        "selectorAttr": ".onglet-1 .coverage-1 .option-0 .parameter-0 .cell-0-3",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    
+    "cell-1-0-coverage-1-parameter-0-option-0": {
+        "selectorAttr": ".onglet-1 .coverage-1 .option-0 .parameter-0 .cell-1-0",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-1-1-coverage-1-parameter-0-option-0": {
+        "selectorAttr": ".onglet-1 .coverage-1 .option-0 .parameter-0 .cell-1-1",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-1-2-coverage-1-parameter-0-option-0": {
+        "selectorAttr": ".onglet-1 .coverage-1 .option-0 .parameter-0 .cell-1-2",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-1-3-coverage-1-parameter-0-option-0": {
+        "selectorAttr": ".onglet-1 .coverage-1 .option-0 .parameter-0 .cell-1-3",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+
+    "cell-2-0-coverage-1-parameter-0-option-0": {
+        "selectorAttr": ".onglet-1 .coverage-1 .option-0 .parameter-0 .cell-2-0",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-2-1-coverage-1-parameter-0-option-0": {
+        "selectorAttr": ".onglet-1 .coverage-1 .option-0 .parameter-0 .cell-2-1",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-2-2-coverage-1-parameter-0-option-0": {
+        "selectorAttr": ".onglet-1 .coverage-1 .option-0 .parameter-0 .cell-2-2",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "cell-2-3-coverage-1-parameter-0-option-0": {
+        "selectorAttr": ".onglet-1 .coverage-1 .option-0 .parameter-0 .cell-2-3",
+        "value": "10",
+        "type": "input-text",
+        "random": false
+    },
+    "link-3": {
+        "selectorAttr": ".link-3",
+        "type": "link",
+        "value": "Services",
+        "random": false
+    },
+    "selectedBenefit-coverage-services": {
+        "selectorAttr": ".onglet-2 .coverage-0 .selectedBenefit .p-dropdown-trigger",
+        "label": "Choix de la garantie :",
+        "value": "Action sociale",
+        "type": "dropDownNoFilter",
+        "random": false
+    },
+    "add-benefit-button-coverage-services": {
+        "selectorAttr": ".onglet-2 .coverage-0 .add-benefit-button",
+        "type": "button",
+        "random": false
+    },
+    "taux_action_sociale": {
+        "selectorAttr": ".onglet-2 .coverage-0 .taux_action_sociale .p-dropdown-trigger",
+        "label": "Taux d'action sociale",
+        "value": "2,00%",
+        "type": "dropDownNoFilter",
+        "random": false
+    }
+}

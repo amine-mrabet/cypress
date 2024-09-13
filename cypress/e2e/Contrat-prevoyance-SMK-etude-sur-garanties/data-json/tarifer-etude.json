@@ -1,0 +1,85 @@
+{
+    "wait": {
+        "type": "wait",
+        "value": 4000
+    },
+    "repartition-demography-0-0": {
+        "selectorAttr": ".repartition-demography-0-0 input",
+        "value": "50",
+        "type": "input-text",
+        "random": false
+    },
+    "repartition-demography-0-1": {
+        "selectorAttr": ".repartition-demography-0-1 input",
+        "value": "50",
+        "type": "input-text",
+        "random": false
+    },
+    "repartition-demography-1-0": {
+        "selectorAttr": ".repartition-demography-1-0 input",
+        "value": "50",
+        "type": "input-text",
+        "random": false
+    },
+    "repartition-demography-1-1": {
+        "selectorAttr": ".repartition-demography-1-1 input",
+        "value": "50",
+        "type": "input-text",
+        "random": false
+    },
+    "repartition-demography-2-0": {
+        "selectorAttr": ".repartition-demography-2-0 input",
+        "value": "50",
+        "type": "input-text",
+        "random": false
+    },
+    "repartition-demography-2-1": {
+        "selectorAttr": ".repartition-demography-2-1 input",
+        "value": "50",
+        "type": "input-text",
+        "random": false
+    },
+    "repartition-demography-3-0": {
+        "selectorAttr": ".repartition-demography-3-0 input",
+        "value": "50",
+        "type": "input-text",
+        "random": false
+    },
+    "repartition-demography-3-1": {
+        "selectorAttr": ".repartition-demography-3-1 input",
+        "value": "50",
+        "type": "input-text",
+        "random": false
+    },
+    "repartition-demography-4-0": {
+        "selectorAttr": ".repartition-demography-4-0 input",
+        "value": "50",
+        "type": "input-text",
+        "random": false
+    },
+    "repartition-demography-4-1": {
+        "selectorAttr": ".repartition-demography-4-1 input",
+        "value": "50",
+        "type": "input-text",
+        "random": false
+    },
+    "repartition-demography-5-0": {
+        "selectorAttr": ".repartition-demography-5-0 input",
+        "value": "50",
+        "type": "input-text",
+        "random": false
+    },
+    "repartition-demography-5-1": {
+        "selectorAttr": ".repartition-demography-5-1 input",
+        "value": "50",
+        "type": "input-text",
+        "random": false
+    },
+    "StructureCotis2_expression_taux_cotis2":{
+        "selectorAttr":".StructureCotis2_expression_taux_cotis2 .p-dropdown-trigger",
+        "label":"Expression de cotisation :",
+        "value":"Tranches TA/TB/TC/TD",
+        "type" : "dropDownNoFilter",
+        "random":false
+    }
+}

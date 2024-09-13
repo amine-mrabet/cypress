@@ -16,7 +16,7 @@
     },
     "collegeIdEtude": {
         "selectorAttr": ".collegeIdEtude",
-        "label": "Choix du collège",
+        "label": "CADRE",
         "value": "ENSEMBLE DU PERSONNEL",
         "type": "dropDown",
         "random": false

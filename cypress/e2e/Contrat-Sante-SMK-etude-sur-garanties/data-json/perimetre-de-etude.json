@@ -2,7 +2,7 @@
     "legalForm": {
         "selectorAttr": ".collegeIdEtude",
         "label": "Choix du collège",
-        "value": "ENSEMBLE DU PERSONNEL",
+        "value": "CADRE",
         "type": "dropDown",
         "random": false
     },

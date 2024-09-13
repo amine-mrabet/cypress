@@ -1,0 +1,198 @@
+{
+    "contractStructuresFilteredOptions":{
+        "selectorAttr":".contractStructuresFilteredOptions .p-dropdown-trigger",
+        "label":"Nombre d’option disponible au produit",
+        "value":"Option responsable y compris Sécurité Sociale ",
+        "type" : "dropDownNoFilter",
+        "random":false
+    },
+    "addOptionButton": {
+        "selectorAttr": ".addOptionButton",
+        "type": "button",
+        "random": false
+    },
+    "wait1": {
+        "type":"wait",
+        "value": 2000
+    },
+    "contractStructuresFilteredOptions1":{
+        "selectorAttr":".contractStructuresFilteredOptions .p-dropdown-trigger",
+        "label":"Nombre d’option disponible au produit",
+        "value":"Option non responsable y compris Sécurité Sociale ",
+        "type" : "dropDownNoFilter",
+        "random":false
+    },
+    "addOptionButton1": {
+        "selectorAttr": ".addOptionButton",
+        "type": "button",
+        "random": false
+    },
+    "wait2": {
+        "type":"wait",
+        "value": 2000
+    },
+    "SANTE_SM_G_1_STD_NonResp_expression_taux_cotis3":{
+        "selectorAttr":".SANTE_SM_G_1_STD_NonResp_expression_taux_cotis3 .p-dropdown-trigger",
+        "label":"Structure de cotisation Option non responsable y compris Sécurité Sociale",
+        "value":"cotisations ISO DUO FAM",
+        "type" : "dropDownNoFilter",
+        "random":false
+    },
+    "SANTE_SM_G_1_STD_Resp_contratstruc_option_resp_socle":{
+        "selectorAttr":".option-1 .SANTE_SM_G_1_STD_Resp_contratstruc_option_resp_socle .p-dropdown-trigger",
+        "label":"Option responsable socle Option responsable y compris Sécurité Sociale",
+        "value":"Oui",
+        "type" : "dropDownNoFilter",
+        "random":false
+    },
+    "SANTE_SM_G_1_STD_Resp_contratstruc_option_resp_valeur":{
+        "selectorAttr":".option-1 .SANTE_SM_G_1_STD_Resp_contratstruc_option_resp_valeur .p-dropdown-trigger",
+        "label":"Valeur de l’option responsable Option responsable y compris Sécurité Sociale",
+        "value":"En complément base",
+        "type" : "dropDownNoFilter",
+        "random":false
+    },
+    "paramOption": {
+        "selectorAttr": ".paramOption a.p-ripple",
+        "type": "button",
+        "random": false
+    },
+    "Base-hospi-taux_expr_gar_gg_1":{
+        "selectorAttr":".Base .Base-hospi .taux_expr_gar_gg_1",
+        "value": "100",
+        "label":"Hospitalisation Taux 1",
+        "type" : "input-text",
+        "random":false
+    },
+    "Base-hospi-expr_gar_gg_1": {
+        "selectorAttr": ".Base .Base-hospi .expr_gar_gg_1 .p-dropdown-trigger",
+        "label":"Hospitalisation Assiette 1",
+        "value": "FR-SS",
+        "type": "dropDownNoFilter",
+        "random": false
+    },
+    "link-Base-soins_courants": {
+        "selectorAttr":".link-Base-soins_courants",
+        "type": "link",
+        "value": "Soins courants",
+        "random": false
+    },
+    "Base-soins_courants-taux_expr_gar_gg_1":{
+        "selectorAttr":".Base .Base-soins_courants .taux_expr_gar_gg_1",
+        "value": "100",
+        "label":"Soins courants",
+        "type" : "input-text",
+        "random":false
+    },
+    "Base-soins_courants-expr_gar_gg_1": {
+        "selectorAttr": ".Base .Base-soins_courants .expr_gar_gg_1 .p-dropdown-trigger",
+        "label":"Soins courants Assiette 1",
+        "value": "FR-SS",
+        "type": "dropDownNoFilter",
+        "random": false
+    },
+    "link-Base-dentaire": {
+        "selectorAttr":".link-Base-dentaire",
+        "type": "link",
+        "value": "Dentaire",
+        "random": false
+    },
+    "Base-dentaire-taux_expr_gar_gg_1":{
+        "selectorAttr":".Base .Base-dentaire .taux_expr_gar_gg_1",
+        "value": "100",
+        "label":"Dentaire",
+        "type" : "input-text",
+        "random":false
+    },
+    "Base-dentaire-expr_gar_gg_1": {
+        "selectorAttr": ".Base .Base-dentaire .expr_gar_gg_1 .p-dropdown-trigger",
+        "label":"Dentaire Assiette 1",
+        "value": "FR-SS",
+        "type": "dropDownNoFilter",
+        "random": false
+    },
+    "link-Base-optique": {
+        "selectorAttr":".link-Base-optique",
+        "type": "link",
+        "value": "Optique",
+        "random": false
+    },
+    "Base-optique-taux_expr_gar_gg_1":{
+        "selectorAttr":".Base .Base-optique .taux_expr_gar_gg_1",
+        "value": "100",
+        "label":"optique",
+        "type" : "input-text",
+        "random":false
+    },
+    "Base-optique-expr_gar_gg_1": {
+        "selectorAttr": ".Base .Base-optique .expr_gar_gg_1 .p-dropdown-trigger",
+        "label":"Optique Assiette 1",
+        "value": "FR-SS",
+        "type": "dropDownNoFilter",
+        "random": false
+    },
+    "link-Base-aides_auditives": {
+        "selectorAttr":".link-Base-aides_auditives",
+        "type": "link",
+        "value": "Aides auditives",
+        "random": false
+    },
+    "Base-aides_auditives-taux_expr_gar_gg_1":{
+        "selectorAttr":".Base .Base-aides_auditives .taux_expr_gar_gg_1",
+        "value": "100",
+        "label":"Aides Auditives Taux 1",
+        "type" : "input-text",
+        "random":false
+    },
+    "Base-aides_auditives-expr_gar_gg_1": {
+        "selectorAttr": ".Base .Base-aides_auditives .expr_gar_gg_1 .p-dropdown-trigger",
+        "label":"Aides Auditives Assiette 1",
+        "value": "FR-SS",
+        "type": "dropDownNoFilter",
+        "random": false
+    },
+    "link-Base-autres_soins": {
+        "selectorAttr":".link-Base-autres_soins",
+        "type": "link",
+        "value": "Autres postes de soins",
+        "random": false
+    },
+    "Base-autres_soins-taux_expr_gar_gg_1":{
+        "selectorAttr":".Base .Base-autres_soins .taux_expr_gar_gg_1",
+        "value": "100",
+        "label":"Autres postes de soins Taux 1",
+        "type" : "input-text",
+        "random":false
+    },
+    "Base-autres_soins-expr_gar_gg_1": {
+        "selectorAttr": ".Base .Base-autres_soins .expr_gar_gg_1 .p-dropdown-trigger",
+        "label":"Autres postes de soins Assiette 1",
+        "value": "FR-SS",
+        "type": "dropDownNoFilter",
+        "random": false
+    },
+    "link-Base-services_fm": {
+        "selectorAttr":".link-Base-services_fm",
+        "type": "link",
+        "value": "Services",
+        "random": false
+    },
+    "Base-services_fm-taux_expr_gar_gg_1":{
+        "selectorAttr":".Base .Base-services_fm .taux_expr_gar_gg_1",
+        "value": "100",
+        "label":"Services",
+        "type" : "input-text",
+        "random":false
+    },
+    "save-etude1": {
+        "selectorAttr": ".save-etude",
+        "type": "button",
+        "random": false
+    },
+    "valider-options": {
+        "selectorAttr": ".valider-options",
+        "type": "button",
+        "random": false
+    }
+   
+}

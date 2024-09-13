@@ -9,14 +9,14 @@
         },
         "socialReason": {
             "selectorAttr": "app-society-with-siret .social-reason input",
-            "value": "Contrat-prevoyance-SMK-etude-sur-statistiques29082024",
+            "value": "Contrat-prevoyance-SMK-etude-sur-statistiques13099024",
             "label": "Raison sociale",
             "type": "input-text",
             "random": false
         },
         "manager": {
             "selectorAttr": "app-society-with-siret .manager input",
-            "value": "Contrat-prevoyance-SMK-etude-sur-statistiques29882024",
+            "value": "Contrat-prevoyance-SMK-etude-sur-statistiques13099024",
             "label": "Dirigeant",
             "type": "input-text",
             "random": false

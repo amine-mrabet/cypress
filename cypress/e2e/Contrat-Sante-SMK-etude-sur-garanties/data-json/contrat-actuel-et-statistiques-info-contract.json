@@ -2,7 +2,7 @@
     "collegeId": {
         "selectorAttr": ".college-id",
         "label": "Collège",
-        "value": "ENSEMBLE DU PERSONNEL",
+        "value": "CADRE",
         "type": "dropDown",
         "random": false
     },

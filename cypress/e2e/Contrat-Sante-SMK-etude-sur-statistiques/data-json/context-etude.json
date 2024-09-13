@@ -3,104 +3,105 @@
         "selectorAttr": ".expectedEffectiveDate input[type=text]",
         "label": "Date d'effet souhaitée",
         "type": "input-text",
-        "value": "30/08/2024",
+        "value": "30/09/2024",
         "random": false
     },
     "expectedInspectionDate": {
         "selectorAttr": ".expectedInspectionDate input[type=text]",
         "label": "Date souhaitée de retour à l'inspection",
         "type": "input-text",
-        "value": "30/08/2024",
+        "value": "30/09/2024",
         "random": false
     },
     "expectedResponseClientDate": {
         "selectorAttr": ".expectedResponseClientDate input[type=text]",
         "label": "Date souhaitée de réponse à l'apporteur ou au client",
         "type": "input-text",
-        "value": "30/08/2024",
+        "value": "30/09/2024",
         "random": false
     },
-    "DelegateIncome": {
-        "selectorAttr": ".DelegateIncome input[type=checkbox]",
+    "DelegateIncome-0": {
+        "selectorAttr": ".DelegateIncome-0 input[type=checkbox]",
         "label": "contrat",
         "type": "checkbox",
         "value": "",
         "random": false
     },
-    "encaissement-1":{
-        "selectorAttr":".encaissement-1",
+    "encaissement-1-0":{
+        "selectorAttr":".encaissement-1-0",
         "value": "G100",
         "type" : "input-text",
         "random":false
     },
-    "encaissement-loop-button":{
-        "selectorAttr":".encaissement-loop-button",
+    "encaissement-loop-button-0":{
+        "selectorAttr":".encaissement-loop-button-0",
         "type" : "button",
         "random":false
     },
-    "prestationManager": {
-        "selectorAttr": ".prestationManager input[type=checkbox]",
+    "prestationManager-0": {
+        "selectorAttr": ".prestationManager-0 input[type=checkbox]",
         "label": "contrat",
         "type": "checkbox",
         "value": "",
         "random": false
     },
-    "prestation-1":{
-        "selectorAttr":".prestation-1",
+    "prestation-1-0":{
+        "selectorAttr":".prestation-1-0",
         "value": "G100",
         "type" : "input-text",
         "random":false
     },
-    "prestation-loop-button":{
-        "selectorAttr":".prestation-loop-button",
+    "prestation-loop-button-0":{
+        "selectorAttr":".prestation-loop-button-0",
         "type" : "button",
         "random":false
     },
-    "comm_acqui":{
-        "selectorAttr":".comm_acqui",
-        "value": "6",
-        "label":"Commission d'acquisition",
-        "type" : "input-text",
-        "random":false
-    },
-    "surcomm_app":{
-        "selectorAttr":".surcomm_app",
+    "surcomm_app-0":{
+        "selectorAttr":".surcomm_app-0",
         "value": "1",
         "label":"Sur-commisson apporteur",
         "type" : "input-text",
         "random":false
     },
-    "gestion_cie":{
-        "selectorAttr":".gestion_cie",
+    "comm_acqui-0":{
+        "selectorAttr":".comm_acqui-0",
+        "value": "0",
+        "label":"Commission d'acquisition",
+        "type" : "input-text",
+        "random":false
+    },
+    "autres_charg_cie-0":{
+        "selectorAttr":".autres_charg_cie-0",
+        "value": "5",
+        "label":"Autres Chargements compagnie",
+        "type" : "input-text",
+        "random":false
+    },
+    "marge_cie-0":{
+        "selectorAttr":".marge_cie-0",
+        "value": "0",
+        "label":"Taux de marge compagnie",
+        "type" : "input-text",
+        "random":false
+    },
+
+    "gestion_cie-0":{
+        "selectorAttr":".gestion_cie-0",
         "value": "6.5",
         "label":"Taux de gestion compagnie",
         "type" : "input-text",
         "random":false
     },
-    "marge_cie":{
-        "selectorAttr":".marge_cie",
-        "value": "3.5",
-        "label":"Taux de marge compagnie",
-        "type" : "input-text",
-        "random":false
-    },
-    "autres_charg_cie":{
-        "selectorAttr":".autres_charg_cie",
-        "value": "1",
-        "label":"Autres Chargements compagnie",
-        "type" : "input-text",
-        "random":false
-    },
-    "comm_coass":{
-        "selectorAttr":".comm_coass",
-        "value": "2",
+    "comm_coass-0":{
+        "selectorAttr":".comm_coass-0",
+        "value": "0",
         "label":"Chargement de coassurance",
         "type" : "input-text",
         "random":false
     },
-    "comm_reass":{
-        "selectorAttr":".comm_reass",
-        "value": "1",
+    "comm_reass-0":{
+        "selectorAttr":".comm_reass-0",
+        "value": "3.5",
         "label":" Chargement de réassurance",
         "type" : "input-text",
         "random":false

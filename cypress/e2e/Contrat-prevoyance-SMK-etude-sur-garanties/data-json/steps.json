@@ -1,55 +1,59 @@
 {
     "step1": {
         "name": "create Saisie",
-        "run": false
+        "run": true
     },
     "step2": {
         "name": "create Project",
-        "run": false
+        "run": true
     },
     "step3": {
         "name": "create Etude",
         "run": true
     },
     "step4": {
+        "name": "add cotation",
+        "run": true
+    },
+    "step5": {
         "name": "Réponse tarifaire en instance",
         "run": false
     },
-    "step5": {
+    "step6": {
         "name": "validation Accord Client BY souscripteur",
         "run": false
     },
-    "step6": {
+    "step7": {
         "name": "Demander l’émission",
         "run": false
     },
-    "step7": {
+    "step8": {
         "name": "structuration",
         "run": false
     },
-    "step8": {
+    "step9": {
         "name": "En Rédaction vers Projet de PC à envoyer",
         "run": false
     },
-    "step9": {
+    "step10": {
         "name": "Projet de PC à envoyer vers Demande de retouche",
         "run": false
     },
-    "step10": {
+    "step11": {
         "name": "Demande de retouche vers Projet de PC à envoyer",
         "run": false
     },
-    "step11": {
+    "step12": {
         "name": "Projet de PC à envoyer vers Projet de PC Validé",
         "run": false
     },
-    "step12": {
+    "step13": {
         "name": "Projet de PC Validé vers PC à envoyer",
         "run": false
     },
-    "step13": {
+    "step14": {
         "name": "PC à envoyer vers Finalisé",
         "run": false
     },
-    "projectNumber": "2024AS25"
+    "projectNumber": ""
 }
