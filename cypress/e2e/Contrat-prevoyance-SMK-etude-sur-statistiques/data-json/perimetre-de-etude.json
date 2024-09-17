@@ -1,8 +1,23 @@
 {
-    "legalForm": {
+    
+    "contract-actuel": {
+        "selectorAttr": "#contract-actuel-0 input[type=checkbox]",
+        "label":"contract-actuel",
+        "type": "checkbox",
+        "value": "ISOGARANTIE",
+        "random": false
+    },
+    "Iso-garantie": {
+        "selectorAttr": "#g1 input[type=radio]",
+        "label":"Iso-garantie",
+        "type": "checkbox",
+        "value": "ISOGARANTIE",
+        "random": false
+    },
+    "collegeIdEtude": {
         "selectorAttr": ".collegeIdEtude",
-        "label": "Choix du collège",
-        "value": "CADRE",
+        "label": "CADRE",
+        "value": "ENSEMBLE DU PERSONNEL",
         "type": "dropDown",
         "random": false
     },
@@ -13,4 +28,13 @@
         "type": "dropDownNoFilter",
         "random": false
     }
+    ,
+    "PREV_SM_CARCEPT_1_pdtcom_reprise_passif": {
+        "selectorAttr": ".PREV_SM_CARCEPT_1_pdtcom_reprise_passif .p-dropdown-trigger",
+        "label": "Reprise de passif :",
+        "value": "Oui",
+        "type": "dropDownNoFilter",
+        "random": false
+    }
+    
 }

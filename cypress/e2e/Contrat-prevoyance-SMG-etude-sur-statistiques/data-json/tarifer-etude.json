@@ -3,83 +3,88 @@
         "type": "wait",
         "value": 4000
     },
-    "repartition-demography-0-0": {
-        "selectorAttr": ".repartition-demography-0-0 input",
-        "value": "50",
+    "technicalTPFM0": {
+        "selectorAttr": ".technicalTPFM-0",
+        "label": "Taux technique ancien cahier des charges DC TA",
         "type": "input-text",
+        "value": "10",
         "random": false
     },
-    "repartition-demography-0-1": {
-        "selectorAttr": ".repartition-demography-0-1 input",
-        "value": "50",
+    "technicalTPFM1": {
+        "selectorAttr": ".technicalTPFM-1",
+        "label": "Taux technique ancien cahier des charges DC TB",
         "type": "input-text",
+        "value": "10",
         "random": false
     },
-    "repartition-demography-1-0": {
-        "selectorAttr": ".repartition-demography-1-0 input",
-        "value": "50",
+    "technicalTPFM2": {
+        "selectorAttr": ".technicalTPFM-2",
+        "label": "Taux technique ancien cahier des charges DC TC",
         "type": "input-text",
+        "value": "10",
         "random": false
     },
-    "repartition-demography-1-1": {
-        "selectorAttr": ".repartition-demography-1-1 input",
-        "value": "50",
+    "technicalTPFM3": {
+        "selectorAttr": ".technicalTPFM-3",
+        "label": "Taux technique ancien cahier des charges DC TD",
         "type": "input-text",
+        "value": "10",
         "random": false
     },
-    "repartition-demography-2-0": {
-        "selectorAttr": ".repartition-demography-2-0 input",
-        "value": "50",
+    "technicalTPFM4": {
+        "selectorAttr": ".technicalTPFM-4",
+        "label": "Taux technique ancien cahier des charges ITIP TA",
         "type": "input-text",
+        "value": "10",
         "random": false
     },
-    "repartition-demography-2-1": {
-        "selectorAttr": ".repartition-demography-2-1 input",
-        "value": "50",
+    "technicalTPFM5": {
+        "selectorAttr": ".technicalTPFM-5",
+        "label": "Taux technique ancien cahier des charges ITIP TB",
         "type": "input-text",
+        "value": "10",
         "random": false
     },
-    "repartition-demography-3-0": {
-        "selectorAttr": ".repartition-demography-3-0 input",
-        "value": "50",
+    "technicalTPFM6": {
+        "selectorAttr": ".technicalTPFM-6",
+        "label": "Taux technique ancien cahier des charges ITIP TC",
         "type": "input-text",
+        "value": "10",
         "random": false
     },
-    "repartition-demography-3-1": {
-        "selectorAttr": ".repartition-demography-3-1 input",
-        "value": "50",
+    "technicalTPFM7": {
+        "selectorAttr": ".technicalTPFM-7",
+        "label": "Taux technique ancien cahier des charges ITIP TD",
         "type": "input-text",
+        "value": "10",
         "random": false
     },
-    "repartition-demography-4-0": {
-        "selectorAttr": ".repartition-demography-4-0 input",
-        "value": "50",
+    "technicalTPFM8": {
+        "selectorAttr": ".technicalTPFM-8",
+        "label": "Taux technique ancien cahier des charges Global TA",
         "type": "input-text",
+        "value": "10",
         "random": false
     },
-    "repartition-demography-4-1": {
-        "selectorAttr": ".repartition-demography-4-1 input",
-        "value": "50",
+    "technicalTPFM9": {
+        "selectorAttr": ".technicalTPFM-9",
+        "label": "Taux technique ancien cahier des charges Global TB",
         "type": "input-text",
+        "value": "10",
         "random": false
     },
-    "repartition-demography-5-0": {
-        "selectorAttr": ".repartition-demography-5-0 input",
-        "value": "50",
+    "technicalTPFM10": {
+        "selectorAttr": ".technicalTPFM-10",
+        "label": "Taux technique ancien cahier des charges Global TC",
         "type": "input-text",
+        "value": "10",
         "random": false
     },
-    "repartition-demography-5-1": {
-        "selectorAttr": ".repartition-demography-5-1 input",
-        "value": "50",
+    "technicalTPFM11": {
+        "selectorAttr": ".technicalTPFM-11",
+        "label": "Taux technique ancien cahier des charges Global TD",
         "type": "input-text",
+        "value": "10",
         "random": false
-    },
-    "StructureCotis2_expression_taux_cotis2":{
-        "selectorAttr":".StructureCotis2_expression_taux_cotis2 .p-dropdown-trigger",
-        "label":"Expression de cotisation :",
-        "value":"Tranches TA/TB/TC/TD",
-        "type" : "dropDownNoFilter",
-        "random":false
     }
 }

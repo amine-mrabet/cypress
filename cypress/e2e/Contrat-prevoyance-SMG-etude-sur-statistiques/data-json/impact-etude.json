@@ -1,0 +1,135 @@
+{
+    "impact-comm_acqui-0": {
+        "selectorAttr": ".impact-comm_acqui-0",
+        "value": "6",
+        "label": "Commission d'acquisition",
+        "type": "input-text",
+        "random": false
+    },
+    "impact-surcomm_app-0": {
+        "selectorAttr": ".impact-surcomm_app-0",
+        "value": "1",
+        "label": "Sur-commisson apporteur",
+        "type": "input-text",
+        "random": false
+    },
+    "impact-gestion_cie-0": {
+        "selectorAttr": ".impact-gestion_cie-0",
+        "value": "6.5",
+        "label": "Taux de gestion compagnie",
+        "type": "input-text",
+        "random": false
+    },
+    "impact-marge_cie-0": {
+        "selectorAttr": ".impact-marge_cie-0",
+        "value": "3.5",
+        "label": "Taux de marge compagnie",
+        "type": "input-text",
+        "random": false
+    },
+    "impact-autres_charg_cie-0": {
+        "selectorAttr": ".impact-autres_charg_cie-0",
+        "value": "1",
+        "label": "Autres Chargements compagnie",
+        "type": "input-text",
+        "random": false
+    },
+    "impact-comm_coass-0": {
+        "selectorAttr": ".impact-comm_coass-0",
+        "value": "2",
+        "label": "Chargement de coassurance",
+        "type": "input-text",
+        "random": false
+    },
+    "impact-comm_reass-0": {
+        "selectorAttr": ".impact-comm_reass-0",
+        "value": "1",
+        "label": " Chargement de réassurance",
+        "type": "input-text",
+        "random": false
+    },
+    "statistical-deces-coefPriceChangeYear-0": {
+        "selectorAttr": ".statistical-deces-coefPriceChangeYear-0",
+        "value": "1",
+        "label": " Evolutions des tarifs par an décès",
+        "type": "input-text",
+        "random": false
+    },
+    "statistical-deces-coefEvolGuaranteeAcc-0": {
+        "selectorAttr": ".statistical-deces-coefEvolGuaranteeAcc-0",
+        "value": "1",
+        "label": "Evolution garanties sur compte de charge, décès",
+        "type": "input-text",
+        "random": false
+    },
+    "statistical-deces-coefEvolRegulatory-0": {
+        "selectorAttr": ".statistical-deces-coefEvolRegulatory-0",
+        "value": "1",
+        "label": "Evolution réglementaire, décès",
+        "type": "input-text",
+        "random": false
+    },
+    "statistical-deces-coefPriceChangeYear-1": {
+        "selectorAttr": ".statistical-deces-coefPriceChangeYear-1",
+        "value": "1",
+        "label": " Evolutions des tarifs par an décès",
+        "type": "input-text",
+        "random": false
+    },
+    "statistical-deces-coefEvolGuaranteeAcc-1": {
+        "selectorAttr": ".statistical-deces-coefEvolGuaranteeAcc-1",
+        "value": "1",
+        "label": "Evolution garanties sur compte de charge, décès",
+        "type": "input-text",
+        "random": false
+    },
+    "statistical-deces-coefEvolRegulatory-1": {
+        "selectorAttr": ".statistical-deces-coefEvolRegulatory-1",
+        "value": "1",
+        "label": "Evolution réglementaire, décès",
+        "type": "input-text",
+        "random": false
+    },
+    "statistical-incapacite-coefPriceChangeYear-0": {
+        "selectorAttr": ".statistical-incapacite-coefPriceChangeYear-0",
+        "value": "1",
+        "label": " Evolutions des tarifs par an décès",
+        "type": "input-text",
+        "random": false
+    },
+    "statistical-incapacite-coefEvolGuaranteeAcc-0": {
+        "selectorAttr": ".statistical-incapacite-coefEvolGuaranteeAcc-0",
+        "value": "1",
+        "label": "Evolution garanties sur compte de charge, décès",
+        "type": "input-text",
+        "random": false
+    },
+    "statistical-incapacite-coefEvolRegulatory-0": {
+        "selectorAttr": ".statistical-incapacite-coefEvolRegulatory-0",
+        "value": "1",
+        "label": "Evolution réglementaire, décès",
+        "type": "input-text",
+        "random": false
+    },
+    "statistical-incapacite-coefPriceChangeYear-1": {
+        "selectorAttr": ".statistical-incapacite-coefPriceChangeYear-1",
+        "value": "1",
+        "label": " Evolutions des tarifs par an décès",
+        "type": "input-text",
+        "random": false
+    },
+    "statistical-incapacite-coefEvolGuaranteeAcc-1": {
+        "selectorAttr": ".statistical-incapacite-coefEvolGuaranteeAcc-1",
+        "value": "1",
+        "label": "Evolution garanties sur compte de charge, décès",
+        "type": "input-text",
+        "random": false
+    },
+    "statistical-incapacite-coefEvolRegulatory-1": {
+        "selectorAttr": ".statistical-incapacite-coefEvolRegulatory-1",
+        "value": "1",
+        "label": "Evolution réglementaire, décès",
+        "type": "input-text",
+        "random": false
+    }
+}

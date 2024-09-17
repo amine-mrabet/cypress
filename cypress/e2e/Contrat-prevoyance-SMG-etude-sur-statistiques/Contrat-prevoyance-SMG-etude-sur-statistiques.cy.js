@@ -21,7 +21,7 @@ const SOURCETARIFICATION = require('./data-json/source-de-tarification.json');
 const CONTEXTETUDE = require('./data-json/context-etude.json')
 const SELECTIONGARANTIES = require('./data-json/selection-des-garanties.json');
 const TARIFERETUDER = require('./data-json/tarifer-etude.json');
-
+const IMPACTETUDE = require('./data-json/impact-etude.json');
 // Generate a random 14-digit number
 const randomNumber14 = Math.floor(10000000000000 + Math.random() * 90000000000000);
 var NUM_PROJET = STEPS.projectNumber != "" ? STEPS.projectNumber : null
@@ -182,7 +182,9 @@ describe('My Web Application Tests', () => {
         cy.get('.save-etude').should('exist').click({ waitForAnimations: false });
         cy.wait(4000);
         cy.contains('li span', 'Sélection des garanties').click();
-        addDynamiqueData(SELECTIONGARANTIES)
+        addDynamiqueData(SELECTIONGARANTIES);
+        cy.contains('li span', 'Impact').click();
+        addDynamiqueData(IMPACTETUDE);
         cy.contains('li span', 'Tarif').click();
         addDynamiqueData(TARIFERETUDER)
         cy.get('.tarifer').should('exist').click({ waitForAnimations: false });
@@ -191,6 +193,7 @@ describe('My Web Application Tests', () => {
         cy.wait(4000);
         cy.get('.figer-etude').should('exist').click({ waitForAnimations: false });
         cy.wait(4000);
+       
         
       } else {
         console.log('Login failed');
