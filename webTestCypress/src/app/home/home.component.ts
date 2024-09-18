@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit {
       label: 'Run Cypress',
       icon: 'fa-solid fa-gear',
       url: 'runCypress',
+      command: (event: any) => this.open(event.item)
     }
   ];
   Roles: any[] = []
@@ -47,9 +48,9 @@ export class HomeComponent implements OnInit {
               return {
                 label: item.replace(/-/g, " ").replace(".json", " "),
                 icon: 'fa-solid fa-file',
-                url: `editor/${element}/${item}`,
+                url: [`editor/${element}/${item}`],
                 disabled:false,
-                command: (event: any) => this.open(item)
+                command: (event: any) => this.open(event.item)
               }
             })
           })
@@ -61,11 +62,7 @@ export class HomeComponent implements OnInit {
 
   }
   open(menu: any) {
-    const link = menu.link ? menu.link[0] : null;
-    const externalLink = link ? link.startsWith('http') : link;
-    if (link) {
-      externalLink ? window.open(link, menu.openWindow ? '_blank' : '_self') : this.router.navigate(menu.link, { queryParams: menu.params });
-    }
+    menu.url && Array.isArray(menu.url)  ? this.router.navigate(menu.url) : this.router.navigate([menu.url])
   }
 
   /**

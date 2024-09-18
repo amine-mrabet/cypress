@@ -41,6 +41,9 @@ export class RunCypressComponent implements OnInit{
         const blob = new Blob([response], { type: 'video/mp4' });
         this.videoUrl = URL.createObjectURL(blob);
         this.showVideo = true;
-      });
+      },(error=>{
+        this.videoUrl = '';
+        this.showVideo = false;
+      }));
   }
 }
