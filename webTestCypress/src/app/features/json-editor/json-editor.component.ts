@@ -11,23 +11,23 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class CustomJsonEditorComponent implements OnInit {
   fileContent: any
   fileName: any
-  folder:any
+  folder: any
   public editorOptions: JsonEditorOptions | any;
-  form:FormGroup | any;
+  form: FormGroup | any;
   @ViewChild(JsonEditorComponent, { static: false }) editor: JsonEditorComponent | any;
 
-  constructor(private service: JsonEditorService,private route: ActivatedRoute,private fb:FormBuilder) {
+  constructor(private service: JsonEditorService, private route: ActivatedRoute, private fb: FormBuilder) {
     this.editorOptions = new JsonEditorOptions()
     this.editorOptions.mode = 'code';
     this.editorOptions.modes = ['code', 'text', 'tree', 'view']
     this.route.params.subscribe(params => {
-      this.folder  = params['param1'];
-      this.fileName  = params['param2'];
+      this.folder = params['param1'];
+      this.fileName = params['param2'];
+      this.getContentFile()
     });
 
   }
   ngOnInit(): void {
-    this.getContentFile()
   }
 
 

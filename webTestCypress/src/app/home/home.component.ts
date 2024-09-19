@@ -23,8 +23,9 @@ export class HomeComponent implements OnInit {
     {
       label: 'Run Cypress',
       icon: 'fa-solid fa-gear',
-      url: 'runCypress',
-      command: (event: any) => this.open(event.item)
+      //url: 'runCypress',
+      command: () => { this.router.navigate(['runCypress']); this.openSideBarMenu = false;}
+      //command: (event: any) => this.open(event.item)
     }
   ];
   Roles: any[] = []
@@ -34,6 +35,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.getMenu()
+  }
+  goToHome() {
+    this.router.navigate(['/']) 
   }
   getMenu() {
     let count = 0;
@@ -48,9 +52,10 @@ export class HomeComponent implements OnInit {
               return {
                 label: item.replace(/-/g, " ").replace(".json", " "),
                 icon: 'fa-solid fa-file',
-                url: [`editor/${element}/${item}`],
+                //url: [`editor/${element}/${item}`],
                 disabled:false,
-                command: (event: any) => this.open(event.item)
+                command: () => { this.router.navigate([`editor`,`${element}`,`${item}`]); this.openSideBarMenu = false;}
+                //command: (event: any) => this.open(event.item)
               }
             })
           })
