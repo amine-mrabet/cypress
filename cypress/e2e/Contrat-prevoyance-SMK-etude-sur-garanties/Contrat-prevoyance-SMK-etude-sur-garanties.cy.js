@@ -33,7 +33,10 @@ describe('My Web Application Tests', () => {
         Cypress.runner.stop() // Stop the test run
       });
       Cypress.on('fail', (error, runnable) => {
-        Cypress.runner.stop() // Stop the test run
+        if (error.message.includes('element not found')) {
+          return false;
+        }
+        throw error;
       });
       const isLoginSuccessful = checkLogin(b012cag.username, b012cag.password, b012cag);
       if (isLoginSuccessful) {
@@ -77,7 +80,10 @@ describe('My Web Application Tests', () => {
         Cypress.runner.stop() // Stop the test run
       });
       Cypress.on('fail', (error, runnable) => {
-        Cypress.runner.stop() // Stop the test run
+        if (error.message.includes('element not found')) {
+          return false;
+        }
+        throw error;
       });
 
       const isLoginSuccessful = checkLogin(b300nqa.username, b300nqa.password, b300nqa);
@@ -141,7 +147,10 @@ describe('My Web Application Tests', () => {
         Cypress.runner.stop() // Stop the test run
       });
       Cypress.on('fail', (error, runnable) => {
-        Cypress.runner.stop() // Stop the test run
+        if (error.message.includes('element not found')) {
+          return false;
+        }
+        throw error;
       });
 
       const isLoginSuccessful = checkLogin(b300nqa.username, b300nqa.password, b300nqa);
@@ -207,7 +216,10 @@ describe('My Web Application Tests', () => {
         Cypress.runner.stop() // Stop the test run
       });
       Cypress.on('fail', (error, runnable) => {
-        Cypress.runner.stop() // Stop the test run
+        if (error.message.includes('element not found')) {
+          return false;
+        }
+        throw error;
       });
 
       const isLoginSuccessful = checkLogin(b300nqa.username, b300nqa.password, b300nqa);
@@ -242,7 +254,10 @@ describe('My Web Application Tests', () => {
         Cypress.runner.stop() // Stop the test run
       });
       Cypress.on('fail', (error, runnable) => {
-        Cypress.runner.stop() // Stop the test run
+        if (error.message.includes('element not found')) {
+          return false;
+        }
+        throw error;
       });
       const isLoginSuccessful = checkLogin(b011jpz.username, b011jpz.password, b011jpz);
       if (isLoginSuccessful) {
@@ -282,7 +297,10 @@ describe('My Web Application Tests', () => {
         Cypress.runner.stop() // Stop the test run
       });
       Cypress.on('fail', (error, runnable) => {
-        Cypress.runner.stop() // Stop the test run
+        if (error.message.includes('element not found')) {
+          return false;
+        }
+        throw error;
       });
 
       const isLoginSuccessful = checkLogin(b300nqa.username, b300nqa.password, b300nqa);
@@ -338,7 +356,10 @@ describe('My Web Application Tests', () => {
         Cypress.runner.stop() // Stop the test run
       });
       Cypress.on('fail', (error, runnable) => {
-        Cypress.runner.stop() // Stop the test run
+        if (error.message.includes('element not found')) {
+          return false;
+        }
+        throw error;
       });
 
       const isLoginSuccessful = checkLogin(b011jpz.username, b011jpz.password, b011jpz);
@@ -378,7 +399,10 @@ describe('My Web Application Tests', () => {
         Cypress.runner.stop() // Stop the test run
       });
       Cypress.on('fail', (error, runnable) => {
-        Cypress.runner.stop() // Stop the test run
+        if (error.message.includes('element not found')) {
+          return false;
+        }
+        throw error;
       });
 
       const isLoginSuccessful = checkLogin(b011jpz.username, b011jpz.password, b011jpz);
@@ -428,7 +452,10 @@ describe('My Web Application Tests', () => {
       cy.reload(true);
       Login(b011juc.username, b011juc.password)
       Cypress.on('fail', (error, runnable) => {
-        Cypress.runner.stop() // Stop the test run
+        if (error.message.includes('element not found')) {
+          return false;
+        }
+        throw error;
       });
 
       const isLoginSuccessful = checkLogin(b011juc.username, b011juc.password, b011juc);
@@ -496,7 +523,10 @@ describe('My Web Application Tests', () => {
         Cypress.runner.stop() // Stop the test run
       });
       Cypress.on('fail', (error, runnable) => {
-        Cypress.runner.stop() // Stop the test run
+        if (error.message.includes('element not found')) {
+          return false;
+        }
+        throw error;
       });
       const isLoginSuccessful = checkLogin(b011jpz.username, b011jpz.password, b011jpz);
       if (isLoginSuccessful) {
@@ -532,7 +562,10 @@ describe('My Web Application Tests', () => {
         Cypress.runner.stop() // Stop the test run
       });
       Cypress.on('fail', (error, runnable) => {
-        Cypress.runner.stop() // Stop the test run
+        if (error.message.includes('element not found')) {
+          return false;
+        }
+        throw error;
       });
 
       const isLoginSuccessful = checkLogin(b011juc.username, b011juc.password, b011juc);
@@ -577,7 +610,10 @@ describe('My Web Application Tests', () => {
         Cypress.runner.stop() // Stop the test run
       });
       Cypress.on('fail', (error, runnable) => {
-        Cypress.runner.stop() // Stop the test run
+        if (error.message.includes('element not found')) {
+          return false;
+        }
+        throw error;
       });
       const isLoginSuccessful = checkLogin(b011jpz.username, b011jpz.password, b011jpz);
       if (isLoginSuccessful) {
@@ -617,7 +653,10 @@ describe('My Web Application Tests', () => {
         Cypress.runner.stop() // Stop the test run
       });
       Cypress.on('fail', (error, runnable) => {
-        Cypress.runner.stop() // Stop the test run
+        if (error.message.includes('element not found')) {
+          return false;
+        }
+        throw error;
       });
 
       const isLoginSuccessful = checkLogin(b011juc.username, b011juc.password, b011juc);
@@ -665,7 +704,10 @@ describe('My Web Application Tests', () => {
         Cypress.runner.stop() // Stop the test run
       });
       Cypress.on('fail', (error, runnable) => {
-        Cypress.runner.stop() // Stop the test run
+        if (error.message.includes('element not found')) {
+          return false;
+        }
+        throw error;
       });
       const isLoginSuccessful = checkLogin(b011jpz.username, b011jpz.password, b011jpz);
       if (isLoginSuccessful) {

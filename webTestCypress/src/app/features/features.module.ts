@@ -5,10 +5,11 @@ import { SharedModule } from '@app/shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { CustomJsonEditorComponent } from './json-editor/json-editor.component';
 import { RunCypressComponent } from './run-cypress/run-cypress.component';
+import { StatisticalDetailsComponent } from './statistical-details/statistical-details.component';
 
 
 @NgModule({
-  declarations: [CustomJsonEditorComponent, RunCypressComponent],
+  declarations: [CustomJsonEditorComponent, RunCypressComponent, StatisticalDetailsComponent],
   imports: [
     CommonModule,
     SharedModule,

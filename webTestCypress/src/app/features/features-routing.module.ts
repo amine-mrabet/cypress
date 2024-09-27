@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CustomJsonEditorComponent } from './json-editor/json-editor.component';
 import { RunCypressComponent } from './run-cypress/run-cypress.component';
+import { StatisticalDetailsComponent } from './statistical-details/statistical-details.component';
 
 
 const routes: Routes = [
+  { path: '', loadChildren: () => import('./dashboard/dashboard.module').then((m) => m.DashboardModule) },
   {
     path: 'editor/:param1/:param2',
     component: CustomJsonEditorComponent,
@@ -16,6 +18,10 @@ const routes: Routes = [
   {
     path: 'runCypress',
     component: RunCypressComponent,
+  },
+  {
+    path: 'statistical-details',
+    component: StatisticalDetailsComponent,
   }
 ];
 

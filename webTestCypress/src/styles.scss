@@ -382,3 +382,46 @@ json-editor > div{
     margin: -3px 0px 3px 3px;
   }
 }
+.container-dashbord{
+  margin: 10px 45px;
+  .item-chart{
+    margin-bottom: 20px;
+    .card-widget{
+      border: 1px solid #ccc;
+      margin: 5px;
+      box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15) !important;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-color: #fff;
+      background-clip: border-box;
+      .header-widget{
+        background-color: #f8f9fc;
+        border-bottom: 1px solid #e3e6f0;
+        .content{
+          padding: 10px 0px;
+          h6{
+            margin: 0;
+            font-size: 14px;
+            text-align: center;
+          }
+        }
+      }
+      .body-widget{
+        .chart-widget{
+          display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 0;
+            min-height: 200px;
+        }
+      }
+    }
+  
+  }
+}
+.p-accordion-header .p-accordion-header-link{
+  color: #000000 !important;
+}

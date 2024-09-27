@@ -1,0 +1,51 @@
+<div class="card flex justify-content-center container-statistiques">
+    <p-accordion class="w-full">
+        <p-accordionTab *ngFor="let item of statistiques">
+            <ng-template pTemplate="header">
+                <div class="flex align-items-center">
+                    <span class="vertical-align-middle">{{item.label}}</span>
+                </div>
+            </ng-template>
+            <ng-template *ngIf="item?.history.length" pTemplate="content">
+                <div class="tbl-header">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                        <thead>
+                            <tr>
+                                <th style="width: 25%;">Société de référence</th>
+                                <th style="width: 10%;">Date</th>
+                                <th style="width: 55%;">Message</th>
+                                <th style="width: 10%;">Status</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="tbl-content">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                        <tbody>
+                            <tr *ngFor="let history of item.history">
+                                <td style="width: 25%;">{{history?.socialReason}}</td>
+                                <td style="width: 10%;">{{history?.date}}</td>
+                                <td style="width: 55.5%;" [innerHTML]="formatTestResults(history?.message)"></td>
+                                <td style="width: 9.5%;">
+                                   <span [ngClass]="{
+                                    'green-status': history?.status === 'passed',
+                                    'red-status': history?.status === 'failed'
+                                  }">{{history?.status}}</span> 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </ng-template>
+            <div *ngIf="!item?.history.length" class="text-center">
+                <div class="icon-container">
+                    <img src="assets/no_results.svg" />
+                </div>
+                <p class="text-header">
+                    Nous n’avons rien trouvé.
+                </p>
+               
+            </div>
+        </p-accordionTab>
+    </p-accordion>
+</div>

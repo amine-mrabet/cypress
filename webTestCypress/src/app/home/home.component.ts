@@ -26,6 +26,13 @@ export class HomeComponent implements OnInit {
       //url: 'runCypress',
       command: () => { this.router.navigate(['runCypress']); this.openSideBarMenu = false;}
       //command: (event: any) => this.open(event.item)
+    },
+    {
+      label: 'Statistical Details',
+      icon: 'fa-solid fa-chart-simple',
+      //url: 'runCypress',
+      command: () => { this.router.navigate(['statistical-details']); this.openSideBarMenu = false;}
+      //command: (event: any) => this.open(event.item)
     }
   ];
   Roles: any[] = []

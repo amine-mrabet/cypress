@@ -15,13 +15,13 @@ module.exports = defineConfig({
   e2e: {
     supportFile:false,
     setupNodeEvents(on, config) {},
-    baseUrl: 'http://10.1.146.29:8080/#/',
+    baseUrl: 'http://localhost:4200/#/',
   },
   reporter: "mochawesome",
   reporterOptions: {
     reportDir: "cypress/reports/mochareports",
-    overwrite: true,
-    html: true,
-    json: true
+    overwrite: false,
+    html: false,
+    json: false
   }
 })

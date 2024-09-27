@@ -11,21 +11,21 @@ const backupFolder = path.join(__dirname, 'cypress/videos_backup');
 
 app.use(bodyParser.json());
 app.use(express.json({ limit: '300mb' }));
-app.get('/cypress/runcypress', async  (req, res) => {
+app.get('/cypress/runcypress', async (req, res) => {
+    const filePath = `cypress/e2e/${req.query.folder}/data-json/Etablissement.json`
+    const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    const socialReason = jsonData[0].socialReason.value;
     try {
         // Backup old videos
         await backupOldVideos(videosFolder, backupFolder);
         // Run Cypress tests
-        execSync(`npx cypress run --spec cypress/e2e/${req.query.folder}/${req.query.folder}.cy.js`, { stdio: 'inherit' });
+        const output = execSync(`npx cypress run --spec cypress/e2e/${req.query.folder}/${req.query.folder}.cy.js`, { stdio: 'pipe' });
         await backupOldVideos(videosFolder, backupFolder);
-
-        // Optionally backup videos again if needed
-        // await backupOldVideos(videosFolder, backupFolder);
-
-        res.send('Cypress script executed successfully');
+        const beautifiedOutput = beautifyCypressOutput(output);
+        res.send({ message: beautifiedOutput, socialReason: socialReason });
     } catch (error) {
-        console.error(`Error occurred: ${error}`);
-        res.status(500).send('An error occurred');
+        const beautifiedOutput = beautifyCypressOutput(error.stdout);
+        res.status(500).send({ error: beautifiedOutput, socialReason: socialReason });
     }
 });
 app.post('/cypress/updateFile', (req, res) => {
@@ -87,6 +87,26 @@ app.get('/cypress/getVideo', (req, res) => {
     // Pipe the file stream to the response
     readStream.pipe(res);
 });
+
+app.get('/cypress/getStatistiques', (req, res) => {
+    const filePath = `cypress/reports/statistiques.json`
+    const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    return res.json(jsonData);
+});
+app.post('/cypress/updateFileStatistiques', (req, res) => {
+    const filePath = `cypress/reports/statistiques.json`
+    const newData = req.body
+    if (!filePath || !newData) {
+        return res.status(400).json({ error: 'Missing filePath or newData parameters' });
+    }
+    try {
+        const updatedData = newData;
+        fs.writeFileSync(filePath, JSON.stringify(updatedData, null, 4));
+        return res.status(200).json({ message: 'JSON file updated successfully' });
+    } catch (err) {
+        return res.status(500).json({ error: 'Internal server error' });
+    }
+});
 function backupOldVideos(videosFolder, backupFolder) {
     return new Promise((resolve, reject) => {
         // Ensure the backup folder exists
@@ -126,7 +146,28 @@ function backupOldVideos(videosFolder, backupFolder) {
         });
     });
 }
+function beautifyCypressOutput(output) {
+    const outputString = output.toString('utf-8');
 
+    // Split the output into lines for processing
+    const lines = outputString.split('\n').map(line => line.trim()).filter(Boolean);
+    const start = lines.findIndex(line => line.includes('My Web Application Tests'));
+    const end = lines.findIndex(line => line.includes('(Results)'));
+    
+    // Define sections for better readability
+    const sections = []
+
+    lines.forEach((line,index) => {
+        if(index > start && index < end){
+            sections.push(line);  
+        }
+    });
+
+    let beautifiedOutput = '';
+    beautifiedOutput +=  sections.join('\n') + '\n\n';
+
+    return beautifiedOutput;
+}
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });

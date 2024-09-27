@@ -52,4 +52,14 @@ export class JsonEditorService {
     }
     return this.http.get(`${BASE_PATH}/getVideo`, { responseType: 'blob' ,params: params})
   }
+  getStatistiques() {
+    let params = new HttpParams();
+    return this.http.get(`${BASE_PATH}/getStatistiques`, {params: params})
+  }
+
+  updateFileStatistiques(body?: any): Observable<any[]> {
+    let params = new HttpParams();
+    const headers = new HttpHeaders({ "Content-Type": "application/json" });
+    return this.http.post<any[]>(`${BASE_PATH}/updateFileStatistiques`, body, { params: params, headers: headers });
+  }
 }

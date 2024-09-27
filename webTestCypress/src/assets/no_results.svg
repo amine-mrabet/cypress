@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>no results</title>
+    <g id="07---Parcours-gestionnaire-✅" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="07-01-01---Milleis---Parcours-Gestionnaire---Dashboard" transform="translate(-487.000000, -753.000000)">
+            <g id="no-results" transform="translate(487.000000, 753.000000)">
+                <circle id="Oval" fill="#F8F8F8" cx="32" cy="32" r="32"></circle>
+                <g id="Group-2" transform="translate(15.125000, 16.243940)" stroke="#999999" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                    <circle id="Oval" cx="6.75" cy="24.7560603" r="6.75"></circle>
+                    <path d="M13.5000043,24.7560603 L13.5000043,3.94356027 C13.5028789,1.97146671 12.0463844,0.301412004 10.0922161,0.0361059807 C8.13804769,-0.229200042 6.28901327,0.992082315 5.766,2.89356027 L0.2415,22.9635603" id="Shape"></path>
+                    <circle id="Oval" cx="27" cy="24.7560603" r="6.75"></circle>
+                    <path d="M20.2499957,24.7560603 L20.2499957,3.94356027 C20.2471211,1.97146671 21.7036156,0.301412004 23.6577839,0.0361059807 C25.6119523,-0.229200042 27.4609867,0.992082315 27.984,2.89356027 L33.5085,22.9590603" id="Shape"></path>
+                    <rect id="Rectangle-path" x="13.5" y="11.2560603" width="6.75" height="4.5"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

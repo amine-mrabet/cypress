@@ -13,6 +13,7 @@ import { LoaderService } from './services/loader.service';
 import { RequestInterceptorService } from './services/request-interceptor.service';
 import {ButtonModule} from 'primeng/button';
 import { NgJsonEditorModule } from 'ang-jsoneditor' 
+import { AccordionModule } from 'primeng/accordion';
 @NgModule({
   declarations: [
     LoaderComponent,
@@ -28,7 +29,8 @@ import { NgJsonEditorModule } from 'ang-jsoneditor'
     PanelMenuModule,
     DropdownModule,
     ButtonModule,
-    NgJsonEditorModule
+    NgJsonEditorModule,
+    AccordionModule
   ],
   exports: [
     FormsModule,
@@ -41,7 +43,8 @@ import { NgJsonEditorModule } from 'ang-jsoneditor'
     PanelMenuModule,
     DropdownModule,
     ButtonModule,
-    NgJsonEditorModule
+    NgJsonEditorModule,
+    AccordionModule
   ],
   providers: [LoaderService, MessageService,RequestInterceptorService]
 })
