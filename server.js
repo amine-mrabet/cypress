@@ -17,13 +17,14 @@ app.get('/cypress/runcypress', async (req, res) => {
     const socialReason = jsonData[0].socialReason.value;
     try {
         // Backup old videos
-        await backupOldVideos(videosFolder, backupFolder);
+        //await backupOldVideos(videosFolder, backupFolder);
         // Run Cypress tests
         const output = execSync(`npx cypress run --spec cypress/e2e/${req.query.folder}/${req.query.folder}.cy.js`, { stdio: 'pipe' });
         await backupOldVideos(videosFolder, backupFolder);
         const beautifiedOutput = beautifyCypressOutput(output);
         res.send({ message: beautifiedOutput, socialReason: socialReason });
     } catch (error) {
+        await backupOldVideos(videosFolder, backupFolder);
         const beautifiedOutput = beautifyCypressOutput(error.stdout);
         res.status(500).send({ error: beautifiedOutput, socialReason: socialReason });
     }

@@ -13,7 +13,7 @@
     },
     "step4": {
         "name": "add cotation",
-        "run": true
+        "run": false
     },
     "step5": {
         "name": "Réponse tarifaire en instance",

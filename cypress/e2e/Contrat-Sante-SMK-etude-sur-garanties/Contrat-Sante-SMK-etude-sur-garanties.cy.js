@@ -170,12 +170,13 @@ describe('My Web Application Tests', () => {
           let numProjet = doc.querySelector('.numProject > input[type="text"]').id
           let risqueUrl = doc.querySelector('.risque > input[type="text"]').id
           let tarificationTypeUrl = doc.querySelector('.type-de-tarification > p-dropdown span').textContent == 'Tarification sur garanties' ? "garantie" : "statistique";
-          let commercialProduct = doc.querySelectorAll('.commercial-product > p-dropdown span span')[1].id;
+          let commercialProduct = doc.querySelectorAll('.commercial-product > p-dropdown span span')[0].id;
           cy.visit(`/etudes/${tarificationTypeUrl}/${risqueUrl}?numProject=${numProjet}&commercialProduct=${commercialProduct}`);
         });
         cy.wait(12000).then(() => {
           cy.contains('li span', 'Périmètre de l’étude').click();
           addDynamiqueData(PERIMETREETUDE)
+          cy.wait(3000);
           cy.contains('li span', 'Source de tarification').click();
           addDynamiqueData(SOURCETARIFICATION)
           cy.wait(1000);
@@ -868,11 +869,11 @@ function addApporteur() {
 function addDynamiqueData(data) {
   Object.entries(data).forEach(([key, value]) => {
     cy.get('body').then(($body) => {
-      if(data[key].type == 'wait') {
+      if (data[key].type == 'wait') {
         cy.wait(data[key].value).then(() => {
 
         })
-      }else{
+      } else {
         cy.wait(500).then(() => {
           // Check if the element exists in the DOM
           if ($body.find(data[key].selectorAttr).length > 0) {
@@ -896,7 +897,7 @@ function addDynamiqueData(data) {
                 cy.get(".p-dropdown-filter").should('exist').type(data[key].value)
                 cy.get('p-dropdownitem').contains(data[key].value).should('exist').click();
               })
-  
+
             }
             if (data[key].type == 'dropDownNoFilter') {
               cy.get(data[key].selectorAttr).should('exist').click();
@@ -920,10 +921,10 @@ function addDynamiqueData(data) {
                       .contains(element)
                       .click();
                   });
-  
+
                 });
             }
-  
+
           } else {
             // If it doesn't exist, you can log a message or do nothing
             cy.log('Element does not exist, skipping the action');

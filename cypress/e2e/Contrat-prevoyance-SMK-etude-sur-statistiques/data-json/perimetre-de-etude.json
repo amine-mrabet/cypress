@@ -14,25 +14,10 @@
         "value": "ISOGARANTIE",
         "random": false
     },
-    "collegeIdEtude": {
-        "selectorAttr": ".collegeIdEtude",
-        "label": "CADRE",
-        "value": "ENSEMBLE DU PERSONNEL",
-        "type": "dropDown",
-        "random": false
-    },
     "ventilationChoise": {
         "selectorAttr": ".selection_valorisation .p-dropdown-trigger",
         "label": "Sélection d'une valorisation ",
         "value": "STANDARD",
-        "type": "dropDownNoFilter",
-        "random": false
-    }
-    ,
-    "PREV_SM_CARCEPT_1_pdtcom_reprise_passif": {
-        "selectorAttr": ".PREV_SM_CARCEPT_1_pdtcom_reprise_passif .p-dropdown-trigger",
-        "label": "Reprise de passif :",
-        "value": "Oui",
         "type": "dropDownNoFilter",
         "random": false
     }

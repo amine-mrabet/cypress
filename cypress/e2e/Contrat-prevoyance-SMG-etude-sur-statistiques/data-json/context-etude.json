@@ -10,21 +10,21 @@
         "selectorAttr": ".expectedEffectiveDate input[type=text]",
         "label": "Date d'effet souhaitée",
         "type": "input-text",
-        "value": "30/09/2024",
+        "value": "30/10/2024",
         "random": false
     },
     "expectedInspectionDate": {
         "selectorAttr": ".expectedInspectionDate input[type=text]",
         "label": "Date souhaitée de retour à l'inspection",
         "type": "input-text",
-        "value": "30/09/2024",
+        "value": "30/10/2024",
         "random": false
     },
     "expectedResponseClientDate": {
         "selectorAttr": ".expectedResponseClientDate input[type=text]",
         "label": "Date souhaitée de réponse à l'apporteur ou au client",
         "type": "input-text",
-        "value": "30/09/2024",
+        "value": "30/10/2024",
         "random": false
     },
     "DelegateIncome-0": {
