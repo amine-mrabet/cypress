@@ -7,6 +7,7 @@ module.exports = defineConfig({
   viewportWidth: 1600,
   viewportHeight: 760,
   video: true,
+  videoCompression: 40,
   videosFolder: "cypress/videos", // The folder where recorded videos will be stored
   chromeWebSecurity: false,
   experimentalSourceRewriting: true,
@@ -15,7 +16,7 @@ module.exports = defineConfig({
   e2e: {
     supportFile:false,
     setupNodeEvents(on, config) {},
-    baseUrl: 'http://localhost:4200/#/',
+    baseUrl: 'http://10.1.146.29:8080/#/',
   },
   reporter: "mochawesome",
   reporterOptions: {

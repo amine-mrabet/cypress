@@ -179,7 +179,7 @@ describe('My Web Application Tests', () => {
           cy.wait(3000);
           cy.contains('li span', 'Source de tarification').click();
           addDynamiqueData(SOURCETARIFICATION)
-          cy.wait(1000);
+          cy.wait(3000);
           cy.get('.valider-source-tarification').should('exist').click({ waitForAnimations: false });
           cy.wait(13000);
           cy.contains('li span', 'Contexte de l’étude').click();
