@@ -59,8 +59,8 @@ describe('My Web Application Tests', () => {
         cy.get(".open-project").should('exist').click({ waitForAnimations: false });
         cy.wait(7000)
         cy.url().then(url => {
-          const uri = url.split('/').slice(3).join('/');
-          NUM_PROJET = uri.split('#/project?numProject=').join('')
+          const urlParams = new URLSearchParams(url.split('?')[1]);
+          NUM_PROJET = urlParams.get('numProject');
         });
       } else {
         console.log('Login failed');
@@ -93,7 +93,7 @@ describe('My Web Application Tests', () => {
         cy.get('.project-0 .button-expandable-project button').should('exist').click();
         cy.get('.row-expanded .vp-col-actions .plm-grouped-button button').should('exist').click();
         cy.get('.assigner-action button').should('exist').click();
-        cy.wait(5000);
+        cy.wait(3000);
         cy.get('.row-expanded .vp-col-actions .plm-grouped-button button').should('exist').click();
         cy.get(' .ouvrir-action button').should('exist').click({ waitForAnimations: false });
         cy.wait(3000);
@@ -103,7 +103,9 @@ describe('My Web Application Tests', () => {
         cy.wait(2000);
         addDynamiqueData(CONTEXTPROJET)
         cy.get('#scrollTopBtn').should('exist').click({ waitForAnimations: false });
-        cy.get('.suivant-action button').should('exist').click({ waitForAnimations: false });
+        cy.get('.actions-projets chevrondownicon').should('exist').click({ waitForAnimations: false });
+        cy.get('#goNext').should('exist').click({ waitForAnimations: false });
+        cy.wait(4000);
         cy.contains('li span', 'Démographie').click();
         cy.wait(2000);
         addDynamiqueData(DEMOGRAPHY)
@@ -115,12 +117,12 @@ describe('My Web Application Tests', () => {
           addDynamiqueData(CONTRACTACUELSTATISTIQUESINFOCONTRACT)
           cy.get('.valider-info-contrat').should('exist').click({ waitForAnimations: false });
           cy.wait(5000);
-          cy.contains('li span', 'Statistiques').click();
+          cy.contains('li span', 'Statistiques').click({ waitForAnimations: false });
           addDynamiqueData(CONTRACTACUELSTATISTIQUESSTATISTIQUE);
           cy.get('.calculer').should('exist').click({ waitForAnimations: false });
           cy.wait(5000);
           cy.get('.valider-statistique').should('exist').click({ waitForAnimations: false });
-          cy.contains('li span', "Vérification de l'encaissement").click();
+          cy.contains('li span', "Vérification de l'encaissement").click({ waitForAnimations: false });
           addDynamiqueData(CONTRACTACUELSTATISTIQUESVERIFICATION);
           cy.get('.verifierEncaissementButton').should('exist').click({ waitForAnimations: false })
           cy.wait(5000);
