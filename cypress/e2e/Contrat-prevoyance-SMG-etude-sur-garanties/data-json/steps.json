@@ -5,11 +5,11 @@
     },
     "step2": {
         "name": "create Project",
-        "run": true
+        "run": false
     },
     "step3": {
         "name": "create Etude",
-        "run": true
+        "run": false
     },
     "step4": {
         "name": "add cotation",

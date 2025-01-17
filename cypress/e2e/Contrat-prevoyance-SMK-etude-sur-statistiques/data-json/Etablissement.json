@@ -9,7 +9,7 @@
         },
         "socialReason": {
             "selectorAttr": "app-society-with-siret .social-reason input",
-            "value": "contratprevoyanceSMKstatistiques-19102024",
+            "value": "Ines contratprevoyanceSMKstatistiques-01112024",
             "label": "Raison sociale",
             "type": "input-text",
             "random": false

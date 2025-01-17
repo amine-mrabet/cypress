@@ -9,7 +9,7 @@
         },
         "socialReason": {
             "selectorAttr": "app-society-with-siret .social-reason input",
-            "value": "SanteSMKstatistiques-19102024",
+            "value": "Ines SanteSMKstatistiques-01112024",
             "label": "Raison sociale",
             "type": "input-text",
             "random": false

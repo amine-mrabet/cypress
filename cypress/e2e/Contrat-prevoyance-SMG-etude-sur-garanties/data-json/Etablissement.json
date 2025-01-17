@@ -9,14 +9,14 @@
         },
         "socialReason": {
             "selectorAttr": "app-society-with-siret .social-reason input",
-            "value": "prevoyanceSMGgaranties-21102024",
+            "value": "DEMOTGSMGgaranties-01112024",
             "label": "Raison sociale",
             "type": "input-text",
             "random": false
         },
         "manager": {
             "selectorAttr": "app-society-with-siret .manager input",
-            "value": "prevoyanceSMGgaranties-21102024",
+            "value": "DEMOTGprevoyanceSMGgaranties-21102024",
             "label": "Dirigeant",
             "type": "input-text",
             "random": false

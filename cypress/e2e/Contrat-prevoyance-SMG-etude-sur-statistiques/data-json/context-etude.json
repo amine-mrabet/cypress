@@ -6,6 +6,13 @@
         "type": "dropDownNoFilter",
         "random": false
     },
+    "PREV_SM_G_1_pdtcom_list_CA": {
+        "selectorAttr": ".PREV_SM_G_1_pdtcom_list_CA .p-dropdown-trigger",
+        "label": "Indicateur chiffre d'affaires",
+        "value": "moins de 8 millions d'euros",
+        "type": "dropDownNoFilter",
+        "random": false
+    },
     "expectedEffectiveDate": {
         "selectorAttr": ".expectedEffectiveDate input[type=text]",
         "label": "Date d'effet souhaitée",

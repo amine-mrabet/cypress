@@ -9,14 +9,14 @@
         },
         "socialReason": {
             "selectorAttr": "app-society-with-siret .social-reason input",
-            "value": "SanteSMGgaranties-19102024",
+            "value": "DEMO-TEST-SanteSMGgaranties-16012025",
             "label": "Raison sociale",
             "type": "input-text",
             "random": false
         },
         "manager": {
             "selectorAttr": "app-society-with-siret .manager input",
-            "value": "SanteSMGgaranties-19102024",
+            "value": "DEMO-SanteSMGgaranties-16012025",
             "label": "Dirigeant",
             "type": "input-text",
             "random": false
@@ -58,7 +58,7 @@
         },
         "siret": {
             "selectorAttr": "app-society-with-siret .address-siret-label input",
-            "value": "38684318865452",
+            "value": "24077235185697",
             "label": "SIRET",
             "type": "input-text",
             "random": true
