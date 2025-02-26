@@ -9,7 +9,7 @@
     "cotisationRateYear": {
         "selectorAttr": ".cotisationRateYear",
         "label": "Année des taux des cotisations",
-        "value": "2023",
+        "value": "2024",
         "type": "dropDown",
         "random": false
     },

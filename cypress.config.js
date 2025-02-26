@@ -16,7 +16,7 @@ module.exports = defineConfig({
   e2e: {
     supportFile:false,
     setupNodeEvents(on, config) {},
-    baseUrl: 'http://10.1.146.28:8080/#/',
+    baseUrl: 'https://chrysalide-nf.dev.vermeg.com/fr/#/',
   },
   reporter: "mochawesome",
   reporterOptions: {

@@ -8,6 +8,9 @@ const bodyParser = require('body-parser');
 const { execSync } = require('child_process');
 const videosFolder = path.join(__dirname, 'cypress/videos');
 const backupFolder = path.join(__dirname, 'cypress/videos_backup');
+const schedule = require('node-schedule');
+const scheduleJob = `cypress/reports/schedule-job.json`
+let isReloading = false;
 
 app.use(bodyParser.json());
 app.use(express.json({ limit: '300mb' }));
@@ -15,10 +18,18 @@ app.get('/cypress/runcypress', async (req, res) => {
     const filePath = `cypress/e2e/${req.query.folder}/data-json/Etablissement.json`
     const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
     const socialReason = jsonData[0].socialReason.value;
-    try {
-        // Backup old videos
-        //await backupOldVideos(videosFolder, backupFolder);
-        // Run Cypress tests
+    exec(`npx cypress run --spec cypress/e2e/${req.query.folder}/${req.query.folder}.cy.js`, (error, stdout, stderr) => {
+        backupOldVideos(videosFolder, backupFolder);
+        const beautifiedOutput = beautifyCypressOutput(stdout);
+
+        if (error || stderr) {
+            res.status(500).send({ error: beautifiedOutput, socialReason: socialReason });
+        } else {
+            res.send({ message: beautifiedOutput, socialReason: socialReason });
+        }
+
+    });
+/*     try {
         const output = execSync(`npx cypress run --spec cypress/e2e/${req.query.folder}/${req.query.folder}.cy.js`, { stdio: 'pipe' });
         await backupOldVideos(videosFolder, backupFolder);
         const beautifiedOutput = beautifyCypressOutput(output);
@@ -27,7 +38,7 @@ app.get('/cypress/runcypress', async (req, res) => {
         await backupOldVideos(videosFolder, backupFolder);
         const beautifiedOutput = beautifyCypressOutput(error.stdout);
         res.status(500).send({ error: beautifiedOutput, socialReason: socialReason });
-    }
+    } */
 });
 app.post('/cypress/updateFile', (req, res) => {
     const filePath = `cypress/e2e/${req.body.folder}/data-json/${req.body.fileName}`
@@ -169,6 +180,155 @@ function beautifyCypressOutput(output) {
 
     return beautifiedOutput;
 }
+/* scheduleJob */
+const updateFileStatistiques = async (folderCode, message, socialReason, completed) => {
+    try {
+        const filePath = path.resolve('cypress/reports/statistiques.json');
+
+        // Read and parse the JSON file
+        const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+        const statistiques = jsonData;
+
+        const now = new Date();
+        const formattedDate = formatDate(now);
+
+        const history = {
+            message: message,
+            date: formattedDate,
+            socialReason: socialReason,
+            status: completed ? 'passed' : 'failed',
+        };
+
+        // Find the corresponding folder
+        const folderStat = statistiques.find(element => element.name === folderCode);
+
+        if (folderStat) {
+            // Update the statistics
+            if (completed) {
+                folderStat.passed += 1;
+            } else {
+                folderStat.failed += 1;
+            }
+            folderStat.total += 1;
+            folderStat.history.push(history);
+
+            // Write updated data back to the file
+            fs.writeFileSync(filePath, JSON.stringify(statistiques, null, 4), 'utf-8');
+            //console.log('Statistics updated successfully.');
+        } else {
+            //console.error(`Folder with code '${folderCode}' not found in statistics.`);
+            throw new Error(`Folder with code '${folderCode}' not found.`);
+        }
+    } catch (error) {
+        console.error('Error updating file statistiques:', error.message);
+        throw error;
+    }
+};
+// Helper function to format date
+const formatDate = (date) => {
+    // Example: format the date as 'YYYY-MM-DD HH:mm:ss'
+    return date.toISOString().replace('T', ' ').split('.')[0];
+};
+
+// Fonction pour exécuter une tâche
+const executeTask = (task) => {
+    const filePath = `cypress/e2e/${task.id}/data-json/Etablissement.json`;
+    const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    const socialReason = jsonData[0].socialReason.value;
+    console.log(`[${new Date().toISOString()}] Exécution de la tâche : ${task.label} (Raison sociale : ${socialReason})`);
+    updateStatusByTaskId(task.id, "En cours");
+
+    exec(`npx cypress run --spec cypress/e2e/${task.id}/${task.id}.cy.js`, (error, stdout, stderr) => {
+        backupOldVideos(videosFolder, backupFolder);
+        const beautifiedOutput = beautifyCypressOutput(stdout);
+
+        if (error || stderr) {
+            updateFileStatistiques(task.id, beautifiedOutput, socialReason, false);
+            console.error(`Erreur lors de l'exécution de la tâche "${task.label}": ${stderr || error.message}`);
+        } else {
+            updateFileStatistiques(task.id, beautifiedOutput, socialReason, true);
+        }
+
+        updateStatusByTaskId(task.id, "Terminé");
+    });
+};
+function updateStatusByTaskId(taskId,status){
+    const filePath = `cypress/reports/schedule-job.json`
+    const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    jsonData.find(element => element.id === taskId).status = status;
+    fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 4));
+}
+function loadAndScheduleTasks() {
+    fs.readFile(scheduleJob, 'utf8', (err, data) => {
+        if (err) return;
+
+        let tasks;
+        try {
+            tasks = JSON.parse(data);
+        } catch (error) {
+            return;
+        }
+
+        tasks.forEach((task) => {
+            if (task.enabled) {
+                const [day, month, year, hour, minute] = task.scheduleTime.split(/[\/\s:]/).map(Number);
+                const jobDate = new Date(year, month - 1, day, hour, minute);
+
+                try {
+                    // Schedule both jobs to run at the same time
+                    schedule.scheduleJob(jobDate, () => {
+                        executeTask(task);
+                    });
+                    console.log(`Tâche "${task.label}" planifiée pour le ${task.scheduleTime}.`);
+                } catch (error) {
+                    console.error(`Erreur lors de la planification de la tâche "${task.label}":`, error.message);
+                }
+            }
+        });
+    });
+}
+// Initial load
+//loadAndScheduleTasks();
+fs.watch(scheduleJob, (eventType) => {
+    if (eventType === 'change' && !isReloading) { 
+        isReloading = true; 
+        //console.log(`Le fichier "${scheduleJob}" a été modifié. Rechargement des tâches...`);
+        // Annuler toutes les tâches planifiées existantes
+        const jobs = schedule.scheduledJobs;
+        for (const jobName in jobs) {
+            if (jobs[jobName]) {
+                jobs[jobName].cancel();
+            }
+        }
+        setTimeout(() => {
+            loadAndScheduleTasks();
+            isReloading = false;
+        }, 1000); 
+    }
+
+});
+
+
+
+app.post('/cypress/updateScheduleJob', (req, res) => {
+    const filePath = scheduleJob;
+    const newData = req.body;
+
+    if (!newData) {
+        return res.status(400).json({ error: 'Missing newData parameter' });
+    }
+    try {
+        fs.writeFileSync(filePath, JSON.stringify(newData, null, 4));
+        return res.status(200).json({ message: 'JSON file updated successfully' });
+    } catch (err) {
+        return res.status(500).json({ error: 'Internal server error' });
+    }
+});
+app.get('/cypress/getScheduleJob', (req, res) => {
+    const filePath = `cypress/reports/schedule-job.json`
+    const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    return res.json(jsonData);
+});
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });

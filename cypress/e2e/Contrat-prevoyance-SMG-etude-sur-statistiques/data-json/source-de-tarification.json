@@ -15,8 +15,8 @@
         "label": "statistics",
         "type": "checkbox"
     },
-    "yearIncomeStatementAllStaff-2023": {
-        "selectorAttr": "#yearIncomeStatementAllStaff-2023 input[type=checkbox]",
+    "yearIncomeStatementAllStaff-2024": {
+        "selectorAttr": "#yearIncomeStatementAllStaff-2024 input[type=checkbox]",
         "label": "statistics",
         "type": "checkbox"
     },

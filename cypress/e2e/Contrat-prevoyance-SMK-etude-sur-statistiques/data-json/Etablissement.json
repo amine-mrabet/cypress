@@ -9,14 +9,14 @@
         },
         "socialReason": {
             "selectorAttr": "app-society-with-siret .social-reason input",
-            "value": "Ines contratprevoyanceSMKstatistiques-01112024",
+            "value": "Contrat-prevoyance-SMK-etude-sur-statistiques04022025",
             "label": "Raison sociale",
             "type": "input-text",
             "random": false
         },
         "manager": {
             "selectorAttr": "app-society-with-siret .manager input",
-            "value": "contratprevoyanceSMKstatistiques-19102024",
+            "value": "Contrat-prevoyance-SMK-etude-sur-statistiques04022025",
             "label": "Dirigeant",
             "type": "input-text",
             "random": false

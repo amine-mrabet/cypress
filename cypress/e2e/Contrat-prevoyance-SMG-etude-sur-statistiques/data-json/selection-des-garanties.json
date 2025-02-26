@@ -191,7 +191,7 @@
     "link-2": {
         "selectorAttr": ".link-2",
         "type": "link",
-        "value": "Incapacité/Invalidité",
+        "value": "Incapacité temporaire de travail / Invalidité permanente",
         "random": false
     },
     "selectedBenefit-coverage-0": {

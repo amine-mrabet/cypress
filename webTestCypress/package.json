@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.config.json --open --port=4100 ",
+    "start": "ng serve --proxy-config proxy.config.json --open --port=3200 ",
     "build": "ng build --base-href /cypress-ui/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

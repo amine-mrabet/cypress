@@ -5,11 +5,11 @@
     },
     "step2": {
         "name": "create Project",
-        "run": false
+        "run": true
     },
     "step3": {
         "name": "create Etude",
-        "run": false
+        "run": true
     },
     "step4": {
         "name": "add cotation",
@@ -55,5 +55,5 @@
         "name": "PC à envoyer vers Finalisé",
         "run": false
     },
-    "projectNumber": ""
+    "projectNumber": "2025AB14"
 }

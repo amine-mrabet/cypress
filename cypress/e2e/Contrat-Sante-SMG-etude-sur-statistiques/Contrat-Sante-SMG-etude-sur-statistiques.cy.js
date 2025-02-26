@@ -25,7 +25,10 @@ var NUM_PROJET = STEPS.projectNumber != "" ? STEPS.projectNumber : null
 describe('My Web Application Tests', () => {
   if (STEPS.step1.run) {
     it('create Saisie', () => {
+      cy.wait(1000);
       cy.visit('/');
+      cy.wait(500)
+      cy.reload(true);
       Login(b012cag.username, b012cag.password)
       Cypress.on('uncaught:exception', (err, runnable) => {
         Cypress.runner.stop() // Stop the test run
@@ -39,7 +42,10 @@ describe('My Web Application Tests', () => {
       const isLoginSuccessful = checkLogin(b012cag.username, b012cag.password, b012cag);
       if (isLoginSuccessful) {
         cy.visit('/');
+        cy.reload(true);
+        cy.wait(6000);
         cy.get('.create-request button').should('exist').click({ waitForAnimations: false });
+        cy.wait(6000);
         addEtablisement();
         cy.get('#scrollTopBtn').should('exist').click();
         cy.get('.checkmark-container input[type=checkbox]').first().should('exist').click({ force: true });
@@ -93,41 +99,41 @@ describe('My Web Application Tests', () => {
         cy.get('.project-0 .button-expandable-project button').should('exist').click();
         cy.get('.row-expanded .vp-col-actions .plm-grouped-button button').should('exist').click();
         cy.get('.assigner-action button').should('exist').click();
-        cy.wait(3000);
+        cy.wait(1000);
         cy.get('.row-expanded .vp-col-actions .plm-grouped-button button').should('exist').click();
         cy.get(' .ouvrir-action button').should('exist').click({ waitForAnimations: false });
-        cy.wait(3000);
+        cy.wait(1000);
         cy.contains('li span', 'Contexte du projet').click({ waitForAnimations: false });
         cy.get('.risk-sante button').should('exist').click();
         cy.contains('.p-datepicker-buttonbar button span', "Aujourd'hui").click({ waitForAnimations: false });
-        cy.wait(2000);
+        //cy.wait(2000);
         addDynamiqueData(CONTEXTPROJET)
         cy.get('#scrollTopBtn').should('exist').click({ waitForAnimations: false });
         cy.get('.actions-projets chevrondownicon').should('exist').click({ waitForAnimations: false });
         cy.get('#goNext').should('exist').click({ waitForAnimations: false });
-        cy.wait(4000);
+        //cy.wait(4000);
         cy.contains('li span', 'Démographie').click();
-        cy.wait(2000);
+        //cy.wait(2000);
         addDynamiqueData(DEMOGRAPHY)
         cy.get('#scrollTopBtn').should('exist').click({ waitForAnimations: false });
         cy.get('.valider-demographie').should('exist').click({ waitForAnimations: false });
-        cy.wait(2000);
+        //cy.wait(2000);
         cy.contains('li span', 'Contrat actuel et statistiques santé').click();
-        cy.wait(12000).then(() => {
+        cy.wait(6000).then(() => {
           addDynamiqueData(CONTRACTACUELSTATISTIQUESINFOCONTRACT)
           cy.get('.valider-info-contrat').should('exist').click({ waitForAnimations: false });
-          cy.wait(5000);
+          cy.wait(2000);
           cy.contains('li span', 'Statistiques').click({ waitForAnimations: false });
           addDynamiqueData(CONTRACTACUELSTATISTIQUESSTATISTIQUE);
           cy.get('.calculer').should('exist').click({ waitForAnimations: false });
-          cy.wait(5000);
+          cy.wait(2000);
           cy.get('.valider-statistique').should('exist').click({ waitForAnimations: false });
           cy.contains('li span', "Vérification de l'encaissement").click({ waitForAnimations: false });
           addDynamiqueData(CONTRACTACUELSTATISTIQUESVERIFICATION);
           cy.get('.verifierEncaissementButton').should('exist').click({ waitForAnimations: false })
-          cy.wait(5000);
+          cy.wait(2000);
           cy.get('.valider-verif-contrat').should('exist').click({ waitForAnimations: false });
-          cy.wait(8000);
+          cy.wait(3000);
         })
 
       } else {
@@ -175,37 +181,37 @@ describe('My Web Application Tests', () => {
           let commercialProduct = doc.querySelectorAll('.commercial-product > p-dropdown span span')[0].id;
           cy.visit(`/etudes/${tarificationTypeUrl}/${risqueUrl}?numProject=${numProjet}&commercialProduct=${commercialProduct}`);
         });
-        cy.wait(12000).then(() => {
-          cy.contains('li span', 'Périmètre de l’étude').click();
+        cy.wait(6000).then(() => {
+          cy.contains('li span', 'Périmètre de l’étude').click({ waitForAnimations: false });
           addDynamiqueData(PERIMETREETUDE)
-          cy.wait(3000);
-          cy.contains('li span', 'Source de tarification').click();
+          cy.wait(1000);
+          cy.contains('li span', 'Source de tarification').click({ waitForAnimations: false });
           addDynamiqueData(SOURCETARIFICATION)
-          cy.wait(3000);
+          cy.wait(1000);
           cy.get('.valider-source-tarification').should('exist').click({ waitForAnimations: false });
-          cy.wait(13000);
-          cy.contains('li span', 'Contexte de l’étude').click();
+          //cy.wait(13000);
+          cy.contains('li span', 'Contexte de l’étude').click({ waitForAnimations: false });
           addDynamiqueData(CONTEXTETUDE)
-          cy.contains('li span', 'Sélection des garanties').click();
+          cy.contains('li span', 'Sélection des garanties').click({ waitForAnimations: false });
           addDynamiqueData(SELECTIONGARANTIES)
-          cy.wait(7000);
-          cy.contains('li span', 'Tarif et budget').click();
-          cy.wait(4000);
+          //cy.wait(7000);
+          cy.contains('li span', 'Tarif et budget').click({ waitForAnimations: false });
+          //cy.wait(4000);
           cy.get('.tarifer-0').should('exist').click({ waitForAnimations: false });
-          cy.wait(6000);
-          cy.contains('li span', 'Structure cible 1').click();
+          //cy.wait(6000);
+          cy.contains('li span', 'Structure cible 1').click({ waitForAnimations: false });
           cy.get('.tarifer-1').should('exist').click({ waitForAnimations: false });
-          cy.wait(6000);
-          cy.contains('li span', 'Structure cible 2').click();
+          //cy.wait(6000);
+          cy.contains('li span', 'Structure cible 2').click({ waitForAnimations: false });
           cy.get('.tarifer-2').should('exist').click({ waitForAnimations: false });
-          cy.wait(6000);
-          cy.contains('li span', 'Structure cible 3').click();
+          //cy.wait(6000);
+          cy.contains('li span', 'Structure cible 3').click({ waitForAnimations: false });
           cy.get('.tarifer-3').should('exist').click({ waitForAnimations: false });
-          cy.wait(6000);
+          //cy.wait(6000);
           cy.get('.save-etude').should('exist').click({ waitForAnimations: false });
-          cy.wait(8000);
+          //cy.wait(8000);
           cy.get('.figer-etude').should('exist').click({ waitForAnimations: false });
-          cy.wait(4000);
+          //cy.wait(4000);
         })
 
       } else {
@@ -777,9 +783,16 @@ function checkLogin(username, password, login) {
  * @param {*} password 
  */
 function Login(username, password) {
-  cy.get('input').first().should('exist').type(username);
+/*   cy.get('input').first().should('exist').type(username);
   cy.get('input[type=password]').should('exist').type(password);
-  cy.get('#kc-form-login input[type=submit]').should('exist').click();
+  cy.get('#kc-form-login input[type=submit]').should('exist').click(); */
+  cy.get('body').then(($body) => {
+    if ($body.find('#AUTHENTICATION\\.LOGINContainer').length > 0) {
+      cy.get('#AUTHENTICATION\\.LOGINContainer input').should('exist').type(username);
+      cy.get('#AUTHENTICATION\\.PASSWORDContainer input').should('exist').type(password);
+      cy.get('#validateButton').should('exist').click();
+    }
+  });
 }
 function generateDoc() {
   // Check if the button does not have the 'disabled' attribute
@@ -860,7 +873,7 @@ function addApporteur() {
 
   cy.get(Apporteur.brokerCode.selectorAttr).should('exist').clear({ force: true });
   cy.get(Apporteur.brokerCode.selectorAttr).should('exist').type(Apporteur.brokerCode.value, { force: true });
-  cy.wait(3000)
+  cy.wait(1000)
   cy.get('app-apporteur-inspecteur .broker-code .search-broker-code').should('exist').click();
   cy.get(Apporteur.brokerContactCode.selectorAttr).should('exist').click();
   cy.get(".p-dropdown-filter").should('exist').type(Apporteur.brokerContactCode.value)
@@ -889,7 +902,9 @@ function addDynamiqueData(data) {
           // Check if the element exists in the DOM
           if ($body.find(data[key].selectorAttr).length > 0) {
             cy.document().then((doc) => {
-              cy.get(data[key].selectorAttr).scrollIntoView();
+              if(data[key].selectorAttr != ".collapsed-all-nodes"){
+                cy.get(data[key].selectorAttr).scrollIntoView();
+              }
             });
             if (data[key].type == 'checkbox') {
               cy.get(data[key].selectorAttr).click({ force: true });
@@ -918,7 +933,11 @@ function addDynamiqueData(data) {
               cy.get(`.${data[key].value}`).contains(data[key].value).click();
             }
             if (data[key].type == 'button') {
-              cy.get(data[key].selectorAttr).should('exist').click();
+              if(data[key].selectorAttr != ".collapsed-all-nodes"){
+                cy.get(data[key].selectorAttr).should('exist').click();
+              }else{
+                cy.get(data[key].selectorAttr).should('exist').click({ multiple: true ,force: true});
+              }
             }
             if (data[key].type == 'link') {
               cy.contains(data[key].selectorAttr, data[key].value).click();

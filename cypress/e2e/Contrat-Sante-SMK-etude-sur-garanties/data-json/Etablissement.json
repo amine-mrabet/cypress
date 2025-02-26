@@ -9,14 +9,14 @@
         },
         "socialReason": {
             "selectorAttr": "app-society-with-siret .social-reason input",
-            "value": "Ines SanteSMKgaranties-01112024",
+            "value": "job7",
             "label": "Raison sociale",
             "type": "input-text",
             "random": false
         },
         "manager": {
             "selectorAttr": "app-society-with-siret .manager input",
-            "value": "SanteSMKgaranties-01112024",
+            "value": "job7",
             "label": "Dirigeant",
             "type": "input-text",
             "random": false

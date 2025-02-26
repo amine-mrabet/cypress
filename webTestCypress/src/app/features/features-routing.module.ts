@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CustomJsonEditorComponent } from './json-editor/json-editor.component';
 import { RunCypressComponent } from './run-cypress/run-cypress.component';
 import { StatisticalDetailsComponent } from './statistical-details/statistical-details.component';
+import { ScheduleJobComponent } from './schedule-job/schedule-job.component';
 
 
 const routes: Routes = [
@@ -22,7 +23,12 @@ const routes: Routes = [
   {
     path: 'statistical-details',
     component: StatisticalDetailsComponent,
+  },
+  {
+    path: 'schedule-job',
+    component: ScheduleJobComponent,
   }
+  
 ];
 
 @NgModule({

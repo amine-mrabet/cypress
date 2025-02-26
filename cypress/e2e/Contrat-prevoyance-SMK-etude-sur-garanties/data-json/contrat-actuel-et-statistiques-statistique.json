@@ -22,34 +22,34 @@
     },
     "yearCotisationRate": {
         "selectorAttr": ".yearCotisationRate",
-        "value": ["2023", "2022", "2021"],
+        "value": ["2024", "2022", "2021"],
         "label": "Année(s) des statistique(s)",
         "type": "p-multiSelect",
         "random": false
     },
-    "deces-2023-0-1":{
-        "selectorAttr":".deces-2023-0-1",
+    "deces-2024-0-1":{
+        "selectorAttr":".deces-2024-0-1",
         "value": "10",
         "label":"Cotisations brut HT",
         "type" : "input-text",
         "random":false
     },
-    "deces-2023-0-2":{
-        "selectorAttr":".deces-2023-0-2",
+    "deces-2024-0-2":{
+        "selectorAttr":".deces-2024-0-2",
         "value": "10",
         "label":"Cotisations nettes",
         "type" : "input-text",
         "random":false
     },
-    "deces-2023-0-3":{
-        "selectorAttr":".deces-2023-0-3",
+    "deces-2024-0-3":{
+        "selectorAttr":".deces-2024-0-3",
         "value": "10",
         "label":"Prestations",
         "type" : "input-text",
         "random":false
     },
-    "deces-2023-0-4":{
-        "selectorAttr":".deces-2023-0-4",
+    "deces-2024-0-4":{
+        "selectorAttr":".deces-2024-0-4",
         "value": "10",
         "label":"Provisions",
         "type" : "input-text",
@@ -111,29 +111,29 @@
         "type" : "input-text",
         "random":false
     },
-    "incap-inval-2023-0-1":{
-        "selectorAttr":".incap-inval-2023-0-1",
+    "incap-inval-2024-0-1":{
+        "selectorAttr":".incap-inval-2024-0-1",
         "value": "10",
         "label":"Cotisations brut HT",
         "type" : "input-text",
         "random":false
     },
-    "incap-inval-2023-0-2":{
-        "selectorAttr":".incap-inval-2023-0-2",
+    "incap-inval-2024-0-2":{
+        "selectorAttr":".incap-inval-2024-0-2",
         "value": "10",
         "label":"Cotisations nettes",
         "type" : "input-text",
         "random":false
     },
-    "incap-inval-2023-0-3":{
-        "selectorAttr":".incap-inval-2023-0-3",
+    "incap-inval-2024-0-3":{
+        "selectorAttr":".incap-inval-2024-0-3",
         "value": "10",
         "label":"Prestations",
         "type" : "input-text",
         "random":false
     },
-    "incap-inval-2023-0-4":{
-        "selectorAttr":".incap-inval-2023-0-4",
+    "incap-inval-2024-0-4":{
+        "selectorAttr":".incap-inval-2024-0-4",
         "value": "10",
         "label":"Provisions",
         "type" : "input-text",

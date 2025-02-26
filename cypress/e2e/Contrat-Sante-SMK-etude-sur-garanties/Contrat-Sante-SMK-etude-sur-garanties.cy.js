@@ -25,7 +25,10 @@ var NUM_PROJET = STEPS.projectNumber != "" ? STEPS.projectNumber : null
 describe('My Web Application Tests', () => {
   if (STEPS.step1.run) {
     it('create Saisie', () => {
+      cy.wait(1000);
       cy.visit('/');
+      cy.wait(500)
+      cy.reload(true);
       Login(b012cag.username, b012cag.password)
       Cypress.on('uncaught:exception', (err, runnable) => {
         Cypress.runner.stop() // Stop the test run
@@ -40,6 +43,7 @@ describe('My Web Application Tests', () => {
       if (isLoginSuccessful) {
         cy.visit('/');
         cy.get('.create-request button').should('exist').click({ waitForAnimations: false });
+        cy.wait(6000);
         addEtablisement();
         cy.get('#scrollTopBtn').should('exist').click();
         cy.get('.checkmark-container input[type=checkbox]').first().should('exist').click({ force: true });
@@ -768,9 +772,16 @@ function checkLogin(username, password, login) {
  * @param {*} password 
  */
 function Login(username, password) {
-  cy.get('input').first().should('exist').type(username);
+/*   cy.get('input').first().should('exist').type(username);
   cy.get('input[type=password]').should('exist').type(password);
-  cy.get('#kc-form-login input[type=submit]').should('exist').click();
+  cy.get('#kc-form-login input[type=submit]').should('exist').click(); */
+  cy.get('body').then(($body) => {
+    if ($body.find('#AUTHENTICATION\\.LOGINContainer').length > 0) {
+      cy.get('#AUTHENTICATION\\.LOGINContainer input').should('exist').type(username);
+      cy.get('#AUTHENTICATION\\.PASSWORDContainer input').should('exist').type(password);
+      cy.get('#validateButton').should('exist').click();
+    }
+  });
 }
 function generateDoc() {
   // Check if the button does not have the 'disabled' attribute
@@ -851,7 +862,7 @@ function addApporteur() {
 
   cy.get(Apporteur.brokerCode.selectorAttr).should('exist').clear({ force: true });
   cy.get(Apporteur.brokerCode.selectorAttr).should('exist').type(Apporteur.brokerCode.value, { force: true });
-  cy.wait(3000)
+  cy.wait(1000)
   cy.get('app-apporteur-inspecteur .broker-code .search-broker-code').should('exist').click();
   cy.get(Apporteur.brokerContactCode.selectorAttr).should('exist').click();
   cy.get(".p-dropdown-filter").should('exist').type(Apporteur.brokerContactCode.value)
@@ -880,7 +891,9 @@ function addDynamiqueData(data) {
           // Check if the element exists in the DOM
           if ($body.find(data[key].selectorAttr).length > 0) {
             cy.document().then((doc) => {
-              cy.get(data[key].selectorAttr).scrollIntoView();
+              if(data[key].selectorAttr != ".collapsed-all-nodes"){
+                cy.get(data[key].selectorAttr).scrollIntoView();
+              }
             });
             if (data[key].type == 'checkbox') {
               cy.get(data[key].selectorAttr).click({ force: true });
@@ -909,7 +922,11 @@ function addDynamiqueData(data) {
               cy.get(`.${data[key].value}`).contains(data[key].value).click();
             }
             if (data[key].type == 'button') {
-              cy.get(data[key].selectorAttr).should('exist').click();
+              if(data[key].selectorAttr != ".collapsed-all-nodes"){
+                cy.get(data[key].selectorAttr).should('exist').click();
+              }else{
+                cy.get(data[key].selectorAttr).should('exist').click({ multiple: true ,force: true});
+              }
             }
             if (data[key].type == 'link') {
               cy.contains(data[key].selectorAttr, data[key].value).click();

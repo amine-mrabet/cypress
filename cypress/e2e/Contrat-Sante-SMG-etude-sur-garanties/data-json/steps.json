@@ -1,11 +1,11 @@
 {
     "step1": {
         "name": "create Saisie",
-        "run": true
+        "run": false
     },
     "step2": {
         "name": "create Project",
-        "run": true
+        "run": false
     },
     "step3": {
         "name": "create Etude",
@@ -55,5 +55,5 @@
         "name": "PC à envoyer vers Finalisé",
         "run": false
     },
-    "projectNumber": ""
+    "projectNumber": "2025AB17"
 }

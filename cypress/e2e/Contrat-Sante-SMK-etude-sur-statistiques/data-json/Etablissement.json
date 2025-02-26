@@ -9,14 +9,14 @@
         },
         "socialReason": {
             "selectorAttr": "app-society-with-siret .social-reason input",
-            "value": "Ines SanteSMKstatistiques-01112024",
+            "value": "job-Contrat-Sante-SMK-etude-sur-statistiques",
             "label": "Raison sociale",
             "type": "input-text",
             "random": false
         },
         "manager": {
             "selectorAttr": "app-society-with-siret .manager input",
-            "value": "SanteSMKstatistiques-19102024",
+            "value": "job-Contrat-Sante-SMK-etude-sur-statistiques",
             "label": "Dirigeant",
             "type": "input-text",
             "random": false

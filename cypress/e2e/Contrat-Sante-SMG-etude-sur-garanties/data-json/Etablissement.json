@@ -9,14 +9,14 @@
         },
         "socialReason": {
             "selectorAttr": "app-society-with-siret .social-reason input",
-            "value": "DEMO-TEST-SanteSMGgaranties-16012025",
+            "value": "Contrat-Sante-SMG-etude-sur-garanties04022025",
             "label": "Raison sociale",
             "type": "input-text",
             "random": false
         },
         "manager": {
             "selectorAttr": "app-society-with-siret .manager input",
-            "value": "DEMO-SanteSMGgaranties-16012025",
+            "value": "Contrat-Sante-SMG-etude-sur-garanties04022025",
             "label": "Dirigeant",
             "type": "input-text",
             "random": false

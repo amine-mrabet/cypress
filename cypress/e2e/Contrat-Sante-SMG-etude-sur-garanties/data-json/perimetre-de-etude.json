@@ -12,5 +12,13 @@
         "value": "STANDARD",
         "type": "dropDownNoFilter",
         "random": false
+    },
+    "SANTE_SM_G_1_pdtcom_bool_yc_ss": {
+        "selectorAttr": ".SANTE_SM_G_1_pdtcom_bool_yc_ss .p-dropdown-trigger",
+        "label": "Y compris SS ? ",
+        "value": "Oui",
+        "type": "dropDownNoFilter",
+        "random": false
     }
+    
 }

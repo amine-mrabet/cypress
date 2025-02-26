@@ -58,14 +58,14 @@
         "random": false
     },
     "Base-hospi-taux_expr_gar_gg_1":{
-        "selectorAttr":".Base .Base-hospi .taux_expr_gar_gg_1",
+        "selectorAttr":".Base .hospi_forfait_jour_hospi_forfait_jour_hospi .taux_expr_gar_gg_1",
         "value": "100",
         "label":"Hospitalisation Taux 1",
         "type" : "input-text",
         "random":false
     },
     "Base-hospi-expr_gar_gg_1": {
-        "selectorAttr": ".Base .Base-hospi .expr_gar_gg_1 .p-dropdown-trigger",
+        "selectorAttr": ".Base .hospi_forfait_jour_hospi_forfait_jour_hospi .expr_gar_gg_1 .p-dropdown-trigger",
         "label":"Hospitalisation Assiette 1",
         "value": "FR-SS",
         "type": "dropDownNoFilter",

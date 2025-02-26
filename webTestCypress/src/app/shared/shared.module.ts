@@ -14,6 +14,9 @@ import { RequestInterceptorService } from './services/request-interceptor.servic
 import {ButtonModule} from 'primeng/button';
 import { NgJsonEditorModule } from 'ang-jsoneditor' 
 import { AccordionModule } from 'primeng/accordion';
+import { TableModule } from 'primeng/table';
+import { CalendarModule } from 'primeng/calendar';
+import { InputSwitchModule } from 'primeng/inputswitch';
 @NgModule({
   declarations: [
     LoaderComponent,
@@ -30,7 +33,10 @@ import { AccordionModule } from 'primeng/accordion';
     DropdownModule,
     ButtonModule,
     NgJsonEditorModule,
-    AccordionModule
+    AccordionModule,
+    TableModule,
+    CalendarModule,
+    InputSwitchModule
   ],
   exports: [
     FormsModule,
@@ -44,7 +50,10 @@ import { AccordionModule } from 'primeng/accordion';
     DropdownModule,
     ButtonModule,
     NgJsonEditorModule,
-    AccordionModule
+    AccordionModule,
+    TableModule,
+    CalendarModule,
+    InputSwitchModule
   ],
   providers: [LoaderService, MessageService,RequestInterceptorService]
 })

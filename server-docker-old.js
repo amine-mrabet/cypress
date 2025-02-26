@@ -8,28 +8,24 @@ const bodyParser = require('body-parser');
 const { execSync } = require('child_process');
 const videosFolder = path.join(__dirname, 'cypress/videos');
 const backupFolder = path.join(__dirname, 'cypress/videos_backup');
-const schedule = require('node-schedule');
-const scheduleJob = `cypress/reports/schedule-job.json`
-let isReloading = false;
+
 app.use(bodyParser.json());
 app.use(express.json({ limit: '300mb' }));
 app.get('/cypress/runcypress', async (req, res) => {
     const filePath = `cypress/e2e/${req.query.folder}/data-json/Etablissement.json`
     const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
     const socialReason = jsonData[0].socialReason.value;
-    const command = `docker run -t -v /opt/vermeg/cypress:/e2e -w /e2e --entrypoint=cypress cypress/included run --spec cypress/e2e/${req.query.folder}/${req.query.folder}.cy.js`
-
-    exec(command, (error, stdout, stderr) => {
-        backupOldVideos(videosFolder, backupFolder);
-        const beautifiedOutput = beautifyCypressOutput(stdout);
-
-        if (error || stderr) {
-            res.status(500).send({ error: beautifiedOutput, socialReason: socialReason });
-        } else {
-            res.send({ message: beautifiedOutput, socialReason: socialReason });
-        }
-
-    });
+    try {
+        const command = `docker run -t -v /opt/vermeg/cypress:/e2e -w /e2e --entrypoint=cypress cypress/included run --spec cypress/e2e/${req.query.folder}/${req.query.folder}.cy.js`
+        const output = execSync(command, { stdio: 'pipe' });
+        await backupOldVideos(videosFolder, backupFolder);
+        const beautifiedOutput = beautifyCypressOutput(output);
+        res.send({ message: beautifiedOutput, socialReason: socialReason });
+    } catch (error) {
+        await backupOldVideos(videosFolder, backupFolder);
+        const beautifiedOutput = beautifyCypressOutput(error.stdout);
+        res.status(500).send({ error: beautifiedOutput, socialReason: socialReason });
+    }
 });
 app.post('/cypress/updateFile', (req, res) => {
     const filePath = `cypress/e2e/${req.body.folder}/data-json/${req.body.fileName}`
@@ -210,9 +206,9 @@ const updateFileStatistiques = async (folderCode, message, socialReason, complet
 
             // Write updated data back to the file
             fs.writeFileSync(filePath, JSON.stringify(statistiques, null, 4), 'utf-8');
-            //console.log('Statistics updated successfully.');
+            console.log('Statistics updated successfully.');
         } else {
-            //console.error(`Folder with code '${folderCode}' not found in statistics.`);
+            console.error(`Folder with code '${folderCode}' not found in statistics.`);
             throw new Error(`Folder with code '${folderCode}' not found.`);
         }
     } catch (error) {
@@ -227,51 +223,43 @@ const formatDate = (date) => {
 };
 
 // Fonction pour exécuter une tâche
-const executeTask = (task) => {
-    const filePath = `cypress/e2e/${task.id}/data-json/Etablissement.json`;
+const executeTask = async (task) => {
+    const filePath = `cypress/e2e/${task.id}/data-json/Etablissement.json`
     const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
     const socialReason = jsonData[0].socialReason.value;
-    updateStatusByTaskId(task.id, "En cours");
-    const command = `docker run -t -v /opt/vermeg/cypress:/e2e -w /e2e --entrypoint=cypress cypress/included run --spec cypress/e2e/${task.id}/${task.id}.cy.js`
-
-    exec(command, (error, stdout, stderr) => {
-        backupOldVideos(videosFolder, backupFolder);
-        const beautifiedOutput = beautifyCypressOutput(stdout);
-
-        if (error || stderr) {
-            updateFileStatistiques(task.id, beautifiedOutput, socialReason, false);
-            console.error(`Erreur lors de l'exécution de la tâche "${task.label}": ${stderr || error.message}`);
-        } else {
-            updateFileStatistiques(task.id, beautifiedOutput, socialReason, true);
-        }
-
-        updateStatusByTaskId(task.id, "Terminé");
-    });
+    console.log(`[${new Date().toISOString()}] Exécution de la tâche : ${task.label} (Raison sociale : ${socialReason})`);
+    try {
+        const command = `docker run -t -v /opt/vermeg/cypress:/e2e -w /e2e --entrypoint=cypress cypress/included run --spec cypress/e2e/${task.id}/${task.id}.cy.js`
+        const output = execSync(command, { stdio: 'pipe' });
+         backupOldVideos(videosFolder, backupFolder);
+        const beautifiedOutput = beautifyCypressOutput(output);
+        updateFileStatistiques(task.id, beautifiedOutput, socialReason, true);
+    } catch (error) {
+         backupOldVideos(videosFolder, backupFolder);
+         const beautifiedOutput = beautifyCypressOutput(error.stdout);
+         updateFileStatistiques(task.id, beautifiedOutput, socialReason, false);
+    }
 };
-function updateStatusByTaskId(taskId,status){
-    const filePath = `cypress/reports/schedule-job.json`
-    const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-    jsonData.find(element => element.id === taskId).status = status;
-    fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 4));
-}
 function loadAndScheduleTasks() {
     fs.readFile(scheduleJob, 'utf8', (err, data) => {
-        if (err) return;
-
+        if (err) {
+            console.error('Erreur lors du chargement du fichier des tâches:', err);
+            return;
+        }
         let tasks;
         try {
             tasks = JSON.parse(data);
         } catch (error) {
+            console.error('Erreur de parsing JSON :', error.message);
             return;
         }
-
         tasks.forEach((task) => {
             if (task.enabled) {
-                const [day, month, year, hour, minute] = task.scheduleTime.split(/[\/\s:]/).map(Number);
+                const [day, month, year, hour, minute] = task.scheduleTime
+                    .split(/[\/\s:]/)
+                    .map(Number);
                 const jobDate = new Date(year, month - 1, day, hour, minute);
-
                 try {
-                    // Schedule both jobs to run at the same time
                     schedule.scheduleJob(jobDate, () => {
                         executeTask(task);
                     });
@@ -284,11 +272,12 @@ function loadAndScheduleTasks() {
     });
 }
 // Initial load
-//loadAndScheduleTasks();
+loadAndScheduleTasks();
 fs.watch(scheduleJob, (eventType) => {
-    if (eventType === 'change' && !isReloading) { 
-        isReloading = true; 
-        //console.log(`Le fichier "${scheduleJob}" a été modifié. Rechargement des tâches...`);
+    if (eventType === 'change' && !isReloading) {
+        isReloading = true; // Empêche d'exécuter plusieurs fois
+        console.log(`Le fichier "${scheduleJob}" a été modifié. Rechargement des tâches...`);
+
         // Annuler toutes les tâches planifiées existantes
         const jobs = schedule.scheduledJobs;
         for (const jobName in jobs) {
@@ -296,25 +285,25 @@ fs.watch(scheduleJob, (eventType) => {
                 jobs[jobName].cancel();
             }
         }
+
+        // Recharger et replanifier les tâches après une brève pause
         setTimeout(() => {
             loadAndScheduleTasks();
-            isReloading = false;
-        }, 1000); 
+            isReloading = false; // Réinitialise le drapeau après le rechargement
+        }, 100); // 100ms pour éviter les doublons
     }
-
 });
 
 
-
 app.post('/cypress/updateScheduleJob', (req, res) => {
-    const filePath = scheduleJob;
-    const newData = req.body;
-
-    if (!newData) {
-        return res.status(400).json({ error: 'Missing newData parameter' });
+    const filePath = `cypress/reports/schedule-job.json`
+    const newData = req.body
+    if (!filePath || !newData) {
+        return res.status(400).json({ error: 'Missing filePath or newData parameters' });
     }
     try {
-        fs.writeFileSync(filePath, JSON.stringify(newData, null, 4));
+        const updatedData = newData;
+        fs.writeFileSync(filePath, JSON.stringify(updatedData, null, 4));
         return res.status(200).json({ message: 'JSON file updated successfully' });
     } catch (err) {
         return res.status(500).json({ error: 'Internal server error' });

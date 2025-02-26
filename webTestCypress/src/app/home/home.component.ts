@@ -14,25 +14,28 @@ export class HomeComponent implements OnInit {
   displayBarMenu = false;
   menu: MenuItem[] = [
     {
-      label: 'Data',
+      label: 'Donnés',
       icon: 'fa fa-database',
       items: [
         
       ]
     },
     {
-      label: 'Run Cypress',
+      label: 'Exécuter Cypress',
       icon: 'fa-solid fa-gear',
       //url: 'runCypress',
       command: () => { this.router.navigate(['runCypress']); this.openSideBarMenu = false;}
       //command: (event: any) => this.open(event.item)
     },
     {
-      label: 'Statistical Details',
+      label: 'Détails statistiques',
       icon: 'fa-solid fa-chart-simple',
-      //url: 'runCypress',
       command: () => { this.router.navigate(['statistical-details']); this.openSideBarMenu = false;}
-      //command: (event: any) => this.open(event.item)
+    },
+    {
+      label: 'Planifier le travail',
+      icon: 'fa-solid fa-chart-simple',
+      command: () => { this.router.navigate(['schedule-job']); this.openSideBarMenu = false;}
     }
   ];
   Roles: any[] = []

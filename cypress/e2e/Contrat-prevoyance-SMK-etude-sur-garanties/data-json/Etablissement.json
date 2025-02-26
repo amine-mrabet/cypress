@@ -9,14 +9,14 @@
         },
         "socialReason": {
             "selectorAttr": "app-society-with-siret .social-reason input",
-            "value": "Ines prevoyanceSMKgaranties-01112024",
+            "value": "job-contrat-pre-smk-granties-04022025",
             "label": "Raison sociale",
             "type": "input-text",
             "random": false
         },
         "manager": {
             "selectorAttr": "app-society-with-siret .manager input",
-            "value": "prevoyanceSMKgaranties-19102024",
+            "value": "job-contrat-pre-smk-granties-04022025",
             "label": "Dirigeant",
             "type": "input-text",
             "random": false

@@ -48,7 +48,7 @@
     "SANTE_SM_G_1_STD_Resp_contratstruc_option_resp_valeur":{
         "selectorAttr":".option-1 .SANTE_SM_G_1_STD_Resp_contratstruc_option_resp_valeur .p-dropdown-trigger",
         "label":"Valeur de l’option responsable Option responsable y compris Sécurité Sociale",
-        "value":"En complément base",
+        "value":"Y compris base",
         "type" : "dropDownNoFilter",
         "random":false
     },
@@ -57,18 +57,251 @@
         "type": "button",
         "random": false
     },
-    "Base-hospi-taux_expr_gar_gg_1":{
-        "selectorAttr":".Base .Base-hospi .taux_expr_gar_gg_1",
+    "p-treetable-toggler17": {
+        "selectorAttr": ".collapsed-all-nodes",
+        "type": "button",
+        "random": false
+    },
+    "hospi_forfait_jour_hospi_forfait_jour_hospi-taux_expr_gar_gg_1":{
+        "selectorAttr":".Base .hospi_forfait_jour_hospi_forfait_jour_hospi .taux_expr_gar_gg_1",
         "value": "100",
         "label":"Hospitalisation Taux 1",
         "type" : "input-text",
         "random":false
     },
-    "Base-hospi-expr_gar_gg_1": {
-        "selectorAttr": ".Base .Base-hospi .expr_gar_gg_1 .p-dropdown-trigger",
+    "hospi_forfait_jour_hospi_forfait_jour_hospi-expr_gar_gg_1": {
+        "selectorAttr": ".Base .hospi_forfait_jour_hospi_forfait_jour_hospi .expr_gar_gg_1 .p-dropdown-trigger",
         "label":"Hospitalisation Assiette 1",
         "value": "FR-SS",
         "type": "dropDownNoFilter",
+        "random": false
+    },
+    "link-Base-soins_courants": {
+        "selectorAttr":".link-Base-soins_courants",
+        "type": "link",
+        "value": "Soins courants",
+        "random": false
+    },
+    "p-treetable-toggler": {
+        "selectorAttr": ".collapsed-all-nodes",
+        "type": "button",
+        "random": false
+    },
+    "soins_courants_consult_visite_med_gen-taux_expr_gar_pt_1":{
+        "selectorAttr":".Base-soins_courants .soins_courants_consult_visite_med_gen_consult_medecin_gene_dptm .taux_expr_gar_pt_1",
+        "value": "100",
+        "label":"Médecin signataire dptm Taux 1",
+        "type" : "input-text",
+        "random":false
+    },
+    "soins_courants_consult_visite_med_gen-expr_gar_pt_3_1": {
+        "selectorAttr": ".Base-soins_courants .soins_courants_consult_visite_med_gen_consult_medecin_gene_dptm .gar_pt_3_1 .p-dropdown-trigger",
+        "label":"Médecin signataire dptm Assiette 1",
+        "value": "FR-SS",
+        "type": "dropDownNoFilter",
+        "random": false
+    },
+    "link-Base-dentaire": {
+        "selectorAttr":".link-Base-dentaire",
+        "type": "link",
+        "value": "Dentaire",
+        "random": false
+    },
+    "p-treetable-toggler1": {
+        "selectorAttr": ".collapsed-all-nodes",
+        "type": "button",
+        "random": false
+    },
+    "link-Base-optique": {
+        "selectorAttr":".link-Base-optique",
+        "type": "link",
+        "value": "Optique",
+        "random": false
+    },
+    "p-treetable-toggler2": {
+        "selectorAttr": ".collapsed-all-nodes",
+        "type": "button",
+        "random": false
+    },
+    "link-Base-aides_auditives": {
+        "selectorAttr":".link-Base-aides_auditives",
+        "type": "link",
+        "value": "Aides auditives",
+        "random": false
+    },
+    "p-treetable-toggler3": {
+        "selectorAttr": ".collapsed-all-nodes",
+        "type": "button",
+        "random": false
+    },
+    "link-Base-autres_soins": {
+        "selectorAttr":".link-Base-autres_soins",
+        "type": "link",
+        "value": "Autres postes de soins",
+        "random": false
+    },
+    "p-treetable-toggler4": {
+        "selectorAttr": ".collapsed-all-nodes",
+        "type": "button",
+        "random": false
+    },
+    "link-Base-services_fm": {
+        "selectorAttr":".link-Base-services_fm",
+        "type": "link",
+        "value": "Services",
+        "random": false
+    },
+    "link-Resp_1": {
+        "selectorAttr":".link-Resp_1",
+        "type": "link",
+        "value": "Option responsable y compris Sécurité Sociale 1",
+        "random": false
+    },
+    "p-treetable-toggler5": {
+        "selectorAttr": ".collapsed-all-nodes",
+        "type": "button",
+        "random": false
+    },
+    "link-Resp_1-soins_courants": {
+        "selectorAttr":".link-Resp_1-soins_courants",
+        "type": "link",
+        "value": "Soins courants",
+        "random": false
+    },
+    "p-treetable-toggler6": {
+        "selectorAttr": ".collapsed-all-nodes",
+        "type": "button",
+        "random": false
+    },
+    "link-Resp_1-dentaire": {
+        "selectorAttr":".link-Resp_1-dentaire",
+        "type": "link",
+        "value": "Dentaire",
+        "random": false
+    },
+    "p-treetable-toggler7": {
+        "selectorAttr": ".collapsed-all-nodes",
+        "type": "button",
+        "random": false
+    },
+    "link-Resp_1-optique": {
+        "selectorAttr":".link-Resp_1-optique",
+        "type": "link",
+        "value": "Optique",
+        "random": false
+    },
+    "p-treetable-toggler8": {
+        "selectorAttr": ".collapsed-all-nodes",
+        "type": "button",
+        "random": false
+    },
+    "link-Resp_1-aides_auditives": {
+        "selectorAttr":".link-Resp_1-aides_auditives",
+        "type": "link",
+        "value": "Aides auditives",
+        "random": false
+    },
+    "p-treetable-toggler9": {
+        "selectorAttr": ".collapsed-all-nodes",
+        "type": "button",
+        "random": false
+    },
+    "link-Resp_1-autres_soins": {
+        "selectorAttr":".link-Resp_1-autres_soins",
+        "type": "link",
+        "value": "Autres postes de soins",
+        "random": false
+    },
+    "p-treetable-toggler10": {
+        "selectorAttr": ".collapsed-all-nodes",
+        "type": "button",
+        "random": false
+    },
+    "Resp_1-autres_soins-autres_soins_checkbox": {
+        "selectorAttr": ".Resp_1-autres_soins .autres_soins_ .column_isRespo input[type=checkbox]",
+        "label": "contrat",
+        "type": "checkbox",
+        "value": "",
+        "random": false
+    },
+    "Resp_1-autres_soins-autres_soins_expr_gar_gg_1":{
+        "selectorAttr":".Resp_1-autres_soins .autres_soins_ .taux_expr_gar_gg_1",
+        "value": "100",
+        "label":"Autres postes de soins Taux 2",
+        "type" : "input-text",
+        "random":false
+    },
+    "soins_courants_consult_visite_med_gen-expr_gar_gg_1": {
+        "selectorAttr": ".Resp_1-autres_soins .autres_soins_ .expr_gar_gg_1 .p-dropdown-trigger",
+        "label":"Autres postes de soins Assiette 2",
+        "value": "FR-SS",
+        "type": "dropDownNoFilter",
+        "random": false
+    },
+    "link-NonResp_2": {
+        "selectorAttr":".link-NonResp_2",
+        "type": "link",
+        "value": "Option non responsable y compris Sécurité Sociale 2",
+        "random": false
+    },
+    "p-treetable-toggler11": {
+        "selectorAttr": ".collapsed-all-nodes",
+        "type": "button",
+        "random": false
+    },
+    "link-NonResp_2-soins_courants": {
+        "selectorAttr":".link-NonResp_2-soins_courants",
+        "type": "link",
+        "value": "Soins courants",
+        "random": false
+    },
+    "p-treetable-toggler12": {
+        "selectorAttr": ".collapsed-all-nodes",
+        "type": "button",
+        "random": false
+    },
+    "link-NonResp_2-dentaire": {
+        "selectorAttr":".link-NonResp_2-dentaire",
+        "type": "link",
+        "value": "Dentaire",
+        "random": false
+    },
+    "p-treetable-toggler13": {
+        "selectorAttr": ".collapsed-all-nodes",
+        "type": "button",
+        "random": false
+    },
+    "link-NonResp_2-optique": {
+        "selectorAttr":".link-NonResp_2-optique",
+        "type": "link",
+        "value": "Optique",
+        "random": false
+    },
+    "p-treetable-toggler14": {
+        "selectorAttr": ".collapsed-all-nodes",
+        "type": "button",
+        "random": false
+    },
+    "link-NonResp_2-aides_auditives": {
+        "selectorAttr":".link-NonResp_2-aides_auditives",
+        "type": "link",
+        "value": "Aides auditives",
+        "random": false
+    },
+    "p-treetable-toggler15": {
+        "selectorAttr": ".collapsed-all-nodes",
+        "type": "button",
+        "random": false
+    },
+    "link-NonResp_2-autres_soins": {
+        "selectorAttr":".link-NonResp_2-autres_soins",
+        "type": "link",
+        "value": "Autres postes de soins",
+        "random": false
+    },
+    "p-treetable-toggler16": {
+        "selectorAttr": ".collapsed-all-nodes",
+        "type": "button",
         "random": false
     },
     "save-etude1": {

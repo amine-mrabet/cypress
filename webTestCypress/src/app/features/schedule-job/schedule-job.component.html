@@ -1,0 +1,70 @@
+<form [formGroup]="form">
+    <p-table 
+        styleClass="p-datatable-striped" 
+        [value]="scheduleJobsArray.controls" 
+        dataKey="id" 
+        [tableStyle]="{ 'width': '80%' , 'margin' : '0 auto' }">
+        
+        <ng-template pTemplate="header">
+            <tr>
+                <th class="text-center" [ngStyle]="{'width':'25%'}">
+                    Label
+                </th>
+                <th class="text-center" [ngStyle]="{'width':'15%'}">
+                    Date d'exécution
+                </th>
+                <th class="text-center" [ngStyle]="{'width':'10%'}">
+                    Statut
+                </th>
+                <th class="text-center" [ngStyle]="{'width':'10%'}">
+                    Activé
+                </th>
+            </tr>
+        </ng-template>
+        
+        <ng-template pTemplate="body" let-job let-i="rowIndex">
+            <!-- Bind each row to a specific FormGroup -->
+            <tr [formGroup]="getFormGroupAt(i)">
+                <td>
+                    <!-- Display Label -->
+                    {{ job.get('label').value }}
+                </td>
+                <td class="text-center">
+                    <!-- Schedule Time Input -->
+                    <p-calendar 
+                        appendTo="body"
+                        formControlName="scheduleTime"
+                        dateFormat="dd/mm/yy"
+                        hourFormat="24"
+                        [showIcon]="true"
+                        [showTime]="true">
+                    </p-calendar>
+                </td>
+                <td class="text-center">
+                    <!-- Status -->
+                    <span class="status" [ngStyle]="{'background': getbackground(job.get('status').value)}">
+                        {{ job.get('status').value }}
+                    </span>
+                </td>
+                <td class="text-center">
+                    <!-- Enabled Switch -->
+                    <p-inputSwitch formControlName="enabled"></p-inputSwitch>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+  
+    <!-- Save Button -->
+    <div class="row-btn">
+        <div class="col-lg-11 text-right">
+            <p-button 
+                [disabled]="!form.valid"
+                class="save-btn" 
+                (onClick)="updateScheduleJob()" 
+                icon="fa-solid fa-floppy-disk" 
+                label="Save">
+            </p-button>
+        </div>
+    </div>
+  </form>
+  

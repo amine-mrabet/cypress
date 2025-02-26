@@ -62,4 +62,14 @@ export class JsonEditorService {
     const headers = new HttpHeaders({ "Content-Type": "application/json" });
     return this.http.post<any[]>(`${BASE_PATH}/updateFileStatistiques`, body, { params: params, headers: headers });
   }
+  getScheduleJob() {
+    let params = new HttpParams();
+    return this.http.get(`${BASE_PATH}/getScheduleJob`, {params: params})
+  }
+
+  updateScheduleJob(body?: any): Observable<any[]> {
+    let params = new HttpParams();
+    const headers = new HttpHeaders({ "Content-Type": "application/json" });
+    return this.http.post<any[]>(`${BASE_PATH}/updateScheduleJob`, body, { params: params, headers: headers });
+  }
 }
